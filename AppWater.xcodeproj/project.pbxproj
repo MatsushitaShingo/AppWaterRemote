@@ -14,6 +14,9 @@
 		1E9D2D6C27E05C880035C405 /* AppWaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D6B27E05C880035C405 /* AppWaterTests.swift */; };
 		1E9D2D7627E05C880035C405 /* AppWaterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D7527E05C880035C405 /* AppWaterUITests.swift */; };
 		1E9D2D7827E05C880035C405 /* AppWaterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D7727E05C880035C405 /* AppWaterUITestsLaunchTests.swift */; };
+		1E9D2D8527E060FD0035C405 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D8427E060FD0035C405 /* MovieView.swift */; };
+		1E9D2D8727E061130035C405 /* StudyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D8627E061130035C405 /* StudyView.swift */; };
+		1E9D2D8927E0613B0035C405 /* Visualization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D8827E0613B0035C405 /* Visualization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		1E9D2D7127E05C880035C405 /* AppWaterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppWaterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9D2D7527E05C880035C405 /* AppWaterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWaterUITests.swift; sourceTree = "<group>"; };
 		1E9D2D7727E05C880035C405 /* AppWaterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWaterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1E9D2D8427E060FD0035C405 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
+		1E9D2D8627E061130035C405 /* StudyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyView.swift; sourceTree = "<group>"; };
+		1E9D2D8827E0613B0035C405 /* Visualization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visualization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +102,10 @@
 			children = (
 				1E9D2D5A27E05C870035C405 /* AppWaterApp.swift */,
 				1E9D2D5C27E05C870035C405 /* ContentView.swift */,
+				1E9D2D8427E060FD0035C405 /* MovieView.swift */,
 				1E9D2D5E27E05C880035C405 /* Assets.xcassets */,
+				1E9D2D8627E061130035C405 /* StudyView.swift */,
+				1E9D2D8827E0613B0035C405 /* Visualization.swift */,
 				1E9D2D6027E05C880035C405 /* Preview Content */,
 			);
 			path = AppWater;
@@ -258,7 +267,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E9D2D5D27E05C870035C405 /* ContentView.swift in Sources */,
+				1E9D2D8527E060FD0035C405 /* MovieView.swift in Sources */,
+				1E9D2D8727E061130035C405 /* StudyView.swift in Sources */,
 				1E9D2D5B27E05C870035C405 /* AppWaterApp.swift in Sources */,
+				1E9D2D8927E0613B0035C405 /* Visualization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
