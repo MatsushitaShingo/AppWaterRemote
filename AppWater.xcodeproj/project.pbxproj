@@ -17,6 +17,8 @@
 		1E9D2D8527E060FD0035C405 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D8427E060FD0035C405 /* MovieView.swift */; };
 		1E9D2D8727E061130035C405 /* StudyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D8627E061130035C405 /* StudyView.swift */; };
 		1E9D2D8927E0613B0035C405 /* Visualization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D8827E0613B0035C405 /* Visualization.swift */; };
+		1E9D2D9027E074BA0035C405 /* movie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D2D8E27E074BA0035C405 /* movie.mp4 */; };
+		1E9D2D9127E074BA0035C405 /* mov_hts-samp001.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D2D8F27E074BA0035C405 /* mov_hts-samp001.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		1E9D2D8427E060FD0035C405 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
 		1E9D2D8627E061130035C405 /* StudyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyView.swift; sourceTree = "<group>"; };
 		1E9D2D8827E0613B0035C405 /* Visualization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visualization.swift; sourceTree = "<group>"; };
+		1E9D2D8E27E074BA0035C405 /* movie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = movie.mp4; sourceTree = "<group>"; };
+		1E9D2D8F27E074BA0035C405 /* mov_hts-samp001.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mov_hts-samp001.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 		1E9D2D4E27E05C870035C405 = {
 			isa = PBXGroup;
 			children = (
+				1E9D2D8F27E074BA0035C405 /* mov_hts-samp001.mp4 */,
+				1E9D2D8E27E074BA0035C405 /* movie.mp4 */,
 				1E9D2D5927E05C870035C405 /* AppWater */,
 				1E9D2D6A27E05C880035C405 /* AppWaterTests */,
 				1E9D2D7427E05C880035C405 /* AppWaterUITests */,
@@ -240,6 +246,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E9D2D9027E074BA0035C405 /* movie.mp4 in Resources */,
+				1E9D2D9127E074BA0035C405 /* mov_hts-samp001.mp4 in Resources */,
 				1E9D2D6227E05C880035C405 /* Preview Assets.xcassets in Resources */,
 				1E9D2D5F27E05C880035C405 /* Assets.xcassets in Resources */,
 			);
