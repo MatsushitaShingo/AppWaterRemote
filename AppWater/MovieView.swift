@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct MovieView: View {
+    
+    @State private var isShowingView: Bool = false
+
     var body: some View {
-        Text("hello,world")
+        if isShowingView {
+                        Visualization()
+                    } else {
+                        Button {
+                            isShowingView.toggle()
+                        } label: {
+                            Text("フラグ")
+                        }
+                    }
     }
 }
 
