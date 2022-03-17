@@ -144,5 +144,6 @@ struct moviestart: View{
 struct MovieView_Previews: PreviewProvider {
     static var previews: some View {
         MovieView()
+.previewInterfaceOrientation(.landscapeLeft)
     }
 }
