@@ -44,16 +44,16 @@ struct Visualization: View {
 
 struct selectView:View{
     
-    @State private var isShowingView: Bool = false
-    @State private var record = 0
-    @State private var select1 = 1
-    @State private var select2 = 5
-    @State private var select3 = 10
-    @State private var select4 = 50
-    @State private var select5 = 100
-    @State private var select6 = 500
-    @State private var select7 = 1000
-    @State private var select8 = 5000
+    @State fileprivate var isShowingView: Bool = false
+    @State fileprivate var record = 0
+    @State fileprivate var select1 = 1
+    @State fileprivate var select2 = 5
+    @State fileprivate var select3 = 10
+    @State fileprivate var select4 = 50
+    @State fileprivate var select5 = 100
+    @State fileprivate var select6 = 500
+    @State fileprivate var select7 = 1000
+    @State fileprivate var select8 = 5000
     
     var body: some View {
         VStack{
@@ -68,25 +68,29 @@ struct selectView:View{
             }
             VStack{
                 HStack{
-                    Text("トイレ")
+                    Button{
+                        record = select1
+                    }label: {
+                        Text("トイレ")
+                            .foregroundColor(.red)
+                            .font(.largeTitle)
+                            .background(Circle()
+                                .fill(Color.blue)
+                                .frame(width:80, height:80))
+                    }
+                    Text("手洗い")
                         .foregroundColor(.red)
                         .font(.largeTitle)
                         .background(Circle()
                             .fill(Color.blue)
                             .frame(width:80, height:80))
-                    Text("トイレ")
+                    Text("お風呂")
                         .foregroundColor(.red)
                         .font(.largeTitle)
                         .background(Circle()
                             .fill(Color.blue)
                             .frame(width:80, height:80))
-                    Text("トイレ")
-                        .foregroundColor(.red)
-                        .font(.largeTitle)
-                        .background(Circle()
-                            .fill(Color.blue)
-                            .frame(width:80, height:80))
-                    Text("トイレ")
+                    Text("歯磨き")
                         .foregroundColor(.red)
                         .font(.largeTitle)
                         .background(Circle()
@@ -94,25 +98,25 @@ struct selectView:View{
                             .frame(width:80, height:80))
                 }.offset(y:-50)
                 HStack{
-                    Text("トイレ")
+                    Text("シャワ")
                         .foregroundColor(.red)
                         .font(.largeTitle)
                         .background(Circle()
                             .fill(Color.blue)
                             .frame(width:80, height:80))
-                    Text("トイレ")
+                    Text("洗顔ー")
                         .foregroundColor(.red)
                         .font(.largeTitle)
                         .background(Circle()
                             .fill(Color.blue)
                             .frame(width:80, height:80))
-                    Text("トイレ")
+                    Text("水まき")
                         .foregroundColor(.red)
                         .font(.largeTitle)
                         .background(Circle()
                             .fill(Color.blue)
                             .frame(width:80, height:80))
-                    Text("トイレ")
+                    Text("お風呂")
                         .foregroundColor(.red)
                         .font(.largeTitle)
                         .background(Circle()
