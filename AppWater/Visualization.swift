@@ -10,6 +10,8 @@ import SwiftUI
 struct Visualization: View {
     
     @State private var isShowingView1: Bool = false
+    let userdefaults = UserDefaults.standard
+    @State var NowWaterSaving = 0
     
     var body: some View {
         
@@ -18,24 +20,30 @@ struct Visualization: View {
                 Text("現在の節水料")
                     .font(.largeTitle)
                     .bold()
-                Text("0L")
+                Text("\(self.NowWaterSaving)L")
+                    .onAppear{
+                        guard let userdefaults = UserDefaults.standard.value(forKey: "RecordData")as? Int else {return}
+                        self.NowWaterSaving = userdefaults
+                    }
                 Text("○○月○○日")
                     .padding()
             }.frame(width: 250, height:160, alignment: .bottomTrailing)
                 .border(Color.red, width: 2) .offset(x:-400,y:-200)
             Image("夜景").clipShape(Circle())
             
-            if isShowingView1 {
-                selectView()
-            } else {
-                Button {
-                    isShowingView1.toggle()
-                } label: {
+                //選ぶボタンでselectviewのモーダル表示を行う
+            Button(action: {
+                self.isShowingView1.toggle()
+            }){
+                ZStack{
                     Color.blue
                         .frame(width:110,height: 110)
                     Text("選ぶ").foregroundColor(.red)
-                }.offset(x:400,y:200)
-            }
+                }
+            }.fullScreenCover(isPresented: $isShowingView1){
+                selectView()
+            }.offset(x:300,y:180)
+            
             Text("コップいっぱい")
                 .offset(y:200)
         }
@@ -54,23 +62,30 @@ struct selectView:View{
     @State fileprivate var select6 = 500
     @State fileprivate var select7 = 1000
     @State fileprivate var select8 = 5000
+    @Environment(\.dismiss) var dismiss
+    let userdefaults = UserDefaults.standard
     
     var body: some View {
+        
         VStack{
-            if isShowingView {
-                Visualization()
-            } else {
-                Button {
-                    isShowingView.toggle()
-                 //UserDefaultsを使ってrecord変数を記録する
-                } label: {
-                    Text("記録する")
-                }.offset(y:-100)
-            }
+            //記録するボタンを押すと、record変数の値を保存してVisualizationで値を取り出せる状態にする
+            Button(action: {
+                dismiss()
+                UserDefaults.standard.set(self.record,forKey: "RecordData")
+                
+            }){
+                ZStack{
+                    Color.blue
+                    .frame(width:110,height: 110)
+                    Text("記録する").foregroundColor(.red)
+                }
+            }.fullScreenCover(isPresented: $isShowingView){
+            }.offset(y:-100)
+            
             VStack{
                 HStack{
                     Button{
-                        record = select1
+                        record = select3
                     }label: {
                         Text("トイレ")
                             .foregroundColor(.red)
@@ -132,7 +147,7 @@ struct selectView:View{
 
 struct Visualization_Previews: PreviewProvider {
     static var previews: some View {
-        selectView()
+        Visualization()
             .previewInterfaceOrientation(.landscapeRight)
     }
 }
