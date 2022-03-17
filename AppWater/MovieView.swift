@@ -24,7 +24,7 @@ struct MovieView: View {
                         self.showingDetail1.toggle()
                     }){
                         Image("夜景")
-                    }.sheet(isPresented: $showingDetail1){
+                    }.fullScreenCover(isPresented: $showingDetail1){
                         moviestart()
                     }
                     
@@ -32,7 +32,7 @@ struct MovieView: View {
                         self.showingDetail2.toggle()
                     }){
                         Image("飛行機窓")
-                    }.sheet(isPresented: $showingDetail2){
+                    }.fullScreenCover(isPresented: $showingDetail2){
                         moviestart1()
                     }
                 }
@@ -41,7 +41,7 @@ struct MovieView: View {
                         self.showingDetail1.toggle()
                     }){
                         Image("夜景")
-                    }.sheet(isPresented: $showingDetail1){
+                    }.fullScreenCover(isPresented: $showingDetail1){
                         moviestart()
                     }
                     
@@ -49,42 +49,7 @@ struct MovieView: View {
                         self.showingDetail2.toggle()
                     }){
                         Image("飛行機窓")
-                    }.sheet(isPresented: $showingDetail2){
-                        moviestart1()
-                    }
-                }
-
-                HStack{
-                    Button(action: {
-                        self.showingDetail1.toggle()
-                    }){
-                        Image("夜景")
-                    }.sheet(isPresented: $showingDetail1){
-                        moviestart()
-                    }
-                    
-                    Button(action: {
-                        self.showingDetail2.toggle()
-                    }){
-                        Image("飛行機窓")
-                    }.sheet(isPresented: $showingDetail2){
-                        moviestart1()
-                    }
-                }
-                HStack{
-                    Button(action: {
-                        self.showingDetail1.toggle()
-                    }){
-                        Image("夜景")
-                    }.sheet(isPresented: $showingDetail1){
-                        moviestart()
-                    }
-                    
-                    Button(action: {
-                        self.showingDetail2.toggle()
-                    }){
-                        Image("飛行機窓")
-                    }.sheet(isPresented: $showingDetail2){
+                    }.fullScreenCover(isPresented: $showingDetail2){
                         moviestart1()
                     }
                 }
@@ -94,7 +59,7 @@ struct MovieView: View {
                         self.showingDetail1.toggle()
                     }){
                         Image("夜景")
-                    }.sheet(isPresented: $showingDetail1){
+                    }.fullScreenCover(isPresented: $showingDetail1){
                         moviestart()
                     }
                     
@@ -102,7 +67,42 @@ struct MovieView: View {
                         self.showingDetail2.toggle()
                     }){
                         Image("飛行機窓")
-                    }.sheet(isPresented: $showingDetail2){
+                    }.fullScreenCover(isPresented: $showingDetail2){
+                        moviestart1()
+                    }
+                }
+                HStack{
+                    Button(action: {
+                        self.showingDetail1.toggle()
+                    }){
+                        Image("夜景")
+                    }.fullScreenCover(isPresented: $showingDetail1){
+                        moviestart()
+                    }
+                    
+                    Button(action: {
+                        self.showingDetail2.toggle()
+                    }){
+                        Image("飛行機窓")
+                    }.fullScreenCover(isPresented: $showingDetail2){
+                        moviestart1()
+                    }
+                }
+
+                HStack{
+                    Button(action: {
+                        self.showingDetail1.toggle()
+                    }){
+                        Image("夜景")
+                    }.fullScreenCover(isPresented: $showingDetail1){
+                        moviestart()
+                    }
+                    
+                    Button(action: {
+                        self.showingDetail2.toggle()
+                    }){
+                        Image("飛行機窓")
+                    }.fullScreenCover(isPresented: $showingDetail2){
                         moviestart1()
                     }
                 }

@@ -62,6 +62,7 @@ struct selectView:View{
             } else {
                 Button {
                     isShowingView.toggle()
+                 //UserDefaultsを使ってrecord変数を記録する
                 } label: {
                     Text("記録する")
                 }.offset(y:-100)
