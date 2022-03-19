@@ -16,6 +16,7 @@ struct Visualization: View {
     var body: some View {
         
         VStack{
+            //左上のカレンダー、節水量合計
             VStack{
                 Text("現在の節水料")
                     .font(.largeTitle)
@@ -28,8 +29,40 @@ struct Visualization: View {
                 Text("○○月○○日")
                     .padding()
             }.frame(width: 250, height:160, alignment: .bottomTrailing)
-                .border(Color.red, width: 2) .offset(x:-400,y:-200)
-            Image("夜景").clipShape(Circle())
+                .border(Color.red, width: 2) .offset(x:-400,y:-100)
+            //画面の中央で節水量に応じて画像を切り替える
+            if NowWaterSaving < 10{
+                Image("夜景")
+                    .resizable()
+                    .frame(width: 300, height: 300)
+                    .clipShape(Circle())
+            }else if NowWaterSaving < 50{
+                Image("水族館")
+                    .resizable()
+                    .frame(width: 300, height: 300)
+                    .clipShape(Circle())
+            }else if NowWaterSaving < 100{
+                Image("飛行機窓")
+                    .resizable()
+                    .frame(width: 300, height: 300)
+                    .clipShape(Circle())
+            }else if NowWaterSaving < 200{
+                Image("水族館")
+                    .resizable()
+                    .frame(width: 300, height: 300)
+                    .clipShape(Circle())
+            }else if NowWaterSaving < 300{
+                Image("水族館")
+                    .resizable()
+                    .frame(width: 300, height: 300)
+                    .clipShape(Circle())
+            }else{
+                Image("水族館")
+                    .resizable()
+                    .frame(width: 300, height: 300)
+                    .clipShape(Circle())
+            }
+           
             
                 //選ぶボタンでselectviewのモーダル表示を行う
             Button(action: {
@@ -42,10 +75,10 @@ struct Visualization: View {
                 }
             }.fullScreenCover(isPresented: $isShowingView1){
                 selectView()
-            }.offset(x:300,y:180)
+            }.offset(x:300,y:100)
             
             Text("コップいっぱい")
-                .offset(y:200)
+                .offset(y:50)
         }
     }
 }
