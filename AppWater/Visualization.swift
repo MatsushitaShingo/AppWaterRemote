@@ -12,11 +12,11 @@ struct Visualization: View {
     @State private var isShowingView1: Bool = false
     let userdefaults = UserDefaults.standard
     @State var NowWaterSaving = 0
+    @State private var selectDate = Date()
     
     var body: some View {
         
         VStack{
-            //左上のカレンダー、節水量合計
             VStack{
                 Text("現在の節水料")
                     .font(.largeTitle)
@@ -26,10 +26,12 @@ struct Visualization: View {
                         guard let userdefaults = UserDefaults.standard.value(forKey: "RecordData")as? Int else {return}
                         self.NowWaterSaving = userdefaults
                     }
-                Text("○○月○○日")
-                    .padding()
+                //カレンダー表示
+                DatePicker("日付",selection:$selectDate,displayedComponents: .date)
+                     .labelsHidden()
+                     .padding()
             }.frame(width: 250, height:160, alignment: .bottomTrailing)
-                .border(Color.red, width: 2) .offset(x:-400,y:-100)
+             .border(Color.red, width: 2) .offset(x:-400,y:-100)
             //画面の中央で節水量に応じて画像を切り替える
             if NowWaterSaving < 10{
                 Image("夜景")
@@ -70,7 +72,7 @@ struct Visualization: View {
             }){
                 ZStack{
                     Color.blue
-                        .frame(width:110,height: 110)
+                         .frame(width:110,height: 110)
                     Text("選ぶ").foregroundColor(.red)
                 }
             }.fullScreenCover(isPresented: $isShowingView1){
@@ -181,6 +183,7 @@ struct selectView:View{
 struct Visualization_Previews: PreviewProvider {
     static var previews: some View {
         Visualization()
+            .environment(\.locale, Locale(identifier: "ja_JP"))
             .previewInterfaceOrientation(.landscapeRight)
     }
 }
