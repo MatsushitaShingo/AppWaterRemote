@@ -96,6 +96,7 @@ struct selectView:View{
     
     @State fileprivate var isShowingView: Bool = false
     @State fileprivate var record = 0
+    @State fileprivate var finalrecord = 0
     @State fileprivate var select1 = 1
     @State fileprivate var select2 = 5
     @State fileprivate var select3 = 10
@@ -114,7 +115,6 @@ struct selectView:View{
             Button(action: {
                             dismiss()
                             UserDefaults.standard.set(self.record,forKey: "RecordData")
-                            
                         }){
                             ZStack{
                                 Color.blue
@@ -133,7 +133,7 @@ struct selectView:View{
                             .foregroundColor(.red)
                             .font(.largeTitle)
                             .background(Circle()
-                                .fill(Color.blue)
+                                .fill(Color.gray)
                                 .frame(width:80, height:80))
                     }
                     Button{
@@ -143,7 +143,7 @@ struct selectView:View{
                             .foregroundColor(.red)
                             .font(.largeTitle)
                             .background(Circle()
-                                .fill(Color.blue)
+                                .fill(Color.gray)
                                 .frame(width:80, height:80))
                     }
                     Button{
@@ -153,7 +153,7 @@ struct selectView:View{
                             .foregroundColor(.red)
                             .font(.largeTitle)
                             .background(Circle()
-                                .fill(Color.blue)
+                                .fill(Color.gray)
                                 .frame(width:80, height:80))
                     }
                     Button{
@@ -163,7 +163,7 @@ struct selectView:View{
                             .foregroundColor(.red)
                             .font(.largeTitle)
                             .background(Circle()
-                                .fill(Color.blue)
+                                .fill(Color.gray)
                                 .frame(width:80, height:80))
                     }
                 }.offset(y:-50)
@@ -175,7 +175,7 @@ struct selectView:View{
                             .foregroundColor(.red)
                             .font(.largeTitle)
                             .background(Circle()
-                                .fill(Color.blue)
+                                .fill(Color.gray)
                                 .frame(width:80, height:80))
                     }
                     Button{
@@ -185,7 +185,7 @@ struct selectView:View{
                             .foregroundColor(.red)
                             .font(.largeTitle)
                             .background(Circle()
-                                .fill(Color.blue)
+                                .fill(Color.gray)
                                 .frame(width:80, height:80))
                     }
                     Button{
@@ -195,7 +195,7 @@ struct selectView:View{
                             .foregroundColor(.red)
                             .font(.largeTitle)
                             .background(Circle()
-                                .fill(Color.blue)
+                                .fill(Color.gray)
                                 .frame(width:80, height:80))
                     }
                     Button{
@@ -205,7 +205,7 @@ struct selectView:View{
                             .foregroundColor(.red)
                             .font(.largeTitle)
                             .background(Circle()
-                                .fill(Color.blue)
+                                .fill(Color.gray)
                                 .frame(width:80, height:80))
                     }
                 }

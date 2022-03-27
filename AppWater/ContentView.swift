@@ -17,9 +17,6 @@ struct ContentView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: 200, height: 200)
-                        //カスタムフォントの入れ方
-                        //                                Text("動画再生機能")
-                        //                                    .font(.custom("Corporate-Logo-Medium-ver2", size: 100))
                         Text("動画再生機能")
                             .padding(.vertical)
                             .foregroundColor(.white)
