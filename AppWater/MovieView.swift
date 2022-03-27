@@ -19,94 +19,122 @@ struct MovieView: View {
     var body: some View {
         ScrollView{
             VStack{
-                HStack{
-                    Button(action: {
-                        self.showingDetail1.toggle()
-                    }){
-                        Image("夜景")
-                    }.fullScreenCover(isPresented: $showingDetail1){
-                        moviestart()
-                    }
-                    
-                    Button(action: {
-                        self.showingDetail2.toggle()
-                    }){
-                        Image("飛行機窓")
-                    }.fullScreenCover(isPresented: $showingDetail2){
-                        moviestart1()
-                    }
-                }
-                HStack{
-                    Button(action: {
-                        self.showingDetail1.toggle()
-                    }){
-                        Image("夜景")
-                    }.fullScreenCover(isPresented: $showingDetail1){
-                        moviestart()
-                    }
-                    
-                    Button(action: {
-                        self.showingDetail2.toggle()
-                    }){
-                        Image("飛行機窓")
-                    }.fullScreenCover(isPresented: $showingDetail2){
-                        moviestart1()
+                VStack{
+                    Text("節水")
+                    HStack{
+                        Button(action: {
+                            self.showingDetail1.toggle()
+                        }){
+                            Image("夜景")
+                        }.fullScreenCover(isPresented: $showingDetail1){
+                            moviestart()
+                        }
+                        
+                        Button(action: {
+                            self.showingDetail2.toggle()
+                        }){
+                            Image("飛行機窓")
+                        }.fullScreenCover(isPresented: $showingDetail2){
+                            moviestart1()
+                        }
                     }
                 }
+                .frame(width: 750, height: 250)
+                .border(Color.blue, width: 5)
+                VStack{
+                    Text("地下水")
+                    HStack{
+                        Button(action: {
+                            self.showingDetail1.toggle()
+                        }){
+                            Image("夜景")
+                        }.fullScreenCover(isPresented: $showingDetail1){
+                            moviestart()
+                        }
+                        
+                        Button(action: {
+                            self.showingDetail2.toggle()
+                        }){
+                            Image("飛行機窓")
+                        }.fullScreenCover(isPresented: $showingDetail2){
+                            moviestart1()
+                        }
+                    }
+                }
+                .frame(width: 750, height: 250)
+                .border(Color.green, width: 5)
 
-                HStack{
-                    Button(action: {
-                        self.showingDetail1.toggle()
-                    }){
-                        Image("夜景")
-                    }.fullScreenCover(isPresented: $showingDetail1){
-                        moviestart()
-                    }
-                    
-                    Button(action: {
-                        self.showingDetail2.toggle()
-                    }){
-                        Image("飛行機窓")
-                    }.fullScreenCover(isPresented: $showingDetail2){
-                        moviestart1()
-                    }
-                }
-                HStack{
-                    Button(action: {
-                        self.showingDetail1.toggle()
-                    }){
-                        Image("夜景")
-                    }.fullScreenCover(isPresented: $showingDetail1){
-                        moviestart()
-                    }
-                    
-                    Button(action: {
-                        self.showingDetail2.toggle()
-                    }){
-                        Image("飛行機窓")
-                    }.fullScreenCover(isPresented: $showingDetail2){
-                        moviestart1()
+                VStack{
+                    Text("歴史")
+                    HStack{
+                        Button(action: {
+                            self.showingDetail1.toggle()
+                        }){
+                            Image("夜景")
+                        }.fullScreenCover(isPresented: $showingDetail1){
+                            moviestart()
+                        }
+                        
+                        Button(action: {
+                            self.showingDetail2.toggle()
+                        }){
+                            Image("飛行機窓")
+                        }.fullScreenCover(isPresented: $showingDetail2){
+                            moviestart1()
+                        }
                     }
                 }
+                .frame(width: 750, height: 250)
+                .border(Color.purple, width: 5)
+                VStack{
+                    Text("世界の水")
+                    HStack{
+                        Button(action: {
+                            self.showingDetail1.toggle()
+                        }){
+                            Image("夜景")
+                        }.fullScreenCover(isPresented: $showingDetail1){
+                            moviestart()
+                        }
+                        
+                        Button(action: {
+                            self.showingDetail2.toggle()
+                        }){
+                            Image("飛行機窓")
+                        }.fullScreenCover(isPresented: $showingDetail2){
+                            moviestart1()
+                        }
+                    }
+                }
+                .frame(width: 750, height: 250)
+                .border(Color.yellow, width: 5)
 
-                HStack{
-                    Button(action: {
-                        self.showingDetail1.toggle()
-                    }){
-                        Image("夜景")
-                    }.fullScreenCover(isPresented: $showingDetail1){
-                        moviestart()
-                    }
-                    
-                    Button(action: {
-                        self.showingDetail2.toggle()
-                    }){
-                        Image("飛行機窓")
-                    }.fullScreenCover(isPresented: $showingDetail2){
-                        moviestart1()
+                VStack{
+                    Text("水循環")
+                    HStack{
+                        Button(action: {
+                            self.showingDetail1.toggle()
+                        }){
+                            Image("夜景")
+                        }.fullScreenCover(isPresented: $showingDetail1){
+                            moviestart()
+                        }
+                        
+                        Button(action: {
+                            self.showingDetail2.toggle()
+                        }){
+                            Image("飛行機窓")
+                        }.fullScreenCover(isPresented: $showingDetail2){
+                            moviestart1()
+                        }
                     }
                 }
+                .frame(width: 750, height: 250)
+                .border(Color.red, width: 5)
         }
+            //Vstackのフレームサイズ変更
+            .frame(width: 800,
+                   alignment:.center)
     }
 }
 struct moviestart: View{

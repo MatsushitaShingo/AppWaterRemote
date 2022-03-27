@@ -10,54 +10,60 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView{
-                    HStack{
-                        NavigationLink(destination: MovieView()){
-                            ZStack{
-                                Image(systemName: "drop.fill")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 200, height: 200)
-                                //カスタムフォントの入れ方
-//                                Text("動画再生機能")
-//                                    .font(.custom("Corporate-Logo-Medium-ver2", size: 100))
-                                Text("動画再生機能")
-                                    .padding(.vertical)
-                                    .foregroundColor(.white)
-                            }
-                        }
-                        //ナビゲーションの戻るボタンのテキスト変更
-                        .navigationTitle("ホームへ")
-                        .navigationBarHidden(true)
-                        NavigationLink(destination: StudyView()){
-                            ZStack{
-                                Image(systemName: "drop.fill")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 200, height: 200)
-                                Text("学習機能")
-                                    .padding(.vertical)
-                                    .foregroundColor(.white)
-                            }
-                        }
-                        NavigationLink(destination: Visualization()){
-                            ZStack{
-                                Image(systemName: "drop.fill")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 200, height: 200)
-                                Text("可視化機能")
-                                    .padding(.vertical)
-                                    .foregroundColor(.white)
-                            }
-                        }
+            HStack{
+                NavigationLink(destination: MovieView()){
+                    ZStack{
+                        Image(systemName: "drop.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 200, height: 200)
+                        //カスタムフォントの入れ方
+                        //                                Text("動画再生機能")
+                        //                                    .font(.custom("Corporate-Logo-Medium-ver2", size: 100))
+                        Text("動画再生機能")
+                            .padding(.vertical)
+                            .foregroundColor(.white)
                     }
-                }.navigationViewStyle(.stack)
+                }
+                //ナビゲーションの戻るボタンのテキスト変更
+                .navigationBarHidden(true)
+                NavigationLink(destination: StudyView()){
+                    ZStack{
+                        Image(systemName: "drop.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 200, height: 200)
+                        Text("学習機能")
+                            .padding(.vertical)
+                            .foregroundColor(.white)
+                    }
+                }
+                NavigationLink(destination: Visualization()){
+                    ZStack{
+                        Image(systemName: "drop.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 200, height: 200)
+                        Text("可視化機能")
+                            .padding(.vertical)
+                            .foregroundColor(.white)
+                    }
+                }
+            }.toolbar {
+                /// ナビゲーションバー左、戻るボタンでSFシンボルを使いたい
+                ToolbarItem(placement: .navigationBarLeading){
+                    Button(action: {}) {
+                        Image(systemName: "house")
+                    }
+                }
+            }
+
+        }.navigationViewStyle(.stack)
     }
 }
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-.previewInterfaceOrientation(.landscapeLeft)
+            .previewInterfaceOrientation(.landscapeLeft)
     }
 }
