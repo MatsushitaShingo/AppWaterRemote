@@ -21,11 +21,20 @@ struct Visualization: View {
                 Text("現在の節水料")
                     .font(.largeTitle)
                     .bold()
-                Text("\(self.NowWaterSaving)L")
-                    .onAppear{
-                        guard let userdefaults = UserDefaults.standard.value(forKey: "RecordData")as? Int else {return}
-                        self.NowWaterSaving = userdefaults
+                HStack{
+                    Text("\(self.NowWaterSaving)L")
+                        .onAppear{
+                            guard let userdefaults = UserDefaults.standard.value(forKey: "RecordData")as? Int else {return}
+                            self.NowWaterSaving = userdefaults
+                        }
+                    //節水量リセット機能
+                    Button(action: {
+                        NowWaterSaving = 0
+                    }) {
+                        Text("リセット")
                     }
+                }
+                
                 //カレンダー表示
                 DatePicker("日付",selection:$selectDate,displayedComponents: .date)
                     .labelsHidden()
@@ -115,6 +124,10 @@ struct selectView:View{
             Button(action: {
                             dismiss()
                             UserDefaults.standard.set(self.record,forKey: "RecordData")
+                //データを合計させたい
+            self.finalrecord = self.select1+self.select2+self.select3+self.select4+self.select5+self.select6+self.select7+self.select8
+            UserDefaults.standard.set(finalrecord,forKey: "FinalRecordData")
+            
                         }){
                             ZStack{
                                 Color.blue
@@ -127,7 +140,7 @@ struct selectView:View{
             VStack{
                 HStack{
                     Button{
-                        record = select1
+                        record = self.finalrecord + self.select1
                     }label: {
                         Text("トイレ")
                             .foregroundColor(.red)
@@ -137,7 +150,7 @@ struct selectView:View{
                                 .frame(width:80, height:80))
                     }
                     Button{
-                        record = select2
+                        record = self.finalrecord + self.select2
                     }label: {
                         Text("お風呂")
                             .foregroundColor(.red)
@@ -147,7 +160,7 @@ struct selectView:View{
                                 .frame(width:80, height:80))
                     }
                     Button{
-                        record = select3
+                        record = self.finalrecord + self.select3
                     }label: {
                         Text("シャワ")
                             .foregroundColor(.red)
@@ -157,7 +170,7 @@ struct selectView:View{
                                 .frame(width:80, height:80))
                     }
                     Button{
-                        record = select4
+                        record = self.finalrecord + self.select4
                     }label: {
                         Text("歯磨き")
                             .foregroundColor(.red)
@@ -169,7 +182,7 @@ struct selectView:View{
                 }.offset(y:-50)
                 HStack{
                     Button{
-                        record = select5
+                        record = self.finalrecord + self.select5
                     }label: {
                         Text("洗顔ー")
                             .foregroundColor(.red)
@@ -179,7 +192,7 @@ struct selectView:View{
                                 .frame(width:80, height:80))
                     }
                     Button{
-                        record = select6
+                        record = self.finalrecord + self.select6
                     }label: {
                         Text("水まき")
                             .foregroundColor(.red)
@@ -189,7 +202,7 @@ struct selectView:View{
                                 .frame(width:80, height:80))
                     }
                     Button{
-                        record = select7
+                        record = self.finalrecord + self.select7
                     }label: {
                         Text("お風呂")
                             .foregroundColor(.red)
@@ -199,7 +212,7 @@ struct selectView:View{
                                 .frame(width:80, height:80))
                     }
                     Button{
-                        record = select8
+                        record = self.finalrecord + self.select8
                     }label: {
                         Text("トイレ")
                             .foregroundColor(.red)
