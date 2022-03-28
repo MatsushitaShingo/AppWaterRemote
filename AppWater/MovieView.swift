@@ -41,6 +41,7 @@ struct MovieView: View {
                 }
                 .frame(width: 750, height: 250)
                 .border(Color.blue, width: 5)
+                .padding()
                 VStack{
                     Text("地下水")
                     HStack{
@@ -63,7 +64,7 @@ struct MovieView: View {
                 }
                 .frame(width: 750, height: 250)
                 .border(Color.green, width: 5)
-
+                .padding()
                 VStack{
                     Text("歴史")
                     HStack{
@@ -86,6 +87,7 @@ struct MovieView: View {
                 }
                 .frame(width: 750, height: 250)
                 .border(Color.purple, width: 5)
+                .padding()
                 VStack{
                     Text("世界の水")
                     HStack{
@@ -108,7 +110,7 @@ struct MovieView: View {
                 }
                 .frame(width: 750, height: 250)
                 .border(Color.yellow, width: 5)
-
+                .padding()
                 VStack{
                     Text("水循環")
                     HStack{
@@ -131,6 +133,7 @@ struct MovieView: View {
                 }
                 .frame(width: 750, height: 250)
                 .border(Color.red, width: 5)
+                .padding()
         }
             //Vstackのフレームサイズ変更
             .frame(width: 800,

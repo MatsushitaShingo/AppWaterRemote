@@ -40,7 +40,19 @@ struct Visualization: View {
                     .labelsHidden()
                     .padding()
             }.frame(width: 250, height:160, alignment: .bottomTrailing)
-                .border(Color.red, width: 2) .offset(x:-400,y:-100)
+                .border(Color.red, width: 2) .offset(x:-300,y:-50)
+            
+            //今までの節水量の合計
+            VStack{
+                Text("今までの合計")
+                Text("\(self.NowWaterSaving)L")
+                    .onAppear{
+                        guard let userdefaults = UserDefaults.standard.value(forKey: "RecordData")as? Int else {return}
+                        self.NowWaterSaving = userdefaults
+                    }
+            }.offset(x:400,y:-200)
+            
+            
             //画面の中央で節水量に応じて画像を切り替える
             if NowWaterSaving < 10{
                 Image("夜景")
@@ -116,6 +128,7 @@ struct selectView:View{
     @State fileprivate var select8 = 5000
     @Environment(\.dismiss) var dismiss
     let userdefaults = UserDefaults.standard
+    @State private var buttonDisabled:Bool = true
     
     var body: some View {
         
@@ -136,100 +149,236 @@ struct selectView:View{
                             }
                         }.fullScreenCover(isPresented: $isShowingView){
                         }.offset(y:-100)
-            
             VStack{
                 HStack{
-                    Button{
-                        record = self.finalrecord + self.select1
-                    }label: {
-                        Text("トイレ")
-                            .foregroundColor(.red)
-                            .font(.largeTitle)
-                            .background(Circle()
-                                .fill(Color.gray)
-                                .frame(width:80, height:80))
+                    ZStack{
+                        Button(action: {
+                            buttonDisabled.toggle()
+                        }, label: {
+                                        Text("トイレ")
+                                    })
+                                    .buttonStyle(MyButtonStyle())
+                                    .disabled(buttonDisabled)
+                                    .padding()
+                        Button(action: {
+                            buttonDisabled.toggle()
+                            record = self.finalrecord + self.select1
+                        }, label: {
+                            Text("　　")
+                        })
                     }
-                    Button{
-                        record = self.finalrecord + self.select2
-                    }label: {
-                        Text("お風呂")
-                            .foregroundColor(.red)
-                            .font(.largeTitle)
-                            .background(Circle()
-                                .fill(Color.gray)
-                                .frame(width:80, height:80))
+                    
+                    ZStack{
+                        Button(action: {buttonDisabled.toggle()}, label: {
+                                        Text("お風呂")
+                                    })
+                                    .buttonStyle(MyButtonStyle())
+                                    .disabled(buttonDisabled)
+                                    .padding()
+                        Button(action: {
+                            buttonDisabled.toggle()
+                            record = self.finalrecord + self.select1
+                        }, label: {
+                            Text("　　")
+                        })
                     }
-                    Button{
-                        record = self.finalrecord + self.select3
-                    }label: {
-                        Text("シャワ")
-                            .foregroundColor(.red)
-                            .font(.largeTitle)
-                            .background(Circle()
-                                .fill(Color.gray)
-                                .frame(width:80, height:80))
+                    ZStack{
+                        Button(action: {buttonDisabled.toggle()}, label: {
+                                        Text("シャワ")
+                                    })
+                                    .buttonStyle(MyButtonStyle())
+                                    .disabled(buttonDisabled)
+                                    .padding()
+                        Button(action: {
+                            buttonDisabled.toggle()
+                            record = self.finalrecord + self.select1
+                        }, label: {
+                            Text("　　")
+                        })
                     }
-                    Button{
-                        record = self.finalrecord + self.select4
-                    }label: {
-                        Text("歯磨き")
-                            .foregroundColor(.red)
-                            .font(.largeTitle)
-                            .background(Circle()
-                                .fill(Color.gray)
-                                .frame(width:80, height:80))
+                    ZStack{
+                        Button(action: {buttonDisabled.toggle()}, label: {
+                                        Text("節水あ")
+                                    })
+                                    .buttonStyle(MyButtonStyle())
+                                    .disabled(buttonDisabled)
+                                    .padding()
+                        Button(action: {
+                            buttonDisabled.toggle()
+                            record = self.finalrecord + self.select1
+                        }, label: {
+                            Text("　　")
+                        })
                     }
-                }.offset(y:-50)
+                }
                 HStack{
-                    Button{
-                        record = self.finalrecord + self.select5
-                    }label: {
-                        Text("洗顔ー")
-                            .foregroundColor(.red)
-                            .font(.largeTitle)
-                            .background(Circle()
-                                .fill(Color.gray)
-                                .frame(width:80, height:80))
+                    ZStack{
+                        Button(action: {buttonDisabled.toggle()}, label: {
+                                        Text("水撒き")
+                                    })
+                                    .buttonStyle(MyButtonStyle())
+                                    .disabled(buttonDisabled)
+                                    .padding()
+                        Button(action: {
+                            buttonDisabled.toggle()
+                            record = self.finalrecord + self.select1
+                        }, label: {
+                            Text("　　")
+                        })
                     }
-                    Button{
-                        record = self.finalrecord + self.select6
-                    }label: {
-                        Text("水まき")
-                            .foregroundColor(.red)
-                            .font(.largeTitle)
-                            .background(Circle()
-                                .fill(Color.gray)
-                                .frame(width:80, height:80))
+                    ZStack{
+                        Button(action: {buttonDisabled.toggle()}, label: {
+                                        Text("洗がん")
+                                    })
+                                    .buttonStyle(MyButtonStyle())
+                                    .disabled(buttonDisabled)
+                                    .padding()
+                        Button(action: {
+                            buttonDisabled.toggle()
+                            record = self.finalrecord + self.select1
+                        }, label: {
+                            Text("　　")
+                        })
                     }
-                    Button{
-                        record = self.finalrecord + self.select7
-                    }label: {
-                        Text("お風呂")
-                            .foregroundColor(.red)
-                            .font(.largeTitle)
-                            .background(Circle()
-                                .fill(Color.gray)
-                                .frame(width:80, height:80))
+                    ZStack{
+                        Button(action: {buttonDisabled.toggle()}, label: {
+                                        Text("歯磨き")
+                                    })
+                                    .buttonStyle(MyButtonStyle())
+                                    .disabled(buttonDisabled)
+                                    .padding()
+                        Button(action: {
+                            buttonDisabled.toggle()
+                            record = self.finalrecord + self.select1
+                        }, label: {
+                            Text("　　")
+                        })
                     }
-                    Button{
-                        record = self.finalrecord + self.select8
-                    }label: {
-                        Text("トイレ")
-                            .foregroundColor(.red)
-                            .font(.largeTitle)
-                            .background(Circle()
-                                .fill(Color.gray)
-                                .frame(width:80, height:80))
+                    ZStack{
+                        Button(action: {buttonDisabled.toggle()}, label: {
+                                        Text("みず巻")
+                                    })
+                                    .buttonStyle(MyButtonStyle())
+                                    .disabled(buttonDisabled)
+                                    .padding()
+                        Button(action: {
+                            buttonDisabled.toggle()
+                            record = self.finalrecord + self.select1
+                        }, label: {
+                            Text("　　")
+                        })
                     }
                 }
             }
+//                HStack{
+//                    Button{
+//                        record = self.finalrecord + self.select1
+//                    }label: {
+//                        Text("トイレ")
+//                            .foregroundColor(.red)
+//                            .font(.largeTitle)
+//                            .background(Circle()
+//                                .fill(Color.gray)
+//                                .frame(width:80, height:80))
+//                    }
+//                    Button{
+//                        record = self.finalrecord + self.select2
+//                    }label: {
+//                        Text("お風呂")
+//                            .foregroundColor(.red)
+//                            .font(.largeTitle)
+//                            .background(Circle()
+//                                .fill(Color.gray)
+//                                .frame(width:80, height:80))
+//                    }
+//                    Button{
+//                        record = self.finalrecord + self.select3
+//                    }label: {
+//                        Text("シャワ")
+//                            .foregroundColor(.red)
+//                            .font(.largeTitle)
+//                            .background(Circle()
+//                                .fill(Color.gray)
+//                                .frame(width:80, height:80))
+//                    }
+//                    Button{
+//                        record = self.finalrecord + self.select4
+//                    }label: {
+//                        Text("歯磨き")
+//                            .foregroundColor(.red)
+//                            .font(.largeTitle)
+//                            .background(Circle()
+//                                .fill(Color.gray)
+//                                .frame(width:80, height:80))
+//                    }
+//                }.offset(y:-50)
+//                HStack{
+//                    Button{
+//                        record = self.finalrecord + self.select5
+//                    }label: {
+//                        Text("洗顔ー")
+//                            .foregroundColor(.red)
+//                            .font(.largeTitle)
+//                            .background(Circle()
+//                                .fill(Color.gray)
+//                                .frame(width:80, height:80))
+//                    }
+//                    Button{
+//                        record = self.finalrecord + self.select6
+//                    }label: {
+//                        Text("水まき")
+//                            .foregroundColor(.red)
+//                            .font(.largeTitle)
+//                            .background(Circle()
+//                                .fill(Color.gray)
+//                                .frame(width:80, height:80))
+//                    }
+//                    Button{
+//                        record = self.finalrecord + self.select7
+//                    }label: {
+//                        Text("お風呂")
+//                            .foregroundColor(.red)
+//                            .font(.largeTitle)
+//                            .background(Circle()
+//                                .fill(Color.gray)
+//                                .frame(width:80, height:80))
+//                    }
+//                    Button{
+//                        record = self.finalrecord + self.select8
+//                    }label: {
+//                        Text("トイレ")
+//                            .foregroundColor(.red)
+//                            .font(.largeTitle)
+//                            .background(Circle()
+//                                .fill(Color.gray)
+//                                .frame(width:80, height:80))
+//                    }
+//                }
         }
     }
 }
-
+//ボタンを押したら色が変わるためのコード
+struct MyButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        MyButton(configuration:configuration)
+    }
+    
+    struct MyButton: View {
+        @Environment(\.isEnabled) var isEnabled
+        let configuration: MyButtonStyle.Configuration
+        var body: some View {
+            configuration.label
+                .foregroundColor(isEnabled ? .blue : .red)
+                .opacity(configuration.isPressed ? 0.2 : 1.0)
+                .padding(15)
+                .background(isEnabled ? Color.blue.opacity(0.4) : Color.gray)
+                .cornerRadius(10)
+        }
+    }
+}
 struct Visualization_Previews: PreviewProvider {
     static var previews: some View {
-        Visualization()
+        selectView()
         //日本語として表示する
             .environment(\.locale, Locale(identifier: "ja_JP"))
             .previewInterfaceOrientation(.landscapeRight)
