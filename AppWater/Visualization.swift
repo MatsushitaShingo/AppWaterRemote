@@ -97,17 +97,13 @@ struct Visualization: View {
                 Text("コップいっぱい")
                     .offset(y:50)
             }
-            //選ぶボタンでselectviewのモーダル表示を行う
-            Button(action: {
-                self.isShowingView1.toggle()
-            }){
+            NavigationLink(destination: SelectView()){
                 ZStack{
                     Color.blue
                         .frame(width:110,height: 110)
-                    Text("選ぶ").foregroundColor(.red)
+                    Text("選ぶ")
+                        .foregroundColor(.red)
                 }
-            }.fullScreenCover(isPresented: $isShowingView1){
-                SelectView()
             }.offset(x:300,y:50)
         }.offset(y:-50)
     }
