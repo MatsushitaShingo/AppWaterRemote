@@ -11,7 +11,7 @@ struct Visualization: View {
     
     @State private var isShowingView1: Bool = false
     let userdefaults = UserDefaults.standard
-    @State var NowWaterSaving = 0
+    @State var WaterTotal = 0
     @State private var selectDate = Date()
     
     var body: some View {
@@ -22,14 +22,14 @@ struct Visualization: View {
                     .font(.largeTitle)
                     .bold()
                 HStack{
-                    Text("\(self.NowWaterSaving)L")
+                    Text("\(self.WaterTotal)L")
                         .onAppear{
                             guard let userdefaults = UserDefaults.standard.value(forKey: "RecordData")as? Int else {return}
-                            self.NowWaterSaving = userdefaults
+                            self.WaterTotal = userdefaults
                         }
                     //節水量リセット機能
                     Button(action: {
-                        NowWaterSaving = 0
+                        WaterTotal = 0
                     }) {
                         Text("リセット")
                     }
@@ -45,44 +45,44 @@ struct Visualization: View {
             //今までの節水量の合計
             VStack{
                 Text("今までの合計")
-                Text("\(self.NowWaterSaving)L")
+                Text("\(self.WaterTotal)L")
                     .onAppear{
                         guard let userdefaults = UserDefaults.standard.value(forKey: "RecordData")as? Int else {return}
-                        self.NowWaterSaving = userdefaults
+                        self.WaterTotal = userdefaults
                     }
             }.offset(x:400,y:-200)
             
             
             //画面の中央で節水量に応じて画像を切り替える
-            if NowWaterSaving < 10{
+            if WaterTotal < 10{
                 Image("夜景")
                     .resizable()
                     .frame(width: 300, height: 300)
                     .clipShape(Circle())
                 Text("コップいっぱい")
                     .offset(y:50)
-            }else if NowWaterSaving < 50{
+            }else if WaterTotal < 50{
                 Image("水族館")
                     .resizable()
                     .frame(width: 300, height: 300)
                     .clipShape(Circle())
                 Text("ペットボトルいっぱい")
                     .offset(y:50)
-            }else if NowWaterSaving < 100{
+            }else if WaterTotal < 100{
                 Image("飛行機窓")
                     .resizable()
                     .frame(width: 300, height: 300)
                     .clipShape(Circle())
                 Text("お風呂いっぱい")
                     .offset(y:50)
-            }else if NowWaterSaving < 200{
+            }else if WaterTotal < 200{
                 Image("")
                     .resizable()
                     .frame(width: 300, height: 300)
                     .clipShape(Circle())
                 Text("コップいっぱい")
                     .offset(y:50)
-            }else if NowWaterSaving < 300{
+            }else if WaterTotal < 300{
                 Image("飛行機窓")
                     .resizable()
                     .frame(width: 300, height: 300)
@@ -107,280 +107,16 @@ struct Visualization: View {
                     Text("選ぶ").foregroundColor(.red)
                 }
             }.fullScreenCover(isPresented: $isShowingView1){
-                selectView()
+                SelectView()
             }.offset(x:300,y:50)
-        }
+        }.offset(y:-50)
     }
 }
 
-struct selectView:View{
-    
-    @State fileprivate var isShowingView: Bool = false
-    @State fileprivate var record = 0
-    @State fileprivate var finalrecord = 0
-    @State fileprivate var select1 = 1
-    @State fileprivate var select2 = 5
-    @State fileprivate var select3 = 10
-    @State fileprivate var select4 = 50
-    @State fileprivate var select5 = 100
-    @State fileprivate var select6 = 500
-    @State fileprivate var select7 = 1000
-    @State fileprivate var select8 = 5000
-    @Environment(\.dismiss) var dismiss
-    let userdefaults = UserDefaults.standard
-    @State private var buttonDisabled:Bool = true
-    
-    var body: some View {
-        
-        VStack{
-            //記録するボタンを押すと、record変数の値を保存してVisualizationで値を取り出せる状態にする
-            Button(action: {
-                            dismiss()
-                            UserDefaults.standard.set(self.record,forKey: "RecordData")
-                //データを合計させたい
-            self.finalrecord = self.select1+self.select2+self.select3+self.select4+self.select5+self.select6+self.select7+self.select8
-            UserDefaults.standard.set(finalrecord,forKey: "FinalRecordData")
-            
-                        }){
-                            ZStack{
-                                Color.blue
-                                    .frame(width:110,height: 110)
-                                Text("記録する").foregroundColor(.red)
-                            }
-                        }.fullScreenCover(isPresented: $isShowingView){
-                        }.offset(y:-100)
-            VStack{
-                HStack{
-                    ZStack{
-                        Button(action: {
-                            buttonDisabled.toggle()
-                        }, label: {
-                                        Text("トイレ")
-                                    })
-                                    .buttonStyle(MyButtonStyle())
-                                    .disabled(buttonDisabled)
-                                    .padding()
-                        Button(action: {
-                            buttonDisabled.toggle()
-                            record = self.finalrecord + self.select1
-                        }, label: {
-                            Text("　　")
-                        })
-                    }
-                    
-                    ZStack{
-                        Button(action: {buttonDisabled.toggle()}, label: {
-                                        Text("お風呂")
-                                    })
-                                    .buttonStyle(MyButtonStyle())
-                                    .disabled(buttonDisabled)
-                                    .padding()
-                        Button(action: {
-                            buttonDisabled.toggle()
-                            record = self.finalrecord + self.select1
-                        }, label: {
-                            Text("　　")
-                        })
-                    }
-                    ZStack{
-                        Button(action: {buttonDisabled.toggle()}, label: {
-                                        Text("シャワ")
-                                    })
-                                    .buttonStyle(MyButtonStyle())
-                                    .disabled(buttonDisabled)
-                                    .padding()
-                        Button(action: {
-                            buttonDisabled.toggle()
-                            record = self.finalrecord + self.select1
-                        }, label: {
-                            Text("　　")
-                        })
-                    }
-                    ZStack{
-                        Button(action: {buttonDisabled.toggle()}, label: {
-                                        Text("節水あ")
-                                    })
-                                    .buttonStyle(MyButtonStyle())
-                                    .disabled(buttonDisabled)
-                                    .padding()
-                        Button(action: {
-                            buttonDisabled.toggle()
-                            record = self.finalrecord + self.select1
-                        }, label: {
-                            Text("　　")
-                        })
-                    }
-                }
-                HStack{
-                    ZStack{
-                        Button(action: {buttonDisabled.toggle()}, label: {
-                                        Text("水撒き")
-                                    })
-                                    .buttonStyle(MyButtonStyle())
-                                    .disabled(buttonDisabled)
-                                    .padding()
-                        Button(action: {
-                            buttonDisabled.toggle()
-                            record = self.finalrecord + self.select1
-                        }, label: {
-                            Text("　　")
-                        })
-                    }
-                    ZStack{
-                        Button(action: {buttonDisabled.toggle()}, label: {
-                                        Text("洗がん")
-                                    })
-                                    .buttonStyle(MyButtonStyle())
-                                    .disabled(buttonDisabled)
-                                    .padding()
-                        Button(action: {
-                            buttonDisabled.toggle()
-                            record = self.finalrecord + self.select1
-                        }, label: {
-                            Text("　　")
-                        })
-                    }
-                    ZStack{
-                        Button(action: {buttonDisabled.toggle()}, label: {
-                                        Text("歯磨き")
-                                    })
-                                    .buttonStyle(MyButtonStyle())
-                                    .disabled(buttonDisabled)
-                                    .padding()
-                        Button(action: {
-                            buttonDisabled.toggle()
-                            record = self.finalrecord + self.select1
-                        }, label: {
-                            Text("　　")
-                        })
-                    }
-                    ZStack{
-                        Button(action: {buttonDisabled.toggle()}, label: {
-                                        Text("みず巻")
-                                    })
-                                    .buttonStyle(MyButtonStyle())
-                                    .disabled(buttonDisabled)
-                                    .padding()
-                        Button(action: {
-                            buttonDisabled.toggle()
-                            record = self.finalrecord + self.select1
-                        }, label: {
-                            Text("　　")
-                        })
-                    }
-                }
-            }
-//                HStack{
-//                    Button{
-//                        record = self.finalrecord + self.select1
-//                    }label: {
-//                        Text("トイレ")
-//                            .foregroundColor(.red)
-//                            .font(.largeTitle)
-//                            .background(Circle()
-//                                .fill(Color.gray)
-//                                .frame(width:80, height:80))
-//                    }
-//                    Button{
-//                        record = self.finalrecord + self.select2
-//                    }label: {
-//                        Text("お風呂")
-//                            .foregroundColor(.red)
-//                            .font(.largeTitle)
-//                            .background(Circle()
-//                                .fill(Color.gray)
-//                                .frame(width:80, height:80))
-//                    }
-//                    Button{
-//                        record = self.finalrecord + self.select3
-//                    }label: {
-//                        Text("シャワ")
-//                            .foregroundColor(.red)
-//                            .font(.largeTitle)
-//                            .background(Circle()
-//                                .fill(Color.gray)
-//                                .frame(width:80, height:80))
-//                    }
-//                    Button{
-//                        record = self.finalrecord + self.select4
-//                    }label: {
-//                        Text("歯磨き")
-//                            .foregroundColor(.red)
-//                            .font(.largeTitle)
-//                            .background(Circle()
-//                                .fill(Color.gray)
-//                                .frame(width:80, height:80))
-//                    }
-//                }.offset(y:-50)
-//                HStack{
-//                    Button{
-//                        record = self.finalrecord + self.select5
-//                    }label: {
-//                        Text("洗顔ー")
-//                            .foregroundColor(.red)
-//                            .font(.largeTitle)
-//                            .background(Circle()
-//                                .fill(Color.gray)
-//                                .frame(width:80, height:80))
-//                    }
-//                    Button{
-//                        record = self.finalrecord + self.select6
-//                    }label: {
-//                        Text("水まき")
-//                            .foregroundColor(.red)
-//                            .font(.largeTitle)
-//                            .background(Circle()
-//                                .fill(Color.gray)
-//                                .frame(width:80, height:80))
-//                    }
-//                    Button{
-//                        record = self.finalrecord + self.select7
-//                    }label: {
-//                        Text("お風呂")
-//                            .foregroundColor(.red)
-//                            .font(.largeTitle)
-//                            .background(Circle()
-//                                .fill(Color.gray)
-//                                .frame(width:80, height:80))
-//                    }
-//                    Button{
-//                        record = self.finalrecord + self.select8
-//                    }label: {
-//                        Text("トイレ")
-//                            .foregroundColor(.red)
-//                            .font(.largeTitle)
-//                            .background(Circle()
-//                                .fill(Color.gray)
-//                                .frame(width:80, height:80))
-//                    }
-//                }
-        }
-    }
-}
-//ボタンを押したら色が変わるためのコード
-struct MyButtonStyle: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        MyButton(configuration:configuration)
-    }
-    
-    struct MyButton: View {
-        @Environment(\.isEnabled) var isEnabled
-        let configuration: MyButtonStyle.Configuration
-        var body: some View {
-            configuration.label
-                .foregroundColor(isEnabled ? .blue : .red)
-                .opacity(configuration.isPressed ? 0.2 : 1.0)
-                .padding(15)
-                .background(isEnabled ? Color.blue.opacity(0.4) : Color.gray)
-                .cornerRadius(10)
-        }
-    }
-}
+
 struct Visualization_Previews: PreviewProvider {
     static var previews: some View {
-        selectView()
-        //日本語として表示する
-            .environment(\.locale, Locale(identifier: "ja_JP"))
+        Visualization()
             .previewInterfaceOrientation(.landscapeRight)
     }
 }

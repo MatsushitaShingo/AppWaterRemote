@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1E1E9FAD27E4A1FA00B244D9 /* Corporate-Logo-Medium-ver2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E9FAC27E4A1FA00B244D9 /* Corporate-Logo-Medium-ver2.ttf */; };
+		1E42530027F466EF00B12D9F /* SelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4252FF27F466EF00B12D9F /* SelectView.swift */; };
 		1E9D2D5B27E05C870035C405 /* AppWaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D5A27E05C870035C405 /* AppWaterApp.swift */; };
 		1E9D2D5D27E05C870035C405 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D5C27E05C870035C405 /* ContentView.swift */; };
 		1E9D2D5F27E05C880035C405 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D2D5E27E05C880035C405 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		1E1E9FAC27E4A1FA00B244D9 /* Corporate-Logo-Medium-ver2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Corporate-Logo-Medium-ver2.ttf"; sourceTree = "<group>"; };
 		1E1E9FAE27E4A73E00B244D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1E4252FF27F466EF00B12D9F /* SelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectView.swift; sourceTree = "<group>"; };
 		1E9D2D5727E05C870035C405 /* AppWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9D2D5A27E05C870035C405 /* AppWaterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWaterApp.swift; sourceTree = "<group>"; };
 		1E9D2D5C27E05C870035C405 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				1E9D2D8427E060FD0035C405 /* MovieView.swift */,
 				1E9D2D8627E061130035C405 /* StudyView.swift */,
 				1E9D2D8827E0613B0035C405 /* Visualization.swift */,
+				1E4252FF27F466EF00B12D9F /* SelectView.swift */,
 				1E9D2D5E27E05C880035C405 /* Assets.xcassets */,
 				1E9D2D6027E05C880035C405 /* Preview Content */,
 			);
@@ -282,6 +285,7 @@
 			files = (
 				1E9D2D5D27E05C870035C405 /* ContentView.swift in Sources */,
 				1E9D2D8527E060FD0035C405 /* MovieView.swift in Sources */,
+				1E42530027F466EF00B12D9F /* SelectView.swift in Sources */,
 				1E9D2D8727E061130035C405 /* StudyView.swift in Sources */,
 				1E9D2D5B27E05C870035C405 /* AppWaterApp.swift in Sources */,
 				1E9D2D8927E0613B0035C405 /* Visualization.swift in Sources */,
