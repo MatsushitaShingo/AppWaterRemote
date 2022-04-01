@@ -22,5 +22,6 @@ struct Quiz4: View {
 struct Quiz4_Previews: PreviewProvider {
     static var previews: some View {
         Quiz4()
+.previewInterfaceOrientation(.landscapeLeft)
     }
 }
