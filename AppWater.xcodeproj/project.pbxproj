@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E1E9FAD27E4A1FA00B244D9 /* Corporate-Logo-Medium-ver2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E9FAC27E4A1FA00B244D9 /* Corporate-Logo-Medium-ver2.ttf */; };
 		1E9D2D5B27E05C870035C405 /* AppWaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D5A27E05C870035C405 /* AppWaterApp.swift */; };
 		1E9D2D5D27E05C870035C405 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D5C27E05C870035C405 /* ContentView.swift */; };
 		1E9D2D5F27E05C880035C405 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D2D5E27E05C880035C405 /* Assets.xcassets */; };
@@ -17,11 +18,8 @@
 		1E9D2D8527E060FD0035C405 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D8427E060FD0035C405 /* MovieView.swift */; };
 		1E9D2D8727E061130035C405 /* StudyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D8627E061130035C405 /* StudyView.swift */; };
 		1E9D2D8927E0613B0035C405 /* Visualization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D8827E0613B0035C405 /* Visualization.swift */; };
-		3B9B585E27E083BF00915E69 /* Quiz1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9B585D27E083BF00915E69 /* Quiz1.swift */; };
-		3B9B586027E083DD00915E69 /* Quiz2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9B585F27E083DD00915E69 /* Quiz2.swift */; };
-		3B9B586227E083E700915E69 /* Quiz3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9B586127E083E700915E69 /* Quiz3.swift */; };
-		3B9B586427E083F300915E69 /* Quiz4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9B586327E083F300915E69 /* Quiz4.swift */; };
-		3B9B586627E083FE00915E69 /* Quiz5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9B586527E083FE00915E69 /* Quiz5.swift */; };
+		1E9D2D9027E074BA0035C405 /* movie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D2D8E27E074BA0035C405 /* movie.mp4 */; };
+		1E9D2D9127E074BA0035C405 /* mov_hts-samp001.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D2D8F27E074BA0035C405 /* mov_hts-samp001.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E1E9FAC27E4A1FA00B244D9 /* Corporate-Logo-Medium-ver2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Corporate-Logo-Medium-ver2.ttf"; sourceTree = "<group>"; };
+		1E1E9FAE27E4A73E00B244D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1E9D2D5727E05C870035C405 /* AppWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9D2D5A27E05C870035C405 /* AppWaterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWaterApp.swift; sourceTree = "<group>"; };
 		1E9D2D5C27E05C870035C405 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,11 +55,8 @@
 		1E9D2D8427E060FD0035C405 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
 		1E9D2D8627E061130035C405 /* StudyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyView.swift; sourceTree = "<group>"; };
 		1E9D2D8827E0613B0035C405 /* Visualization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visualization.swift; sourceTree = "<group>"; };
-		3B9B585D27E083BF00915E69 /* Quiz1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz1.swift; sourceTree = "<group>"; };
-		3B9B585F27E083DD00915E69 /* Quiz2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz2.swift; sourceTree = "<group>"; };
-		3B9B586127E083E700915E69 /* Quiz3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz3.swift; sourceTree = "<group>"; };
-		3B9B586327E083F300915E69 /* Quiz4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz4.swift; sourceTree = "<group>"; };
-		3B9B586527E083FE00915E69 /* Quiz5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz5.swift; sourceTree = "<group>"; };
+		1E9D2D8E27E074BA0035C405 /* movie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = movie.mp4; sourceTree = "<group>"; };
+		1E9D2D8F27E074BA0035C405 /* mov_hts-samp001.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mov_hts-samp001.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +87,9 @@
 		1E9D2D4E27E05C870035C405 = {
 			isa = PBXGroup;
 			children = (
+				1E9D2D8F27E074BA0035C405 /* mov_hts-samp001.mp4 */,
+				1E9D2D8E27E074BA0035C405 /* movie.mp4 */,
+				1E1E9FAC27E4A1FA00B244D9 /* Corporate-Logo-Medium-ver2.ttf */,
 				1E9D2D5927E05C870035C405 /* AppWater */,
 				1E9D2D6A27E05C880035C405 /* AppWaterTests */,
 				1E9D2D7427E05C880035C405 /* AppWaterUITests */,
@@ -110,17 +110,13 @@
 		1E9D2D5927E05C870035C405 /* AppWater */ = {
 			isa = PBXGroup;
 			children = (
+				1E1E9FAE27E4A73E00B244D9 /* Info.plist */,
 				1E9D2D5A27E05C870035C405 /* AppWaterApp.swift */,
 				1E9D2D5C27E05C870035C405 /* ContentView.swift */,
 				1E9D2D8427E060FD0035C405 /* MovieView.swift */,
-				1E9D2D5E27E05C880035C405 /* Assets.xcassets */,
 				1E9D2D8627E061130035C405 /* StudyView.swift */,
 				1E9D2D8827E0613B0035C405 /* Visualization.swift */,
-				3B9B585D27E083BF00915E69 /* Quiz1.swift */,
-				3B9B585F27E083DD00915E69 /* Quiz2.swift */,
-				3B9B586127E083E700915E69 /* Quiz3.swift */,
-				3B9B586327E083F300915E69 /* Quiz4.swift */,
-				3B9B586527E083FE00915E69 /* Quiz5.swift */,
+				1E9D2D5E27E05C880035C405 /* Assets.xcassets */,
 				1E9D2D6027E05C880035C405 /* Preview Content */,
 			);
 			path = AppWater;
@@ -255,6 +251,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E9D2D9027E074BA0035C405 /* movie.mp4 in Resources */,
+				1E9D2D9127E074BA0035C405 /* mov_hts-samp001.mp4 in Resources */,
+				1E1E9FAD27E4A1FA00B244D9 /* Corporate-Logo-Medium-ver2.ttf in Resources */,
 				1E9D2D6227E05C880035C405 /* Preview Assets.xcassets in Resources */,
 				1E9D2D5F27E05C880035C405 /* Assets.xcassets in Resources */,
 			);
@@ -453,6 +452,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AppWater/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppWater/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -481,6 +482,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AppWater/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppWater/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
