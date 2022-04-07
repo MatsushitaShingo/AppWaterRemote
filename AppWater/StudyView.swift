@@ -16,25 +16,20 @@ struct StudyView: View {
     
     var body: some View {
         ZStack{
-            
-            if isShowingView1 {
-                Quiz1()
-            } else {
-                Button {
-                    isShowingView1.toggle()
-                } label: {
-                    ZStack{
-                        Image(systemName: "drop.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 200, height: 200)
-                            .foregroundColor(.yellow)
-                        Text("クイズ１")
-                            .padding(.vertical)
-                            .foregroundColor(.white)
-                    }
-                }.offset(x:250,y:-150)
-            }
+            Button(action: {self.isShowingView1.toggle()}){
+                ZStack{
+                    Image(systemName: "drop.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200, height: 200)
+                        .foregroundColor(.yellow)
+                    Text("クイズ１")
+                        .padding(.vertical)
+                        .foregroundColor(.white)
+                }
+            }.sheet(isPresented: $isShowingView1){
+                ModalView()
+            }.offset(x:250,y:-150)
             
             
             if isShowingView2 {
@@ -121,6 +116,17 @@ struct StudyView: View {
 }
 
 
+struct ModalView: View {
+    @Environment(\.presentationMode) var presentation
+    
+    var body: some View {
+        Button(action: {
+            self.presentation.wrappedValue.dismiss()
+        }, label: {
+            Text("Close")
+        })
+    }
+}
 
 struct StudyView_Previews: PreviewProvider {
     static var previews: some View {

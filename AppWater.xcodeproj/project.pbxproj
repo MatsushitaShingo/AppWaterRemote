@@ -20,6 +20,11 @@
 		1E9D2D8927E0613B0035C405 /* Visualization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D8827E0613B0035C405 /* Visualization.swift */; };
 		1E9D2D9027E074BA0035C405 /* movie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D2D8E27E074BA0035C405 /* movie.mp4 */; };
 		1E9D2D9127E074BA0035C405 /* mov_hts-samp001.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D2D8F27E074BA0035C405 /* mov_hts-samp001.mp4 */; };
+		3B8A41B627F6BDE8004510FC /* Quiz1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8A41B527F6BDE8004510FC /* Quiz1.swift */; };
+		3B8A41B827F6BEA6004510FC /* Quiz2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8A41B727F6BEA6004510FC /* Quiz2.swift */; };
+		3B8A41BA27FE99D2004510FC /* Quiz3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8A41B927FE99D2004510FC /* Quiz3.swift */; };
+		3B8A41BC27FE99E3004510FC /* Quiz4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8A41BB27FE99E3004510FC /* Quiz4.swift */; };
+		3B8A41BE27FE99F3004510FC /* Quiz5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8A41BD27FE99F3004510FC /* Quiz5.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +62,11 @@
 		1E9D2D8827E0613B0035C405 /* Visualization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visualization.swift; sourceTree = "<group>"; };
 		1E9D2D8E27E074BA0035C405 /* movie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = movie.mp4; sourceTree = "<group>"; };
 		1E9D2D8F27E074BA0035C405 /* mov_hts-samp001.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mov_hts-samp001.mp4"; sourceTree = "<group>"; };
+		3B8A41B527F6BDE8004510FC /* Quiz1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz1.swift; sourceTree = "<group>"; };
+		3B8A41B727F6BEA6004510FC /* Quiz2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz2.swift; sourceTree = "<group>"; };
+		3B8A41B927FE99D2004510FC /* Quiz3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz3.swift; sourceTree = "<group>"; };
+		3B8A41BB27FE99E3004510FC /* Quiz4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz4.swift; sourceTree = "<group>"; };
+		3B8A41BD27FE99F3004510FC /* Quiz5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz5.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +125,11 @@
 				1E9D2D5C27E05C870035C405 /* ContentView.swift */,
 				1E9D2D8427E060FD0035C405 /* MovieView.swift */,
 				1E9D2D8627E061130035C405 /* StudyView.swift */,
+				3B8A41B527F6BDE8004510FC /* Quiz1.swift */,
+				3B8A41B727F6BEA6004510FC /* Quiz2.swift */,
+				3B8A41B927FE99D2004510FC /* Quiz3.swift */,
+				3B8A41BB27FE99E3004510FC /* Quiz4.swift */,
+				3B8A41BD27FE99F3004510FC /* Quiz5.swift */,
 				1E9D2D8827E0613B0035C405 /* Visualization.swift */,
 				1E9D2D5E27E05C880035C405 /* Assets.xcassets */,
 				1E9D2D6027E05C880035C405 /* Preview Content */,
@@ -280,12 +295,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B9B586427E083F300915E69 /* Quiz4.swift in Sources */,
-				3B9B585E27E083BF00915E69 /* Quiz1.swift in Sources */,
-				3B9B586627E083FE00915E69 /* Quiz5.swift in Sources */,
+				3B8A41BC27FE99E3004510FC /* Quiz4.swift in Sources */,
+				3B8A41B627F6BDE8004510FC /* Quiz1.swift in Sources */,
+				3B8A41BE27FE99F3004510FC /* Quiz5.swift in Sources */,
 				1E9D2D5D27E05C870035C405 /* ContentView.swift in Sources */,
-				3B9B586227E083E700915E69 /* Quiz3.swift in Sources */,
-				3B9B586027E083DD00915E69 /* Quiz2.swift in Sources */,
+				3B8A41BA27FE99D2004510FC /* Quiz3.swift in Sources */,
+				3B8A41B827F6BEA6004510FC /* Quiz2.swift in Sources */,
 				1E9D2D8527E060FD0035C405 /* MovieView.swift in Sources */,
 				1E9D2D8727E061130035C405 /* StudyView.swift in Sources */,
 				1E9D2D5B27E05C870035C405 /* AppWaterApp.swift in Sources */,
