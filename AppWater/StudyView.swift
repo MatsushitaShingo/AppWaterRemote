@@ -27,106 +27,80 @@ struct StudyView: View {
                         .padding(.vertical)
                         .foregroundColor(.white)
                 }
-            }.sheet(isPresented: $isShowingView1){
-                ModalView()
+            }.fullScreenCover(isPresented: $isShowingView1){
+                ModalView1()
             }.offset(x:250,y:-150)
             
             
-            if isShowingView2 {
-                Quiz2()
-            } else {
-                Button {
-                    isShowingView2.toggle()
-                } label: {
-                    ZStack{
-                        Image(systemName: "drop.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 200, height: 200)
-                            .foregroundColor(.red)
-                        Text("クイズ2")
-                            .padding(.vertical)
-                            .foregroundColor(.white)
-                    }
-                }.offset(x:150,y:150)
-            }
+            Button(action: {self.isShowingView2.toggle()}){
+                ZStack{
+                    Image(systemName: "drop.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200, height: 200)
+                        .foregroundColor(.red)
+                    Text("クイズ2")
+                        .padding(.vertical)
+                        .foregroundColor(.white)
+                }
+            } .fullScreenCover(isPresented: $isShowingView2){
+                ModalView2()
+            }.offset(x:150,y:150)
             
+                
+
+            Button(action: {self.isShowingView3.toggle()}){
+                ZStack{
+                    Image(systemName: "drop.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200, height: 200)
+                        .foregroundColor(.blue)
+                    Text("クイズ3")
+                        .padding(.vertical)
+                        .foregroundColor(.white)
+                }
+            }.fullScreenCover(isPresented: $isShowingView3){
+                ModalView3()
+            } .offset(x:-150,y:150)
             
-            if isShowingView3 {
-                Quiz3()
-            } else {
-                Button {
-                    isShowingView3.toggle()
-                } label: {
-                    ZStack{
-                        Image(systemName: "drop.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 200, height: 200)
-                            .foregroundColor(.blue)
-                        Text("クイズ3")
-                            .padding(.vertical)
-                            .foregroundColor(.white)
-                    }
-                }.offset(x:-150,y:150)
-            }
+               
             
+            Button(action: {self.isShowingView4.toggle()}){
+                ZStack{
+                    Image(systemName: "drop.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200, height: 200)
+                        .foregroundColor(.purple)
+                    Text("クイズ１")
+                        .padding(.vertical)
+                        .foregroundColor(.white)
+                }
+            }.fullScreenCover(isPresented: $isShowingView4){
+                ModalView4()
+            } .offset(x:-250,y:-150)
             
-            if isShowingView4 {
-                Quiz4()
-            } else {
-                Button {
-                    isShowingView4.toggle()
-                } label: {
-                    ZStack{
-                        Image(systemName: "drop.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 200, height: 200)
-                            .foregroundColor(.purple)
-                        Text("クイズ4")
-                            .padding(.vertical)
-                            .foregroundColor(.white)
-                    }
-                }.offset(x:-250,y:-150)
-            }
-            
-            if isShowingView5 {
-                Quiz5()
-            } else {
-                Button {
-                    isShowingView5.toggle()
-                } label: {
-                    ZStack{
-                        Image(systemName: "drop.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 200, height: 200)
-                            .foregroundColor(.green)
-                        Text("クイズ5")
-                            .padding(.vertical)
-                            .foregroundColor(.white)
-                    }
-                }.offset(y:-300)
-            }
+            Button(action: {self.isShowingView5.toggle()}){
+                ZStack{
+                    Image(systemName: "drop.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200, height: 200)
+                        .foregroundColor(.green)
+                    Text("クイズ１")
+                        .padding(.vertical)
+                        .foregroundColor(.white)
+                }
+            }.fullScreenCover(isPresented: $isShowingView5){
+                ModalView5()
+            }.offset(y:-300)
         }
         
     }
     
 }
 
-
-struct ModalView: View {
-    @Environment(\.presentationMode) var presentation
-    
-    var body: some View {
-        Button(action: {
-            self.presentation.wrappedValue.dismiss()
-        }, label: {
-            Text("Close")
-        })
-    }
-}
 
 struct StudyView_Previews: PreviewProvider {
     static var previews: some View {
