@@ -73,7 +73,7 @@ struct StudyView: View {
                         .scaledToFit()
                         .frame(width: 200, height: 200)
                         .foregroundColor(.purple)
-                    Text("クイズ１")
+                    Text("クイズ4")
                         .padding(.vertical)
                         .foregroundColor(.white)
                 }
@@ -88,7 +88,7 @@ struct StudyView: View {
                         .scaledToFit()
                         .frame(width: 200, height: 200)
                         .foregroundColor(.green)
-                    Text("クイズ１")
+                    Text("クイズ5")
                         .padding(.vertical)
                         .foregroundColor(.white)
                 }
