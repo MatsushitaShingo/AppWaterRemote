@@ -22,7 +22,14 @@ struct SelectView:View{
     @State fileprivate var select8 = 24
     @Environment(\.dismiss) var dismiss
     let userdefaults = UserDefaults.standard
-    @State private var buttonDisabled:Bool = true
+    @State private var buttonDisabled1 : Bool = true
+    @State private var buttonDisabled2 : Bool = true
+    @State private var buttonDisabled3 : Bool = true
+    @State private var buttonDisabled4 : Bool = true
+    @State private var buttonDisabled5 : Bool = true
+    @State private var buttonDisabled6 : Bool = true
+    @State private var buttonDisabled7: Bool = true
+    @State private var buttonDisabled8 : Bool = true
     
     var body: some View {
         ZStack{
@@ -39,9 +46,9 @@ struct SelectView:View{
                 
                             }){
                                 ZStack{
-                                    Color.blue
+                                    Color.green
                                         .frame(width:110,height: 110)
-                                    Text("記録する")
+                                    Text("節水した！")
                                         .foregroundColor(.red)
                                 }
                             }.fullScreenCover(isPresented: $isShowingView){
@@ -50,7 +57,14 @@ struct SelectView:View{
                     HStack{
                         ZStack{
                             Button(action: {
-                                buttonDisabled.toggle()
+                                buttonDisabled1.toggle()
+                                buttonDisabled2 = true
+                                buttonDisabled3 = true
+                                buttonDisabled4 = true
+                                buttonDisabled5 = true
+                                buttonDisabled6 = true
+                                buttonDisabled7 = true
+                                buttonDisabled8 = true
                                 SelectTotal = self.SelectTotalRecord + self.select1
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
@@ -58,7 +72,7 @@ struct SelectView:View{
                                                 .frame(width:250, height: 200)
                             })
                             Button(action: {
-                                buttonDisabled.toggle()
+                                buttonDisabled1.toggle()
                             }, label: {
                                 VStack{
                                     Text("歯磨きはコップの水で")
@@ -66,13 +80,20 @@ struct SelectView:View{
                                 }
                                         })
                                         .buttonStyle(MyButtonStyle())
-                                        .disabled(buttonDisabled)
+                                        .disabled(buttonDisabled1)
                                         .padding()
                         }
                         
                         ZStack{
                             Button(action: {
-                                buttonDisabled.toggle()
+                                buttonDisabled2.toggle()
+                                buttonDisabled1 = true
+                                buttonDisabled3 = true
+                                buttonDisabled4 = true
+                                buttonDisabled5 = true
+                                buttonDisabled6 = true
+                                buttonDisabled7 = true
+                                buttonDisabled8 = true
                                 SelectTotal = self.SelectTotalRecord + self.select2
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
@@ -80,7 +101,7 @@ struct SelectView:View{
                                                 .frame(width:250, height: 200)
                             })
                             Button(action: {
-                                buttonDisabled.toggle()
+                                buttonDisabled2.toggle()
                             }, label: {
                                 VStack{
                                     Text("シャワーはこまめに")
@@ -88,12 +109,19 @@ struct SelectView:View{
                                 }
                                         })
                                         .buttonStyle(MyButtonStyle())
-                                        .disabled(buttonDisabled)
+                                        .disabled(buttonDisabled2)
                                         .padding()
                         }
                         ZStack{
                             Button(action: {
-                                buttonDisabled.toggle()
+                                buttonDisabled3.toggle()
+                                buttonDisabled1 = true
+                                buttonDisabled2 = true
+                                buttonDisabled4 = true
+                                buttonDisabled5 = true
+                                buttonDisabled6 = true
+                                buttonDisabled7 = true
+                                buttonDisabled8 = true
                                 SelectTotal = self.SelectTotalRecord + self.select3
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
@@ -101,7 +129,7 @@ struct SelectView:View{
                                                 .frame(width:250, height: 200)
                             })
                             Button(action: {
-                                buttonDisabled.toggle()
+                                buttonDisabled3.toggle()
                             }, label: {
                                 VStack{
                                     Text("風呂水は選択に使う")
@@ -109,12 +137,19 @@ struct SelectView:View{
                                 }
                                         })
                                         .buttonStyle(MyButtonStyle())
-                                        .disabled(buttonDisabled)
+                                        .disabled(buttonDisabled3)
                                         .padding()
                         }
                         ZStack{
                             Button(action: {
-                                buttonDisabled.toggle()
+                                buttonDisabled4.toggle()
+                                buttonDisabled1 = true
+                                buttonDisabled2 = true
+                                buttonDisabled3 = true
+                                buttonDisabled5 = true
+                                buttonDisabled6 = true
+                                buttonDisabled7 = true
+                                buttonDisabled8 = true
                                 SelectTotal = self.SelectTotalRecord + self.select4
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
@@ -122,7 +157,7 @@ struct SelectView:View{
                                                 .frame(width:250, height: 200)
                             })
                             Button(action: {
-                                buttonDisabled.toggle()
+                                buttonDisabled4.toggle()
                             }, label: {
                                 VStack{
                                     Text("トイレは一回で流す")
@@ -130,14 +165,21 @@ struct SelectView:View{
                                 }
                                         })
                                         .buttonStyle(MyButtonStyle())
-                                        .disabled(buttonDisabled)
+                                        .disabled(buttonDisabled4)
                                         .padding()
                         }
                     }
                     HStack{
                         ZStack{
                             Button(action: {
-                                buttonDisabled.toggle()
+                                buttonDisabled5.toggle()
+                                buttonDisabled1 = true
+                                buttonDisabled2 = true
+                                buttonDisabled3 = true
+                                buttonDisabled4 = true
+                                buttonDisabled6 = true
+                                buttonDisabled7 = true
+                                buttonDisabled8 = true
                                 SelectTotal = self.SelectTotalRecord + self.select5
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
@@ -145,7 +187,7 @@ struct SelectView:View{
                                                 .frame(width:250, height: 200)
                             })
                             Button(action: {
-                                buttonDisabled.toggle()
+                                buttonDisabled5.toggle()
                             }, label: {
                                 VStack{
                                     Text("食器はつけおき洗い")
@@ -153,12 +195,19 @@ struct SelectView:View{
                                 }
                                         })
                                         .buttonStyle(MyButtonStyle())
-                                        .disabled(buttonDisabled)
+                                        .disabled(buttonDisabled5)
                                         .padding()
                         }
                         ZStack{
                             Button(action: {
-                                buttonDisabled.toggle()
+                                buttonDisabled6.toggle()
+                                buttonDisabled1 = true
+                                buttonDisabled2 = true
+                                buttonDisabled3 = true
+                                buttonDisabled4 = true
+                                buttonDisabled5 = true
+                                buttonDisabled7 = true
+                                buttonDisabled8 = true
                                 SelectTotal = self.SelectTotalRecord + self.select6
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
@@ -166,7 +215,7 @@ struct SelectView:View{
                                                 .frame(width:250, height: 200)
                             })
                             Button(action: {
-                                buttonDisabled.toggle()
+                                buttonDisabled6.toggle()
                             }, label: {
                                 VStack{
                                     Text("雨水を有効活用")
@@ -174,12 +223,19 @@ struct SelectView:View{
                                 }
                                         })
                                         .buttonStyle(MyButtonStyle())
-                                        .disabled(buttonDisabled)
+                                        .disabled(buttonDisabled6)
                                         .padding()
                         }
                         ZStack{
                             Button(action: {
-                                buttonDisabled.toggle()
+                                buttonDisabled7.toggle()
+                                buttonDisabled1 = true
+                                buttonDisabled2 = true
+                                buttonDisabled3 = true
+                                buttonDisabled4 = true
+                                buttonDisabled5 = true
+                                buttonDisabled6 = true
+                                buttonDisabled8 = true
                                 SelectTotal = self.SelectTotalRecord + self.select7
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
@@ -187,7 +243,7 @@ struct SelectView:View{
                                                 .frame(width:250, height: 200)
                             })
                             Button(action: {
-                                buttonDisabled.toggle()
+                                buttonDisabled7.toggle()
                             }, label: {
                                 VStack{
                                     Text("洗濯はまとめ洗い")
@@ -195,12 +251,19 @@ struct SelectView:View{
                                 }
                                         })
                                         .buttonStyle(MyButtonStyle())
-                                        .disabled(buttonDisabled)
+                                        .disabled(buttonDisabled7)
                                         .padding()
                         }
                         ZStack{
                             Button(action: {
-                                buttonDisabled.toggle()
+                                buttonDisabled8.toggle()
+                                buttonDisabled1 = true
+                                buttonDisabled2 = true
+                                buttonDisabled3 = true
+                                buttonDisabled4 = true
+                                buttonDisabled5 = true
+                                buttonDisabled6 = true
+                                buttonDisabled7 = true
                                 SelectTotal = self.SelectTotalRecord + self.select8
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
@@ -208,7 +271,7 @@ struct SelectView:View{
                                                 .frame(width:250, height: 200)
                             })
                             Button(action: {
-                                buttonDisabled.toggle()
+                                buttonDisabled8.toggle()
                             }, label: {
                                 VStack{
                                     Text("洗顔は洗面器で")
@@ -216,95 +279,11 @@ struct SelectView:View{
                                 }
                                         })
                                         .buttonStyle(MyButtonStyle())
-                                        .disabled(buttonDisabled)
+                                        .disabled(buttonDisabled8)
                                         .padding()
                         }
                     }
                 }
-    //                HStack{
-    //                    Button{
-    //                        record = self.finalrecord + self.select1
-    //                    }label: {
-    //                        Text("トイレ")
-    //                            .foregroundColor(.red)
-    //                            .font(.largeTitle)
-    //                            .background(Circle()
-    //                                .fill(Color.gray)
-    //                                .frame(width:80, height:80))
-    //                    }
-    //                    Button{
-    //                        record = self.finalrecord + self.select2
-    //                    }label: {
-    //                        Text("お風呂")
-    //                            .foregroundColor(.red)
-    //                            .font(.largeTitle)
-    //                            .background(Circle()
-    //                                .fill(Color.gray)
-    //                                .frame(width:80, height:80))
-    //                    }
-    //                    Button{
-    //                        record = self.finalrecord + self.select3
-    //                    }label: {
-    //                        Text("シャワ")
-    //                            .foregroundColor(.red)
-    //                            .font(.largeTitle)
-    //                            .background(Circle()
-    //                                .fill(Color.gray)
-    //                                .frame(width:80, height:80))
-    //                    }
-    //                    Button{
-    //                        record = self.finalrecord + self.select4
-    //                    }label: {
-    //                        Text("歯磨き")
-    //                            .foregroundColor(.red)
-    //                            .font(.largeTitle)
-    //                            .background(Circle()
-    //                                .fill(Color.gray)
-    //                                .frame(width:80, height:80))
-    //                    }
-    //                }.offset(y:-50)
-    //                HStack{
-    //                    Button{
-    //                        record = self.finalrecord + self.select5
-    //                    }label: {
-    //                        Text("洗顔ー")
-    //                            .foregroundColor(.red)
-    //                            .font(.largeTitle)
-    //                            .background(Circle()
-    //                                .fill(Color.gray)
-    //                                .frame(width:80, height:80))
-    //                    }
-    //                    Button{
-    //                        record = self.finalrecord + self.select6
-    //                    }label: {
-    //                        Text("水まき")
-    //                            .foregroundColor(.red)
-    //                            .font(.largeTitle)
-    //                            .background(Circle()
-    //                                .fill(Color.gray)
-    //                                .frame(width:80, height:80))
-    //                    }
-    //                    Button{
-    //                        record = self.finalrecord + self.select7
-    //                    }label: {
-    //                        Text("お風呂")
-    //                            .foregroundColor(.red)
-    //                            .font(.largeTitle)
-    //                            .background(Circle()
-    //                                .fill(Color.gray)
-    //                                .frame(width:80, height:80))
-    //                    }
-    //                    Button{
-    //                        record = self.finalrecord + self.select8
-    //                    }label: {
-    //                        Text("トイレ")
-    //                            .foregroundColor(.red)
-    //                            .font(.largeTitle)
-    //                            .background(Circle()
-    //                                .fill(Color.gray)
-    //                                .frame(width:80, height:80))
-    //                    }
-    //                }
             }
         }
     }

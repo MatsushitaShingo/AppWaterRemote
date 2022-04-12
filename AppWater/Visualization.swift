@@ -31,6 +31,7 @@ struct Visualization: View {
                                 guard let userdefaults = UserDefaults.standard.value(forKey: "RecordData")as? Int else {return}
                                 //データを加算していく
                                 self.MonthTotal += userdefaults
+                                UserDefaults.standard.set(self.MonthTotal,forKey: "MonthTotalData")
                             }
                         //節水量リセット機能
                         Button(action: {
