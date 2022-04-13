@@ -27,7 +27,7 @@ struct ModalView1: View {
                         .navigationBarItems(trailing:Button(action:{self.PresentationMode.wrappedValue.dismiss()
                         })
                                             {
-                            Text("close")
+                            Text("戻る")
                         })
                     
                 }
@@ -69,12 +69,14 @@ struct Quiz1answer1: View {
             
 
             ZStack{
-                    Color.red
-                        .frame(width:650,height: 300)
-                                Text("問題")
+                   Rectangle()
+                    .stroke(lineWidth: 5)
+                    .frame(width:800,height: 300)
+                                Text("熊本の地下水を汚染している代表的な物質はどれ？")
                                     .foregroundColor(.black)
                                     .font(.largeTitle)
                                     .bold()
+                                    .multilineTextAlignment(.center)
                             }
 
                 .padding()
@@ -83,19 +85,19 @@ struct Quiz1answer1: View {
 
                 NavigationLink(destination: Quiz1answer1true()) {
 
-                    Label("ハート", systemImage: "suit.heart.fill")
+                    Label("硝酸性窒素", systemImage: "suit.heart.fill")
                         .labelStyle(MyLabelStyle1(color: .red))
                 }
                         
                 NavigationLink(destination: Quiz1answer1false()) {
 
-                    Label("クラブ", systemImage: "suit.club.fill")
+                    Label("全シアン", systemImage: "suit.club.fill")
                         .labelStyle(MyLabelStyle1(color: .green))
                 }
                         
                 NavigationLink(destination: Quiz1answer1false()) {
 
-                    Label("ダイヤ", systemImage: "suit.diamond.fill")
+                    Label("四塩化炭素", systemImage: "suit.diamond.fill")
                         .labelStyle(MyLabelStyle1(color: .yellow))
 
                 }
@@ -260,12 +262,14 @@ struct Quiz1answer2: View {
             
 
             ZStack{
-                    Color.red
-                        .frame(width:650,height: 300)
-                                Text("問題")
+                Rectangle()
+                 .stroke(lineWidth: 5)
+                 .frame(width:850,height: 300)
+                                Text("地下水は日本の水使用量全体の約何％を占めている？")
                                     .foregroundColor(.black)
                                     .font(.largeTitle)
                                     .bold()
+                                    .multilineTextAlignment(.center)
                             }
 
                 .padding()
@@ -274,19 +278,19 @@ struct Quiz1answer2: View {
 
                 NavigationLink(destination: Quiz1answer2false()) {
 
-                    Label("ハート", systemImage: "suit.heart.fill")
+                    Label("30%", systemImage: "suit.heart.fill")
                         .labelStyle(MyLabelStyle2(color: .red))
                 }
                         
                 NavigationLink(destination: Quiz1answer2true()) {
 
-                    Label("クラブ", systemImage: "suit.club.fill")
+                    Label("10%", systemImage: "suit.club.fill")
                         .labelStyle(MyLabelStyle2(color: .green))
                 }
                         
                 NavigationLink(destination: Quiz1answer2false()) {
 
-                    Label("ダイヤ", systemImage: "suit.diamond.fill")
+                    Label("50%", systemImage: "suit.diamond.fill")
                         .labelStyle(MyLabelStyle2(color: .yellow))
 
                 }
@@ -453,12 +457,14 @@ struct Quiz1answer3: View {
             
 
             ZStack{
-                    Color.red
-                        .frame(width:650,height: 300)
-                                Text("問題")
+                Rectangle()
+                 .stroke(lineWidth: 5)
+                 .frame(width:1050,height: 300)
+                                Text("地下水が減少している理由は2つあり、一つは、水田が畑になっていることである。もう一つは？")
                                     .foregroundColor(.black)
                                     .font(.largeTitle)
                                     .bold()
+                                    .multilineTextAlignment(.center)
                             }
 
                 .padding()
@@ -467,19 +473,19 @@ struct Quiz1answer3: View {
 
                 NavigationLink(destination: Quiz1answer3false()) {
 
-                    Label("ハート", systemImage: "suit.heart.fill")
+                    Label("街が広がって、雨水が染み込まないから", systemImage: "suit.heart.fill")
                         .labelStyle(MyLabelStyle3(color: .red))
                 }
                         
                 NavigationLink(destination: Quiz1answer3false()) {
 
-                    Label("クラブ", systemImage: "suit.club.fill")
+                    Label("森が広がって、雨水が染み込まないから", systemImage: "suit.club.fill")
                         .labelStyle(MyLabelStyle3(color: .green))
                 }
                         
                 NavigationLink(destination: Quiz1answer3true()) {
 
-                    Label("ダイヤ", systemImage: "suit.diamond.fill")
+                    Label("土地が汚れて、雨水が染み込まないから", systemImage: "suit.diamond.fill")
                         .labelStyle(MyLabelStyle3(color: .yellow))
 
                 }
