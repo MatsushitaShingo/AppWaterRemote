@@ -27,12 +27,15 @@ struct Visualization: View {
                         .bold()
                     HStack{
                         Text("\(self.MonthTotal)L")
-                            .onAppear{
-                                guard let userdefaults = UserDefaults.standard.value(forKey: "RecordData")as? Int else {return}
+                            .onAppear(){
+                                guard let RecordData = UserDefaults.standard.value(forKey: "RecordData")as? Int else {return}
                                 //データを加算していく
-                                self.MonthTotal += userdefaults
+                                self.MonthTotal += RecordData
                                 UserDefaults.standard.set(self.MonthTotal,forKey: "MonthTotalData")
+                                print(RecordData)
+                                print(MonthTotal)
                             }
+                               
                         //節水量リセット機能
                         Button(action: {
                             MonthTotal = 0

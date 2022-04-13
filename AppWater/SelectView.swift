@@ -28,7 +28,7 @@ struct SelectView:View{
     @State private var buttonDisabled4 : Bool = true
     @State private var buttonDisabled5 : Bool = true
     @State private var buttonDisabled6 : Bool = true
-    @State private var buttonDisabled7: Bool = true
+    @State private var buttonDisabled7 : Bool = true
     @State private var buttonDisabled8 : Bool = true
     
     var body: some View {
@@ -40,10 +40,11 @@ struct SelectView:View{
                 Button(action: {
                                 dismiss()
                                 UserDefaults.standard.set(self.SelectTotal,forKey: "RecordData")
-                    //データを合計させたい
-                self.SelectTotalRecord = self.select1+self.select2+self.select3+self.select4+self.select5+self.select6+self.select7+self.select8
-                UserDefaults.standard.set(SelectTotalRecord,forKey: "FinalRecordData")
-                
+                    print(SelectTotal)
+//                    //データを合計させたい
+//                self.SelectTotalRecord = self.select1+self.select2+self.select3+self.select4+self.select5+self.select6+self.select7+self.select8
+//                UserDefaults.standard.set(SelectTotalRecord,forKey: "FinalRecordData")
+//                    print(SelectTotalRecord)
                             }){
                                 ZStack{
                                     Color.green
@@ -57,6 +58,7 @@ struct SelectView:View{
                     HStack{
                         ZStack{
                             Button(action: {
+                                //他のボタンの色を戻す
                                 buttonDisabled1.toggle()
                                 buttonDisabled2 = true
                                 buttonDisabled3 = true
@@ -65,7 +67,12 @@ struct SelectView:View{
                                 buttonDisabled6 = true
                                 buttonDisabled7 = true
                                 buttonDisabled8 = true
-                                SelectTotal = self.SelectTotalRecord + self.select1
+                                
+                                if buttonDisabled1 == true{
+                                    select1 = 0
+                                }
+                                SelectTotal += self.select1
+                                
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
                                     .fill(Color.gray)
@@ -299,7 +306,7 @@ struct MyButtonStyle: ButtonStyle {
         let configuration: MyButtonStyle.Configuration
         var body: some View {
             configuration.label
-                .foregroundColor(isEnabled ? .blue : .red)
+                .foregroundColor(isEnabled ? .red : .blue)
                 .opacity(configuration.isPressed ? 0.2 : 1.0)
                 .padding(15)
                 .background(isEnabled ? Color.blue.opacity(0.4) : Color.white)
