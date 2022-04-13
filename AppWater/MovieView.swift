@@ -142,7 +142,7 @@ struct MovieView: View {
 }
 struct moviestart: View{
     
-     private let player = AVPlayer(url: Bundle.main.url(forResource:"movie",withExtension: "mp4")!)
+     private let player = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２　仮完成",withExtension: "mp4")!)
     
      var body: some View{
         VideoPlayer(player: player)
@@ -157,7 +157,7 @@ struct moviestart: View{
     }
     struct moviestart1: View{
         
-         private let player1 = AVPlayer(url: Bundle.main.url(forResource:"mov_hts-samp001",withExtension: "mp4")!)
+         private let player1 = AVPlayer(url: Bundle.main.url(forResource:"SDGs 山北-1",withExtension: "mov")!)
         
          var body: some View{
             VideoPlayer(player: player1)

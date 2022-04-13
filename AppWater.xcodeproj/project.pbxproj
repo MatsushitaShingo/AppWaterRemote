@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1E1E9FAD27E4A1FA00B244D9 /* Corporate-Logo-Medium-ver2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E9FAC27E4A1FA00B244D9 /* Corporate-Logo-Medium-ver2.ttf */; };
+		1E3BD5B828068CA000E6A405 /* 熊本の水２　仮完成.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E3BD5B728068CA000E6A405 /* 熊本の水２　仮完成.mp4 */; };
+		1E3BD5BA28068E0A00E6A405 /* SDGs 山北-1.mov in Resources */ = {isa = PBXBuildFile; fileRef = 1E3BD5B928068E0A00E6A405 /* SDGs 山北-1.mov */; };
+		1E3BD5BC280704F700E6A405 /* Quiz1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3BD5BB280704F700E6A405 /* Quiz1.swift */; };
+		1E3BD5BE2807057C00E6A405 /* Quiz2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3BD5BD2807057C00E6A405 /* Quiz2.swift */; };
+		1E3BD5C02807058600E6A405 /* Quiz4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3BD5BF2807058600E6A405 /* Quiz4.swift */; };
+		1E3BD5C22807059100E6A405 /* Quiz3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3BD5C12807059100E6A405 /* Quiz3.swift */; };
+		1E3BD5C42807059F00E6A405 /* Quiz5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3BD5C32807059F00E6A405 /* Quiz5.swift */; };
 		1E42530027F466EF00B12D9F /* SelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4252FF27F466EF00B12D9F /* SelectView.swift */; };
 		1E9D2D5B27E05C870035C405 /* AppWaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D5A27E05C870035C405 /* AppWaterApp.swift */; };
 		1E9D2D5D27E05C870035C405 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D5C27E05C870035C405 /* ContentView.swift */; };
@@ -43,6 +50,13 @@
 /* Begin PBXFileReference section */
 		1E1E9FAC27E4A1FA00B244D9 /* Corporate-Logo-Medium-ver2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Corporate-Logo-Medium-ver2.ttf"; sourceTree = "<group>"; };
 		1E1E9FAE27E4A73E00B244D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1E3BD5B728068CA000E6A405 /* 熊本の水２　仮完成.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "熊本の水２　仮完成.mp4"; sourceTree = "<group>"; };
+		1E3BD5B928068E0A00E6A405 /* SDGs 山北-1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "SDGs 山北-1.mov"; sourceTree = "<group>"; };
+		1E3BD5BB280704F700E6A405 /* Quiz1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz1.swift; sourceTree = "<group>"; };
+		1E3BD5BD2807057C00E6A405 /* Quiz2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz2.swift; sourceTree = "<group>"; };
+		1E3BD5BF2807058600E6A405 /* Quiz4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz4.swift; sourceTree = "<group>"; };
+		1E3BD5C12807059100E6A405 /* Quiz3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz3.swift; sourceTree = "<group>"; };
+		1E3BD5C32807059F00E6A405 /* Quiz5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz5.swift; sourceTree = "<group>"; };
 		1E4252FF27F466EF00B12D9F /* SelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectView.swift; sourceTree = "<group>"; };
 		1E9D2D5727E05C870035C405 /* AppWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9D2D5A27E05C870035C405 /* AppWaterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWaterApp.swift; sourceTree = "<group>"; };
@@ -89,6 +103,8 @@
 		1E9D2D4E27E05C870035C405 = {
 			isa = PBXGroup;
 			children = (
+				1E3BD5B928068E0A00E6A405 /* SDGs 山北-1.mov */,
+				1E3BD5B728068CA000E6A405 /* 熊本の水２　仮完成.mp4 */,
 				1E9D2D8F27E074BA0035C405 /* mov_hts-samp001.mp4 */,
 				1E9D2D8E27E074BA0035C405 /* movie.mp4 */,
 				1E1E9FAC27E4A1FA00B244D9 /* Corporate-Logo-Medium-ver2.ttf */,
@@ -117,6 +133,11 @@
 				1E9D2D5C27E05C870035C405 /* ContentView.swift */,
 				1E9D2D8427E060FD0035C405 /* MovieView.swift */,
 				1E9D2D8627E061130035C405 /* StudyView.swift */,
+				1E3BD5BB280704F700E6A405 /* Quiz1.swift */,
+				1E3BD5BD2807057C00E6A405 /* Quiz2.swift */,
+				1E3BD5C12807059100E6A405 /* Quiz3.swift */,
+				1E3BD5BF2807058600E6A405 /* Quiz4.swift */,
+				1E3BD5C32807059F00E6A405 /* Quiz5.swift */,
 				1E9D2D8827E0613B0035C405 /* Visualization.swift */,
 				1E4252FF27F466EF00B12D9F /* SelectView.swift */,
 				1E9D2D5E27E05C880035C405 /* Assets.xcassets */,
@@ -254,6 +275,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E3BD5BA28068E0A00E6A405 /* SDGs 山北-1.mov in Resources */,
+				1E3BD5B828068CA000E6A405 /* 熊本の水２　仮完成.mp4 in Resources */,
 				1E9D2D9027E074BA0035C405 /* movie.mp4 in Resources */,
 				1E9D2D9127E074BA0035C405 /* mov_hts-samp001.mp4 in Resources */,
 				1E1E9FAD27E4A1FA00B244D9 /* Corporate-Logo-Medium-ver2.ttf in Resources */,
@@ -283,10 +306,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E3BD5C22807059100E6A405 /* Quiz3.swift in Sources */,
+				1E3BD5C02807058600E6A405 /* Quiz4.swift in Sources */,
 				1E9D2D5D27E05C870035C405 /* ContentView.swift in Sources */,
+				1E3BD5C42807059F00E6A405 /* Quiz5.swift in Sources */,
+				1E3BD5BE2807057C00E6A405 /* Quiz2.swift in Sources */,
 				1E9D2D8527E060FD0035C405 /* MovieView.swift in Sources */,
 				1E42530027F466EF00B12D9F /* SelectView.swift in Sources */,
 				1E9D2D8727E061130035C405 /* StudyView.swift in Sources */,
+				1E3BD5BC280704F700E6A405 /* Quiz1.swift in Sources */,
 				1E9D2D5B27E05C870035C405 /* AppWaterApp.swift in Sources */,
 				1E9D2D8927E0613B0035C405 /* Visualization.swift in Sources */,
 			);
@@ -449,6 +477,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppWater/Preview Content\"";
+				DEVELOPMENT_TEAM = XVAXRG42G2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppWater/Info.plist;
@@ -479,6 +508,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppWater/Preview Content\"";
+				DEVELOPMENT_TEAM = XVAXRG42G2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppWater/Info.plist;
