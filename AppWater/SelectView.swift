@@ -3,7 +3,6 @@
 //  AppWater
 //
 //  Created by 松下慎吾 on 2022/03/30.
-//
 
 import SwiftUI
 
@@ -68,10 +67,13 @@ struct SelectView:View{
                                 buttonDisabled7 = true
                                 buttonDisabled8 = true
                                 
+                                //ボタンが押されていない状態の時のエラー処理
                                 if buttonDisabled1 == true{
                                     select1 = 0
+                                }else{
+                                    SelectTotal += self.select1
                                 }
-                                SelectTotal += self.select1
+                                
                                 
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
@@ -80,6 +82,7 @@ struct SelectView:View{
                             })
                             Button(action: {
                                 buttonDisabled1.toggle()
+                                print(buttonDisabled1)
                             }, label: {
                                 VStack{
                                     Text("歯磨きはコップの水で")
@@ -101,7 +104,11 @@ struct SelectView:View{
                                 buttonDisabled6 = true
                                 buttonDisabled7 = true
                                 buttonDisabled8 = true
-                                SelectTotal = self.SelectTotalRecord + self.select2
+                                if buttonDisabled2 == true{
+                                    select2 = 0
+                                }else{
+                                    SelectTotal += self.select2
+                                }
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
                                     .fill(Color.gray)
@@ -129,7 +136,11 @@ struct SelectView:View{
                                 buttonDisabled6 = true
                                 buttonDisabled7 = true
                                 buttonDisabled8 = true
-                                SelectTotal = self.SelectTotalRecord + self.select3
+                                if buttonDisabled3 == true{
+                                    select3 = 0
+                                }else{
+                                    SelectTotal += self.select3
+                                }
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
                                     .fill(Color.gray)
@@ -157,7 +168,11 @@ struct SelectView:View{
                                 buttonDisabled6 = true
                                 buttonDisabled7 = true
                                 buttonDisabled8 = true
-                                SelectTotal = self.SelectTotalRecord + self.select4
+                                if buttonDisabled4 == true{
+                                    select4 = 0
+                                }else{
+                                    SelectTotal += self.select4
+                                }
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
                                     .fill(Color.gray)
@@ -187,7 +202,11 @@ struct SelectView:View{
                                 buttonDisabled6 = true
                                 buttonDisabled7 = true
                                 buttonDisabled8 = true
-                                SelectTotal = self.SelectTotalRecord + self.select5
+                                if buttonDisabled5 == true{
+                                    select5 = 0
+                                }else{
+                                    SelectTotal += self.select5
+                                }
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
                                     .fill(Color.gray)
@@ -215,7 +234,11 @@ struct SelectView:View{
                                 buttonDisabled5 = true
                                 buttonDisabled7 = true
                                 buttonDisabled8 = true
-                                SelectTotal = self.SelectTotalRecord + self.select6
+                                if buttonDisabled6 == true{
+                                    select6 = 0
+                                }else{
+                                    SelectTotal += self.select6
+                                }
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
                                     .fill(Color.gray)
@@ -226,7 +249,7 @@ struct SelectView:View{
                             }, label: {
                                 VStack{
                                     Text("雨水を有効活用")
-                                    Text("")
+                                    Text("50")
                                 }
                                         })
                                         .buttonStyle(MyButtonStyle())
@@ -243,7 +266,11 @@ struct SelectView:View{
                                 buttonDisabled5 = true
                                 buttonDisabled6 = true
                                 buttonDisabled8 = true
-                                SelectTotal = self.SelectTotalRecord + self.select7
+                                if buttonDisabled7 == true{
+                                    select7 = 0
+                                }else{
+                                    SelectTotal += self.select7
+                                }
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
                                     .fill(Color.gray)
@@ -271,7 +298,11 @@ struct SelectView:View{
                                 buttonDisabled5 = true
                                 buttonDisabled6 = true
                                 buttonDisabled7 = true
-                                SelectTotal = self.SelectTotalRecord + self.select8
+                                if buttonDisabled8 == true{
+                                    select8 = 0
+                                }else{
+                                    SelectTotal += self.select8
+                                }
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
                                     .fill(Color.gray)
