@@ -30,10 +30,15 @@ struct SelectView:View{
     @State private var buttonDisabled7 : Bool = true
     @State private var buttonDisabled8 : Bool = true
     
+    
     var body: some View {
         ZStack{
-            LinearGradient(gradient: Gradient(colors: [.white, .yellow]), startPoint: .top, endPoint: .bottom)
-                             .ignoresSafeArea()
+            Image("クイズ機能背景案-1")
+            //全画面表示
+                .resizable()
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
+            
             VStack{
                 //記録するボタンを押すと、record変数の値を保存してVisualizationで値を取り出せる状態にする
                 Button(action: {
@@ -48,6 +53,7 @@ struct SelectView:View{
                                 ZStack{
                                     Color.green
                                         .frame(width:110,height: 110)
+                                        .cornerRadius(15)
                                     Text("節水した！")
                                         .foregroundColor(.red)
                                 }
@@ -71,7 +77,7 @@ struct SelectView:View{
                                 if buttonDisabled1 == true{
                                     select1 = 0
                                 }else{
-                                    SelectTotal += self.select1
+                                    SelectTotal = self.select1
                                 }
                                 
                                 
@@ -107,7 +113,7 @@ struct SelectView:View{
                                 if buttonDisabled2 == true{
                                     select2 = 0
                                 }else{
-                                    SelectTotal += self.select2
+                                    SelectTotal = self.select2
                                 }
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
@@ -139,7 +145,7 @@ struct SelectView:View{
                                 if buttonDisabled3 == true{
                                     select3 = 0
                                 }else{
-                                    SelectTotal += self.select3
+                                    SelectTotal = self.select3
                                 }
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
@@ -171,7 +177,7 @@ struct SelectView:View{
                                 if buttonDisabled4 == true{
                                     select4 = 0
                                 }else{
-                                    SelectTotal += self.select4
+                                    SelectTotal = self.select4
                                 }
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
@@ -205,7 +211,7 @@ struct SelectView:View{
                                 if buttonDisabled5 == true{
                                     select5 = 0
                                 }else{
-                                    SelectTotal += self.select5
+                                    SelectTotal = self.select5
                                 }
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
@@ -237,7 +243,7 @@ struct SelectView:View{
                                 if buttonDisabled6 == true{
                                     select6 = 0
                                 }else{
-                                    SelectTotal += self.select6
+                                    SelectTotal = self.select6
                                 }
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
@@ -269,7 +275,7 @@ struct SelectView:View{
                                 if buttonDisabled7 == true{
                                     select7 = 0
                                 }else{
-                                    SelectTotal += self.select7
+                                    SelectTotal = self.select7
                                 }
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
@@ -301,7 +307,7 @@ struct SelectView:View{
                                 if buttonDisabled8 == true{
                                     select8 = 0
                                 }else{
-                                    SelectTotal += self.select8
+                                    SelectTotal = self.select8
                                 }
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)

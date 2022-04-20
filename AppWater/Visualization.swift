@@ -18,8 +18,10 @@ struct Visualization: View {
     
     var body: some View {
         ZStack{
-            LinearGradient(gradient: Gradient(colors: [.white, .yellow]), startPoint: .top, endPoint: .bottom)
-                             .ignoresSafeArea()
+            Image("クイズ機能背景案-1")
+                .resizable()
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
             VStack{
                 VStack{
                     Text("現在の節水料")
@@ -63,32 +65,36 @@ struct Visualization: View {
                 
                 //画面の中央で節水量に応じて画像を切り替える
                 if MonthTotal < 10{
-                    Image("夜景")
+                    Image("コップ1")
                         .resizable()
                         .frame(width: 300, height: 300)
                         .clipShape(Circle())
                     Text("コップいっぱい")
+                        .bold()
                         .offset(y:50)
                 }else if MonthTotal < 50{
-                    Image("水族館")
+                    Image("コップ2")
                         .resizable()
                         .frame(width: 300, height: 300)
                         .clipShape(Circle())
                     Text("ペットボトルいっぱい")
+                        .bold()
                         .offset(y:50)
                 }else if MonthTotal < 100{
-                    Image("飛行機窓")
+                    Image("バケツ")
+                        .resizable()
+                        .frame(width: 300, height: 300)
+                        .clipShape(Circle())
+                    Text("バケツいっぱい")
+                        .bold()
+                        .offset(y:50)
+                }else if MonthTotal < 200{
+                    Image("お風呂")
                         .resizable()
                         .frame(width: 300, height: 300)
                         .clipShape(Circle())
                     Text("お風呂いっぱい")
-                        .offset(y:50)
-                }else if MonthTotal < 200{
-                    Image("水族館")
-                        .resizable()
-                        .frame(width: 300, height: 300)
-                        .clipShape(Circle())
-                    Text("コップいっぱい")
+                        .bold()
                         .offset(y:50)
                 }else if MonthTotal < 300{
                     Image("飛行機窓")
@@ -96,6 +102,7 @@ struct Visualization: View {
                         .frame(width: 300, height: 300)
                         .clipShape(Circle())
                     Text("コップいっぱい")
+                        .bold()
                         .offset(y:50)
                 }else{
                     Image("飛行機窓")
@@ -103,15 +110,20 @@ struct Visualization: View {
                         .frame(width: 300, height: 300)
                         .clipShape(Circle())
                     Text("コップいっぱい")
+                        .bold()
                         .offset(y:50)
                 }
                 NavigationLink(destination: SelectView()){
                     ZStack{
                         Color.blue
                             .frame(width:110,height: 110)
+                            .cornerRadius(15)
                         Text("選ぶ")
                             .foregroundColor(.red)
                     }
+                    //遷移後のボタンのtextを”戻る”にする
+                    .navigationTitle("戻る")
+                    
                 }.offset(x:300,y:50)
             }.offset(y:-50)
         }
