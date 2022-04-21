@@ -5,8 +5,13 @@
 //  Created by 松下慎吾 on 2022/03/30.
 
 import SwiftUI
+import AudioToolbox
+
 
 struct SelectView:View{
+    
+    let soundIdRing: SystemSoundID = 1207
+
     
     @State fileprivate var isShowingView: Bool = false
     @State fileprivate var SelectTotal = 0
@@ -43,12 +48,10 @@ struct SelectView:View{
                 //記録するボタンを押すと、record変数の値を保存してVisualizationで値を取り出せる状態にする
                 Button(action: {
                                 dismiss()
-                                UserDefaults.standard.set(self.SelectTotal,forKey: "RecordData")
-                    print(SelectTotal)
-//                    //データを合計させたい
-//                self.SelectTotalRecord = self.select1+self.select2+self.select3+self.select4+self.select5+self.select6+self.select7+self.select8
-//                UserDefaults.standard.set(SelectTotalRecord,forKey: "FinalRecordData")
-//                    print(SelectTotalRecord)
+                    //データを合計させたい
+                    SelectTotalRecord += SelectTotal
+                    UserDefaults.standard.set(self.SelectTotalRecord,forKey: "SelectTotalRecordData")
+                    print(SelectTotalRecord)
                             }){
                                 ZStack{
                                     Color.green
@@ -80,6 +83,7 @@ struct SelectView:View{
                                     SelectTotal = self.select1
                                 }
                                 
+                                AudioServicesPlaySystemSound(soundIdRing)
                                 
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
