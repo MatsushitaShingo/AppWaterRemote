@@ -20,7 +20,7 @@ struct WaterWave: View {
                
                 ZStack{
                     //Water Drop
-                    Image("コップ1")
+                    Image("コップ背景")
                         .resizable()
                         .aspectRatio(contentMode:  .fit)
                     //Strexhing in X Axis
@@ -28,7 +28,7 @@ struct WaterWave: View {
                         .offset(y: -1)
                     
                     //Waave Form Shepe
-                    Waterwave(progress: progress, waveHeght: 0.05, offset: startAnimation)
+                    Waterwave(progress: progress, waveHeght: 0.015, offset: startAnimation)
                         .fill(Color.blue)
                     //Sater Drops
                         .overlay(content: {
@@ -66,7 +66,7 @@ struct WaterWave: View {
                         })
                     //Masking into Drop Shape
                         .mask{
-                            Image("コップ1")
+                            Image("コップ背景")
                                 .resizable()
                                 .aspectRatio(contentMode:.fit)
                                 .padding(20)

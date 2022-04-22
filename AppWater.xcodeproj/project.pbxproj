@@ -18,6 +18,9 @@
 		1E42530027F466EF00B12D9F /* SelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4252FF27F466EF00B12D9F /* SelectView.swift */; };
 		1E63821D2811B67400316318 /* calendarTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63821C2811B67400316318 /* calendarTest.swift */; };
 		1E63821F2811BE7300316318 /* WaterWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63821E2811BE7200316318 /* WaterWave.swift */; };
+		1E63822B2813007800316318 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63822A2813007800316318 /* test.swift */; };
+		1E63822D2813011E00316318 /* Audiotest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63822C2813011E00316318 /* Audiotest.swift */; };
+		1E63822F2813070A00316318 /* 海岸3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1E63822E2813070A00316318 /* 海岸3.mp3 */; };
 		1E9D2D5B27E05C870035C405 /* AppWaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D5A27E05C870035C405 /* AppWaterApp.swift */; };
 		1E9D2D5D27E05C870035C405 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D5C27E05C870035C405 /* ContentView.swift */; };
 		1E9D2D5F27E05C880035C405 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D2D5E27E05C880035C405 /* Assets.xcassets */; };
@@ -62,6 +65,9 @@
 		1E4252FF27F466EF00B12D9F /* SelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectView.swift; sourceTree = "<group>"; };
 		1E63821C2811B67400316318 /* calendarTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calendarTest.swift; sourceTree = "<group>"; };
 		1E63821E2811BE7200316318 /* WaterWave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterWave.swift; sourceTree = "<group>"; };
+		1E63822A2813007800316318 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		1E63822C2813011E00316318 /* Audiotest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audiotest.swift; sourceTree = "<group>"; };
+		1E63822E2813070A00316318 /* 海岸3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "海岸3.mp3"; sourceTree = "<group>"; };
 		1E9D2D5727E05C870035C405 /* AppWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9D2D5A27E05C870035C405 /* AppWaterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWaterApp.swift; sourceTree = "<group>"; };
 		1E9D2D5C27E05C870035C405 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -112,6 +118,7 @@
 				1E9D2D8F27E074BA0035C405 /* mov_hts-samp001.mp4 */,
 				1E9D2D8E27E074BA0035C405 /* movie.mp4 */,
 				1E1E9FAC27E4A1FA00B244D9 /* Corporate-Logo-Medium-ver2.ttf */,
+				1E63822E2813070A00316318 /* 海岸3.mp3 */,
 				1E9D2D5927E05C870035C405 /* AppWater */,
 				1E9D2D6A27E05C880035C405 /* AppWaterTests */,
 				1E9D2D7427E05C880035C405 /* AppWaterUITests */,
@@ -146,6 +153,8 @@
 				1E4252FF27F466EF00B12D9F /* SelectView.swift */,
 				1E63821C2811B67400316318 /* calendarTest.swift */,
 				1E63821E2811BE7200316318 /* WaterWave.swift */,
+				1E63822A2813007800316318 /* test.swift */,
+				1E63822C2813011E00316318 /* Audiotest.swift */,
 				1E9D2D5E27E05C880035C405 /* Assets.xcassets */,
 				1E9D2D6027E05C880035C405 /* Preview Content */,
 			);
@@ -288,6 +297,7 @@
 				1E1E9FAD27E4A1FA00B244D9 /* Corporate-Logo-Medium-ver2.ttf in Resources */,
 				1E9D2D6227E05C880035C405 /* Preview Assets.xcassets in Resources */,
 				1E9D2D5F27E05C880035C405 /* Assets.xcassets in Resources */,
+				1E63822F2813070A00316318 /* 海岸3.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +335,8 @@
 				1E3BD5BC280704F700E6A405 /* Quiz1.swift in Sources */,
 				1E9D2D5B27E05C870035C405 /* AppWaterApp.swift in Sources */,
 				1E9D2D8927E0613B0035C405 /* Visualization.swift in Sources */,
+				1E63822D2813011E00316318 /* Audiotest.swift in Sources */,
+				1E63822B2813007800316318 /* test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

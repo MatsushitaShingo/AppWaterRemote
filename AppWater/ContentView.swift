@@ -11,6 +11,17 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             HStack{
+                NavigationLink(destination: Audiotest()){
+                    ZStack{
+                        Image(systemName: "drop.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 200, height: 200)
+                        Text("動画再生機能")
+                            .padding(.vertical)
+                            .foregroundColor(.white)
+                    }
+                }
                 NavigationLink(destination: MovieView()){
                     ZStack{
                         Image(systemName: "drop.fill")
