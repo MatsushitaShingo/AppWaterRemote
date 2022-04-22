@@ -10,8 +10,9 @@ import AudioToolbox
 
 struct SelectView:View{
     
-    let soundIdRing: SystemSoundID = 1207
-
+    let soundIdRing: SystemSoundID = 1104
+    //候補1322,1306,1150,1107,1105,1104,1052,1050,1008,1004,1003
+    //1053は不正解のときの音
     
     @State fileprivate var isShowingView: Bool = false
     @State fileprivate var SelectTotal = 0
@@ -38,11 +39,15 @@ struct SelectView:View{
     
     var body: some View {
         ZStack{
-            Image("クイズ機能背景案-1")
-            //全画面表示
-                .resizable()
-                .scaledToFill()
-                .edgesIgnoringSafeArea(.all)
+//            Color.yellow
+//            //全画面表示
+//                .resizable()
+//                .scaledToFill()
+//                .edgesIgnoringSafeArea(.all)
+            
+            AngularGradient(gradient: Gradient(colors: [.blue, .black, .blue]), center: .center, angle: .degrees(-45))
+                           .scaledToFill()
+                            .edgesIgnoringSafeArea(.all)
             
             VStack{
                 //記録するボタンを押すと、record変数の値を保存してVisualizationで値を取り出せる状態にする
@@ -119,6 +124,7 @@ struct SelectView:View{
                                 }else{
                                     SelectTotal = self.select2
                                 }
+                                AudioServicesPlaySystemSound(soundIdRing)
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
                                     .fill(Color.gray)
@@ -151,6 +157,7 @@ struct SelectView:View{
                                 }else{
                                     SelectTotal = self.select3
                                 }
+                                AudioServicesPlaySystemSound(soundIdRing)
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
                                     .fill(Color.gray)
@@ -183,6 +190,7 @@ struct SelectView:View{
                                 }else{
                                     SelectTotal = self.select4
                                 }
+                                AudioServicesPlaySystemSound(soundIdRing)
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
                                     .fill(Color.gray)
@@ -217,6 +225,7 @@ struct SelectView:View{
                                 }else{
                                     SelectTotal = self.select5
                                 }
+                                AudioServicesPlaySystemSound(soundIdRing)
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
                                     .fill(Color.gray)
@@ -249,6 +258,7 @@ struct SelectView:View{
                                 }else{
                                     SelectTotal = self.select6
                                 }
+                                AudioServicesPlaySystemSound(soundIdRing)
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
                                     .fill(Color.gray)
@@ -281,6 +291,7 @@ struct SelectView:View{
                                 }else{
                                     SelectTotal = self.select7
                                 }
+                                AudioServicesPlaySystemSound(soundIdRing)
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
                                     .fill(Color.gray)
@@ -313,6 +324,7 @@ struct SelectView:View{
                                 }else{
                                     SelectTotal = self.select8
                                 }
+                                AudioServicesPlaySystemSound(soundIdRing)
                             }, label: {
                                 RoundedRectangle(cornerRadius: 30)
                                     .fill(Color.gray)

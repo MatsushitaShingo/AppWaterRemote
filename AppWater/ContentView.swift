@@ -22,7 +22,8 @@ struct ContentView: View {
                             .foregroundColor(.white)
                     }
                 }
-                //ナビゲーションの戻るボタンのテキスト変更
+                //遷移後のボタンのtextを”戻る”にする
+                .navigationTitle("戻る")
                 .navigationBarHidden(true)
                 NavigationLink(destination: StudyView()){
                     ZStack{
@@ -54,8 +55,8 @@ struct ContentView: View {
                     }
                 }
             }
-
-        }.navigationViewStyle(.stack)
+        }
+        .navigationViewStyle(.stack)
     }
 }
 struct ContentView_Previews: PreviewProvider {
@@ -64,3 +65,4 @@ struct ContentView_Previews: PreviewProvider {
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }
+
