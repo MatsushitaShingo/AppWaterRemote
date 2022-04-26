@@ -25,6 +25,7 @@
 		3B8A41BA27FE99D2004510FC /* Quiz3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8A41B927FE99D2004510FC /* Quiz3.swift */; };
 		3B8A41BC27FE99E3004510FC /* Quiz4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8A41BB27FE99E3004510FC /* Quiz4.swift */; };
 		3B8A41BE27FE99F3004510FC /* Quiz5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8A41BD27FE99F3004510FC /* Quiz5.swift */; };
+		3BD9FEE828184ABE0053CA22 /* QuizAnswer.json in Resources */ = {isa = PBXBuildFile; fileRef = 3BD9FEE728184ABE0053CA22 /* QuizAnswer.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		3B8A41B927FE99D2004510FC /* Quiz3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz3.swift; sourceTree = "<group>"; };
 		3B8A41BB27FE99E3004510FC /* Quiz4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz4.swift; sourceTree = "<group>"; };
 		3B8A41BD27FE99F3004510FC /* Quiz5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz5.swift; sourceTree = "<group>"; };
+		3BD9FEE728184ABE0053CA22 /* QuizAnswer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = QuizAnswer.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				1E9D2D8F27E074BA0035C405 /* mov_hts-samp001.mp4 */,
 				1E9D2D8E27E074BA0035C405 /* movie.mp4 */,
 				1E1E9FAC27E4A1FA00B244D9 /* Corporate-Logo-Medium-ver2.ttf */,
+				3BD9FEE728184ABE0053CA22 /* QuizAnswer.json */,
 				1E9D2D5927E05C870035C405 /* AppWater */,
 				1E9D2D6A27E05C880035C405 /* AppWaterTests */,
 				1E9D2D7427E05C880035C405 /* AppWaterUITests */,
@@ -266,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BD9FEE828184ABE0053CA22 /* QuizAnswer.json in Resources */,
 				1E9D2D9027E074BA0035C405 /* movie.mp4 in Resources */,
 				1E9D2D9127E074BA0035C405 /* mov_hts-samp001.mp4 in Resources */,
 				1E1E9FAD27E4A1FA00B244D9 /* Corporate-Logo-Medium-ver2.ttf in Resources */,

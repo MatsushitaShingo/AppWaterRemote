@@ -1013,32 +1013,31 @@ struct moviestart5: View{
 struct finishView: View{
     
      var body: some View{
-         VStack{
-                     Text("　中止しますか？")
-                         .font(.system(size: 70, weight: .black))
-                     HStack{
-                         NavigationLink(destination: StudyView()){
-                             
-                             Text("はい")
-                                 .foregroundColor(.red)
-                                 .font(.largeTitle)
-                                 .bold()
-                                 .frame(width: 200, height: 150)
-                                 .border(Color.gray, width: 5)
-                         }
-                         
-                         NavigationLink(destination: Quiz1answer1()){
-                             HStack{
-                                 Text("いいえ")
+             VStack{
+                         Text("　中止しますか？")
+                             .font(.system(size: 70, weight: .black))
+                         HStack{
+                             NavigationLink(destination: StudyView()){
+                                 
+                                 Text("はい")
                                      .foregroundColor(.red)
                                      .font(.largeTitle)
                                      .bold()
                                      .frame(width: 200, height: 150)
                                      .border(Color.gray, width: 5)
                              }
+                             
+                             NavigationLink(destination: Quiz1answer1()){
+                                     Text("いいえ")
+                                         .foregroundColor(.red)
+                                         .font(.largeTitle)
+                                         .bold()
+                                         .frame(width: 200, height: 150)
+                                         .border(Color.gray, width: 5)
+                             }
                          }
                      }
-                 }
+
     }
 }
 
