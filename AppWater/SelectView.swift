@@ -35,6 +35,7 @@ struct SelectView:View{
     @State private var buttonDisabled6 : Bool = true
     @State private var buttonDisabled7 : Bool = true
     @State private var buttonDisabled8 : Bool = true
+    @EnvironmentObject var user: User
     
     
     var body: some View {
@@ -57,6 +58,8 @@ struct SelectView:View{
                     SelectTotalRecord += SelectTotal
                     UserDefaults.standard.set(self.SelectTotalRecord,forKey: "SelectTotalRecordData")
                     print(SelectTotalRecord)
+                    user.MonthTotal += SelectTotalRecord
+                    UserDefaults.standard.set(self.user.MonthTotal,forKey: "MonthTotalData")
                             }){
                                 ZStack{
                                     Color.green

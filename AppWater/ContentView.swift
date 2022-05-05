@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+class User: ObservableObject {
+    @Published var MonthTotal = 0
+}
+
 struct ContentView: View {
     var body: some View {
         NavigationView{

@@ -21,6 +21,7 @@
 		1E63822B2813007800316318 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63822A2813007800316318 /* test.swift */; };
 		1E63822D2813011E00316318 /* Audiotest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63822C2813011E00316318 /* Audiotest.swift */; };
 		1E63822F2813070A00316318 /* 海岸3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1E63822E2813070A00316318 /* 海岸3.mp3 */; };
+		1E63823128190F5000316318 /* QuizAnswer.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E63823028190F5000316318 /* QuizAnswer.json */; };
 		1E9D2D5B27E05C870035C405 /* AppWaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D5A27E05C870035C405 /* AppWaterApp.swift */; };
 		1E9D2D5D27E05C870035C405 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D5C27E05C870035C405 /* ContentView.swift */; };
 		1E9D2D5F27E05C880035C405 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D2D5E27E05C880035C405 /* Assets.xcassets */; };
@@ -68,6 +69,7 @@
 		1E63822A2813007800316318 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		1E63822C2813011E00316318 /* Audiotest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audiotest.swift; sourceTree = "<group>"; };
 		1E63822E2813070A00316318 /* 海岸3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "海岸3.mp3"; sourceTree = "<group>"; };
+		1E63823028190F5000316318 /* QuizAnswer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = QuizAnswer.json; sourceTree = "<group>"; };
 		1E9D2D5727E05C870035C405 /* AppWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9D2D5A27E05C870035C405 /* AppWaterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWaterApp.swift; sourceTree = "<group>"; };
 		1E9D2D5C27E05C870035C405 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				1E9D2D8E27E074BA0035C405 /* movie.mp4 */,
 				1E1E9FAC27E4A1FA00B244D9 /* Corporate-Logo-Medium-ver2.ttf */,
 				1E63822E2813070A00316318 /* 海岸3.mp3 */,
+				1E63823028190F5000316318 /* QuizAnswer.json */,
 				1E9D2D5927E05C870035C405 /* AppWater */,
 				1E9D2D6A27E05C880035C405 /* AppWaterTests */,
 				1E9D2D7427E05C880035C405 /* AppWaterUITests */,
@@ -290,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E63823128190F5000316318 /* QuizAnswer.json in Resources */,
 				1E3BD5BA28068E0A00E6A405 /* SDGs 山北-1.mov in Resources */,
 				1E3BD5B828068CA000E6A405 /* 熊本の水２　仮完成.mp4 in Resources */,
 				1E9D2D9027E074BA0035C405 /* movie.mp4 in Resources */,

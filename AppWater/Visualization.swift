@@ -7,11 +7,13 @@
 
 import SwiftUI
 
+
+
 struct Visualization: View {
     
     @State private var isShowingView1: Bool = false
     let userdefaults = UserDefaults.standard
-    @State var MonthTotal = 0
+    @EnvironmentObject var user: User
     @State var AllTotal = 0
     @State private var selectDate = Date()
     
@@ -28,19 +30,13 @@ struct Visualization: View {
                         .font(.largeTitle)
                         .bold()
                     HStack{
-                        Text("\(self.MonthTotal)L")
-                            .onAppear(){
-                                guard let RecordData = UserDefaults.standard.value(forKey: "RecordData")as? Int else {return}
-                                //データを加算していく
-                                self.MonthTotal += RecordData
-                                UserDefaults.standard.set(self.MonthTotal,forKey: "MonthTotalData")
-                                print(RecordData)
-                                print(MonthTotal)
-                            }
-                               
+                        
+                        Text("\(user.MonthTotal)L")
+                            
+                        
                         //節水量リセット機能
                         Button(action: {
-                            MonthTotal = 0
+                            user.MonthTotal = 0
                         }) {
                             Text("リセット")
                         }
@@ -64,7 +60,7 @@ struct Visualization: View {
                 
                 
                 //画面の中央で節水量に応じて画像を切り替える
-                if MonthTotal < 10{
+                if user.MonthTotal < 10{
                     Image("コップ1")
                         .resizable()
                         .frame(width: 300, height: 300)
@@ -72,7 +68,7 @@ struct Visualization: View {
                     Text("コップいっぱい")
                         .bold()
                         .offset(y:50)
-                }else if MonthTotal < 50{
+                }else if user.MonthTotal < 50{
                     Image("コップ2")
                         .resizable()
                         .frame(width: 300, height: 300)
@@ -80,7 +76,7 @@ struct Visualization: View {
                     Text("ペットボトルいっぱい")
                         .bold()
                         .offset(y:50)
-                }else if MonthTotal < 100{
+                }else if user.MonthTotal < 100{
                     Image("バケツ")
                         .resizable()
                         .frame(width: 300, height: 300)
@@ -88,7 +84,7 @@ struct Visualization: View {
                     Text("バケツいっぱい")
                         .bold()
                         .offset(y:50)
-                }else if MonthTotal < 200{
+                }else if user.MonthTotal < 200{
                     Image("お風呂")
                         .resizable()
                         .frame(width: 300, height: 300)
@@ -96,7 +92,7 @@ struct Visualization: View {
                     Text("お風呂いっぱい")
                         .bold()
                         .offset(y:50)
-                }else if MonthTotal < 300{
+                }else if user.MonthTotal < 300{
                     Image("飛行機窓")
                         .resizable()
                         .frame(width: 300, height: 300)
