@@ -13,17 +13,15 @@ struct Visualization: View {
     
     @State private var isShowingView1: Bool = false
     let userdefaults = UserDefaults.standard
-    @EnvironmentObject var user: User
-    @State var AllTotal = 0
+    @EnvironmentObject var waterData: WaterData
     @State private var selectDate = Date()
     
     
     var body: some View {
         ZStack{
-            Image("クイズ機能背景案-1")
-                .resizable()
-                .scaledToFill()
-                .edgesIgnoringSafeArea(.all)
+            AngularGradient(gradient: Gradient(colors: [.blue, .white, .blue]), center: .center, angle: .degrees(-45))
+                           .scaledToFill()
+                            .edgesIgnoringSafeArea(.all)
             VStack{
                 VStack{
                     Text("現在の節水料")
@@ -31,12 +29,12 @@ struct Visualization: View {
                         .bold()
                     HStack{
                         
-                        Text("\(user.MonthTotal)L")
+                        Text("\(waterData.MonthTotal)L")
                             
                         
                         //節水量リセット機能
                         Button(action: {
-                            user.MonthTotal = 0
+                            waterData.MonthTotal = 0
                         }) {
                             Text("リセット")
                         }
@@ -51,16 +49,16 @@ struct Visualization: View {
                 //今までの節水量の合計
                 VStack{
                     Text("今までの合計")
-                    Text("\(self.AllTotal)L")
+                    Text("\(waterData.AllTotal)L")
                         .onAppear{
                             guard let userdefaults = UserDefaults.standard.value(forKey: "RecordData")as? Int else {return}
-                            self.AllTotal += userdefaults
+                            waterData.AllTotal += userdefaults
                         }
                 }.offset(x:400,y:-200)
                 
                 
                 //画面の中央で節水量に応じて画像を切り替える
-                if user.MonthTotal < 10{
+                if waterData.MonthTotal < 10{
                     Image("コップ1")
                         .resizable()
                         .frame(width: 300, height: 300)
@@ -68,7 +66,7 @@ struct Visualization: View {
                     Text("コップいっぱい")
                         .bold()
                         .offset(y:50)
-                }else if user.MonthTotal < 50{
+                }else if waterData.MonthTotal < 50{
                     Image("コップ2")
                         .resizable()
                         .frame(width: 300, height: 300)
@@ -76,7 +74,7 @@ struct Visualization: View {
                     Text("ペットボトルいっぱい")
                         .bold()
                         .offset(y:50)
-                }else if user.MonthTotal < 100{
+                }else if waterData.MonthTotal < 100{
                     Image("バケツ")
                         .resizable()
                         .frame(width: 300, height: 300)
@@ -84,7 +82,7 @@ struct Visualization: View {
                     Text("バケツいっぱい")
                         .bold()
                         .offset(y:50)
-                }else if user.MonthTotal < 200{
+                }else if waterData.MonthTotal < 200{
                     Image("お風呂")
                         .resizable()
                         .frame(width: 300, height: 300)
@@ -92,7 +90,7 @@ struct Visualization: View {
                     Text("お風呂いっぱい")
                         .bold()
                         .offset(y:50)
-                }else if user.MonthTotal < 300{
+                }else if waterData.MonthTotal < 300{
                     Image("飛行機窓")
                         .resizable()
                         .frame(width: 300, height: 300)
@@ -119,6 +117,7 @@ struct Visualization: View {
                     }
                     //遷移後のボタンのtextを”戻る”にする
                     .navigationTitle("戻る")
+                    .labelsHidden()
                     
                 }.offset(x:300,y:50)
             }.offset(y:-50)

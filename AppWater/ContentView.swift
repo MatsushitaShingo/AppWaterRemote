@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-class User: ObservableObject {
+class WaterData: ObservableObject {
     @Published var MonthTotal = 0
+    @Published var AllTotal = 0
 }
 
 struct ContentView: View {
@@ -26,13 +27,13 @@ struct ContentView: View {
                             .foregroundColor(.white)
                     }
                 }
-                NavigationLink(destination: MovieView()){
+                NavigationLink(destination: MovieViewTest()){
                     ZStack{
                         Image(systemName: "drop.fill")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 200, height: 200)
-                        Text("動画再生機能")
+                        Text("動画を見よう！")
                             .padding(.vertical)
                             .foregroundColor(.white)
                     }
@@ -46,18 +47,18 @@ struct ContentView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: 200, height: 200)
-                        Text("学習機能")
+                        Text("クイズを解こう！")
                             .padding(.vertical)
                             .foregroundColor(.white)
                     }
                 }
-                NavigationLink(destination: Visualization()){
+                NavigationLink(destination: VisulalizationViewTest()){
                     ZStack{
                         Image(systemName: "drop.fill")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 200, height: 200)
-                        Text("可視化機能")
+                        Text("記録しよう！")
                             .padding(.vertical)
                             .foregroundColor(.white)
                     }

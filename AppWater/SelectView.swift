@@ -35,7 +35,7 @@ struct SelectView:View{
     @State private var buttonDisabled6 : Bool = true
     @State private var buttonDisabled7 : Bool = true
     @State private var buttonDisabled8 : Bool = true
-    @EnvironmentObject var user: User
+    @EnvironmentObject var waterData: WaterData
     
     
     var body: some View {
@@ -46,7 +46,7 @@ struct SelectView:View{
 //                .scaledToFill()
 //                .edgesIgnoringSafeArea(.all)
             
-            AngularGradient(gradient: Gradient(colors: [.blue, .black, .blue]), center: .center, angle: .degrees(-45))
+            AngularGradient(gradient: Gradient(colors: [.blue, .white, .blue]), center: .center, angle: .degrees(-45))
                            .scaledToFill()
                             .edgesIgnoringSafeArea(.all)
             
@@ -57,9 +57,11 @@ struct SelectView:View{
                     //データを合計させたい
                     SelectTotalRecord += SelectTotal
                     UserDefaults.standard.set(self.SelectTotalRecord,forKey: "SelectTotalRecordData")
-                    print(SelectTotalRecord)
-                    user.MonthTotal += SelectTotalRecord
-                    UserDefaults.standard.set(self.user.MonthTotal,forKey: "MonthTotalData")
+                    waterData.MonthTotal += SelectTotalRecord
+                    UserDefaults.standard.set(self.waterData.MonthTotal,forKey: "MonthTotalData")
+                    
+                    waterData.AllTotal += waterData.MonthTotal
+                    UserDefaults.standard.set(self.waterData.AllTotal,forKey: "AllTotalData")
                             }){
                                 ZStack{
                                     Color.green

@@ -22,6 +22,10 @@
 		1E63822D2813011E00316318 /* Audiotest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63822C2813011E00316318 /* Audiotest.swift */; };
 		1E63822F2813070A00316318 /* 海岸3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1E63822E2813070A00316318 /* 海岸3.mp3 */; };
 		1E63823128190F5000316318 /* QuizAnswer.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E63823028190F5000316318 /* QuizAnswer.json */; };
+		1E6382332825923500316318 /* MovieViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6382322825923400316318 /* MovieViewTest.swift */; };
+		1E6382352825946000316318 /* VisulalizationViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6382342825945F00316318 /* VisulalizationViewTest.swift */; };
+		1E6382372825A10E00316318 /* VisualizationViewTest2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6382362825A10E00316318 /* VisualizationViewTest2.swift */; };
+		1E6382392825A47E00316318 /* VisualizationViewTest3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6382382825A47E00316318 /* VisualizationViewTest3.swift */; };
 		1E9D2D5B27E05C870035C405 /* AppWaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D5A27E05C870035C405 /* AppWaterApp.swift */; };
 		1E9D2D5D27E05C870035C405 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D5C27E05C870035C405 /* ContentView.swift */; };
 		1E9D2D5F27E05C880035C405 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D2D5E27E05C880035C405 /* Assets.xcassets */; };
@@ -70,6 +74,10 @@
 		1E63822C2813011E00316318 /* Audiotest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audiotest.swift; sourceTree = "<group>"; };
 		1E63822E2813070A00316318 /* 海岸3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "海岸3.mp3"; sourceTree = "<group>"; };
 		1E63823028190F5000316318 /* QuizAnswer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = QuizAnswer.json; sourceTree = "<group>"; };
+		1E6382322825923400316318 /* MovieViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewTest.swift; sourceTree = "<group>"; };
+		1E6382342825945F00316318 /* VisulalizationViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisulalizationViewTest.swift; sourceTree = "<group>"; usesTabs = 0; };
+		1E6382362825A10E00316318 /* VisualizationViewTest2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizationViewTest2.swift; sourceTree = "<group>"; };
+		1E6382382825A47E00316318 /* VisualizationViewTest3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizationViewTest3.swift; sourceTree = "<group>"; };
 		1E9D2D5727E05C870035C405 /* AppWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9D2D5A27E05C870035C405 /* AppWaterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWaterApp.swift; sourceTree = "<group>"; };
 		1E9D2D5C27E05C870035C405 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -146,6 +154,7 @@
 				1E9D2D5A27E05C870035C405 /* AppWaterApp.swift */,
 				1E9D2D5C27E05C870035C405 /* ContentView.swift */,
 				1E9D2D8427E060FD0035C405 /* MovieView.swift */,
+				1E6382322825923400316318 /* MovieViewTest.swift */,
 				1E9D2D8627E061130035C405 /* StudyView.swift */,
 				1E3BD5BB280704F700E6A405 /* Quiz1.swift */,
 				1E3BD5BD2807057C00E6A405 /* Quiz2.swift */,
@@ -153,6 +162,9 @@
 				1E3BD5BF2807058600E6A405 /* Quiz4.swift */,
 				1E3BD5C32807059F00E6A405 /* Quiz5.swift */,
 				1E9D2D8827E0613B0035C405 /* Visualization.swift */,
+				1E6382342825945F00316318 /* VisulalizationViewTest.swift */,
+				1E6382362825A10E00316318 /* VisualizationViewTest2.swift */,
+				1E6382382825A47E00316318 /* VisualizationViewTest3.swift */,
 				1E4252FF27F466EF00B12D9F /* SelectView.swift */,
 				1E63821C2811B67400316318 /* calendarTest.swift */,
 				1E63821E2811BE7200316318 /* WaterWave.swift */,
@@ -326,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E6382372825A10E00316318 /* VisualizationViewTest2.swift in Sources */,
 				1E3BD5C22807059100E6A405 /* Quiz3.swift in Sources */,
 				1E3BD5C02807058600E6A405 /* Quiz4.swift in Sources */,
 				1E9D2D5D27E05C870035C405 /* ContentView.swift in Sources */,
@@ -333,11 +346,14 @@
 				1E63821F2811BE7300316318 /* WaterWave.swift in Sources */,
 				1E3BD5C42807059F00E6A405 /* Quiz5.swift in Sources */,
 				1E3BD5BE2807057C00E6A405 /* Quiz2.swift in Sources */,
+				1E6382352825946000316318 /* VisulalizationViewTest.swift in Sources */,
 				1E9D2D8527E060FD0035C405 /* MovieView.swift in Sources */,
 				1E42530027F466EF00B12D9F /* SelectView.swift in Sources */,
+				1E6382332825923500316318 /* MovieViewTest.swift in Sources */,
 				1E9D2D8727E061130035C405 /* StudyView.swift in Sources */,
 				1E3BD5BC280704F700E6A405 /* Quiz1.swift in Sources */,
 				1E9D2D5B27E05C870035C405 /* AppWaterApp.swift in Sources */,
+				1E6382392825A47E00316318 /* VisualizationViewTest3.swift in Sources */,
 				1E9D2D8927E0613B0035C405 /* Visualization.swift in Sources */,
 				1E63822D2813011E00316318 /* Audiotest.swift in Sources */,
 				1E63822B2813007800316318 /* test.swift in Sources */,
