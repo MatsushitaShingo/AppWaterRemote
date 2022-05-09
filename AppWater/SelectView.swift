@@ -64,11 +64,11 @@ struct SelectView:View{
                     UserDefaults.standard.set(self.waterData.AllTotal,forKey: "AllTotalData")
                             }){
                                 ZStack{
-                                    Color.green
+                                    Color.yellow
                                         .frame(width:110,height: 110)
                                         .cornerRadius(15)
-                                    Text("節水した！")
-                                        .foregroundColor(.red)
+                                    Text("OK！")
+                                        .foregroundColor(.black)
                                 }
                             }.fullScreenCover(isPresented: $isShowingView){
                             }.offset(y:-100)
@@ -93,6 +93,7 @@ struct SelectView:View{
                                     SelectTotal = self.select1
                                 }
                                 
+                                //タップ音
                                 AudioServicesPlaySystemSound(soundIdRing)
                                 
                             }, label: {
@@ -102,7 +103,6 @@ struct SelectView:View{
                             })
                             Button(action: {
                                 buttonDisabled1.toggle()
-                                print(buttonDisabled1)
                             }, label: {
                                 VStack{
                                     Text("歯磨きはコップの水で")

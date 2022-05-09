@@ -29,7 +29,6 @@ struct Audiotest_Previews: PreviewProvider {
 var sound: AVAudioPlayer?
 
 func playSound() {
-
     if let path = Bundle.main.path(forResource: "海岸3", ofType: "mp3") {
         do {
             sound = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
@@ -40,3 +39,18 @@ func playSound() {
         }
     }
 }
+//struct moviestart1: View{
+//    
+//     private let player = AVPlayer(url: Bundle.main.url(forResource:"movie",withExtension: "mp4")!)
+//    
+//     var body: some View{
+//        VideoPlayer(player: player)
+//            .onAppear(){
+//                player.play()
+//                
+//            }
+//            .onDisappear(){
+//                player.pause()
+//            }
+//        }
+//    }

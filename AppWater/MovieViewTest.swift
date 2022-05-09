@@ -9,7 +9,7 @@ import SwiftUI
 import AVKit
 
 struct MovieViewTest: View {
-    
+    //それぞれのサムネの場合に応じて対応した動画を出す
     @State var showingmovie1 = false
     @State var showingmovie2 = false
     @State var showingmovie3 = false
@@ -20,6 +20,7 @@ struct MovieViewTest: View {
     @State var showingmovie8 = false
     @State var showingmovie9 = false
     @State var showingmovie10 = false
+    //動画を選ぶ
     @State var selectmoview1 = true
     @State var selectmoview2 = false
     @State var selectmoview3 = false
@@ -30,6 +31,17 @@ struct MovieViewTest: View {
     @State var selectmoview8 = false
     @State var selectmoview9 = false
     @State var selectmoview10 = false
+    //buttonのスタイル
+    @State private var buttonmovie1 : Bool = true
+    @State private var buttonmovie2 : Bool = true
+    @State private var buttonmovie3 : Bool = true
+    @State private var buttonmovie4 : Bool = true
+    @State private var buttonmovie5 : Bool = true
+    @State private var buttonmovie6 : Bool = true
+    @State private var buttonmovie7 : Bool = true
+    @State private var buttonmovie8 : Bool = true
+    @State private var buttonmovie9 : Bool = true
+    @State private var buttonmovie10 : Bool = true
     
     var body: some View {
         VStack{
@@ -249,12 +261,26 @@ struct MovieViewTest: View {
                     selectmoview8 = false
                     selectmoview9 = false
                     selectmoview10 = false
+                    
+                    buttonmovie1.toggle()
+                    buttonmovie2 = true
+                    buttonmovie3 = true
+                    buttonmovie4 = true
+                    buttonmovie5 = true
+                    buttonmovie6 = true
+                    buttonmovie7 = true
+                    buttonmovie8 = true
+                    buttonmovie9 = true
+                    buttonmovie10 = true
                 }){
                     Image(systemName: "play.circle")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 80, height: 80)
+                        .buttonStyle(MyButtonStyle())
+                        .disabled(buttonmovie1)
                 }.padding(.horizontal)
+                    
                 
                 Button(action: {
                     selectmoview1 = false
@@ -267,11 +293,24 @@ struct MovieViewTest: View {
                     selectmoview8 = false
                     selectmoview9 = false
                     selectmoview10 = false
+                    
+                    buttonmovie1 = true
+                    buttonmovie2 = true
+                    buttonmovie3.toggle()
+                    buttonmovie4 = true
+                    buttonmovie5 = true
+                    buttonmovie6 = true
+                    buttonmovie7 = true
+                    buttonmovie8 = true
+                    buttonmovie9 = true
+                    buttonmovie10 = true
                 }){
                     Image(systemName: "play.circle")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 80, height: 80)
+                        .buttonStyle(MyButtonStyle())
+                        .disabled(buttonmovie3)
                 }.padding(.horizontal)
                 Button(action: {
                     selectmoview1 = false
@@ -284,11 +323,24 @@ struct MovieViewTest: View {
                     selectmoview8 = false
                     selectmoview9 = false
                     selectmoview10 = false
+                    
+                    buttonmovie1 = true
+                    buttonmovie2 = true
+                    buttonmovie3 = true
+                    buttonmovie4 = true
+                    buttonmovie5.toggle()
+                    buttonmovie6 = true
+                    buttonmovie7 = true
+                    buttonmovie8 = true
+                    buttonmovie9 = true
+                    buttonmovie10 = true
                 }){
                     Image(systemName: "play.circle")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 80, height: 80)
+                        .buttonStyle(MyButtonStyle())
+                        .disabled(buttonmovie5)
                 }.padding(.horizontal)
                 Button(action: {
                     selectmoview1 = false
@@ -301,11 +353,24 @@ struct MovieViewTest: View {
                     selectmoview8 = false
                     selectmoview9 = false
                     selectmoview10 = false
+                    
+                    buttonmovie1 = true
+                    buttonmovie2 = true
+                    buttonmovie3 = true
+                    buttonmovie4 = true
+                    buttonmovie5 = true
+                    buttonmovie6 = true
+                    buttonmovie7.toggle()
+                    buttonmovie8 = true
+                    buttonmovie9 = true
+                    buttonmovie10 = true
                 }){
                     Image(systemName: "play.circle")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 80, height: 80)
+                        .buttonStyle(MyButtonStyle())
+                        .disabled(buttonmovie7)
                 }.padding(.horizontal)
                 Button(action: {
                     selectmoview1 = false
@@ -318,11 +383,24 @@ struct MovieViewTest: View {
                     selectmoview8 = false
                     selectmoview9 = true
                     selectmoview10 = false
+                    
+                    buttonmovie1 = true
+                    buttonmovie2 = true
+                    buttonmovie3 = true
+                    buttonmovie4 = true
+                    buttonmovie5 = true
+                    buttonmovie6 = true
+                    buttonmovie7 = true
+                    buttonmovie8 = true
+                    buttonmovie9.toggle()
+                    buttonmovie10 = true
                 }){
                     Image(systemName: "play.circle")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 80, height: 80)
+                        .buttonStyle(MyButtonStyle())
+                        .disabled(buttonmovie9)
                 }.padding(.horizontal)
             }
             HStack{
@@ -337,11 +415,24 @@ struct MovieViewTest: View {
                     selectmoview8 = false
                     selectmoview9 = false
                     selectmoview10 = false
+                    
+                    buttonmovie1 = true
+                    buttonmovie2.toggle()
+                    buttonmovie3 = true
+                    buttonmovie4 = true
+                    buttonmovie5 = true
+                    buttonmovie6 = true
+                    buttonmovie7 = true
+                    buttonmovie8 = true
+                    buttonmovie9 = true
+                    buttonmovie10 = true
                 }){
                     Image(systemName: "play.circle")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 80, height: 80)
+                        .buttonStyle(MyButtonStyle())
+                        .disabled(buttonmovie2)
                 }.padding(.horizontal)
                 
                 Button(action: {
@@ -355,11 +446,24 @@ struct MovieViewTest: View {
                     selectmoview8 = false
                     selectmoview9 = false
                     selectmoview10 = false
+                    
+                    buttonmovie1 = true
+                    buttonmovie2 = true
+                    buttonmovie3 = true
+                    buttonmovie4.toggle()
+                    buttonmovie5 = true
+                    buttonmovie6 = true
+                    buttonmovie7 = true
+                    buttonmovie8 = true
+                    buttonmovie9 = true
+                    buttonmovie10 = true
                 }){
                     Image(systemName: "play.circle")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 80, height: 80)
+                        .buttonStyle(MyButtonStyle())
+                        .disabled(buttonmovie4)
                 }.padding(.horizontal)
                 Button(action: {
                     selectmoview1 = false
@@ -372,11 +476,24 @@ struct MovieViewTest: View {
                     selectmoview8 = false
                     selectmoview9 = false
                     selectmoview10 = false
+                    
+                    buttonmovie1 = true
+                    buttonmovie2 = true
+                    buttonmovie3 = true
+                    buttonmovie4 = true
+                    buttonmovie5 = true
+                    buttonmovie6.toggle()
+                    buttonmovie7 = true
+                    buttonmovie8 = true
+                    buttonmovie9 = true
+                    buttonmovie10 = true
                 }){
                     Image(systemName: "play.circle")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 80, height: 80)
+                        .buttonStyle(MyButtonStyle())
+                        .disabled(buttonmovie6)
                 }.padding(.horizontal)
                 Button(action: {
                     selectmoview1 = false
@@ -389,11 +506,24 @@ struct MovieViewTest: View {
                     selectmoview8 = true
                     selectmoview9 = false
                     selectmoview10 = false
+                    
+                    buttonmovie1 = true
+                    buttonmovie2 = true
+                    buttonmovie3 = true
+                    buttonmovie4 = true
+                    buttonmovie5 = true
+                    buttonmovie6 = true
+                    buttonmovie7 = true
+                    buttonmovie8.toggle()
+                    buttonmovie9 = true
+                    buttonmovie10 = true
                 }){
                     Image(systemName: "play.circle")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 80, height: 80)
+                        .buttonStyle(MyButtonStyle())
+                        .disabled(buttonmovie8)
                 }.padding(.horizontal)
                 Button(action: {
                     selectmoview1 = false
@@ -406,11 +536,24 @@ struct MovieViewTest: View {
                     selectmoview8 = false
                     selectmoview9 = false
                     selectmoview10 = true
+                    
+                    buttonmovie1 = true
+                    buttonmovie2 = true
+                    buttonmovie3 = true
+                    buttonmovie4 = true
+                    buttonmovie5 = true
+                    buttonmovie6 = true
+                    buttonmovie7 = true
+                    buttonmovie8 = true
+                    buttonmovie9 = true
+                    buttonmovie10.toggle()
                 }){
                     Image(systemName: "play.circle")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 80, height: 80)
+                        .buttonStyle(MyButtonStyle())
+                        .disabled(buttonmovie10)
                 }.padding(.horizontal)
             }
             .padding(.bottom)
@@ -452,39 +595,48 @@ struct MovieViewTest: View {
             }
             
         }
+        .navigationTitle("動画を見よう！")
+        .navigationBarTitleDisplayMode(.inline)
+//        .toolbar {
+//            /// ナビゲーションバー左、戻るボタンでSFシンボルを使いたい
+//            ToolbarItem(placement: .navigationBarLeading){
+//                Button(action: {}) {
+//                    Image(systemName: "house")
+//                }
+//            }
+//        }
     }
-    struct moviestart1: View{
-        
-         private let player = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２　仮完成",withExtension: "mp4")!)
-        
-         var body: some View{
-            VideoPlayer(player: player)
-                .onAppear(){
-                    player.play()
-                    
-                }
-                .onDisappear(){
-                    player.pause()
-                }
+}
+struct moviestart1: View{
+    
+     private let player = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２　仮完成",withExtension: "mp4")!)
+    
+     var body: some View{
+        VideoPlayer(player: player)
+            .onAppear(){
+                player.play()
+                
+            }
+            .onDisappear(){
+                player.pause()
             }
         }
-        struct moviestart2: View{
-            
-             private let player1 = AVPlayer(url: Bundle.main.url(forResource:"SDGs 山北-1",withExtension: "mov")!)
-            
-             var body: some View{
-                VideoPlayer(player: player1)
-                    .onAppear(){
-                        player1.play()
-                        
-                    }
-                    .onDisappear(){
-                        player1.pause()
-                    }
-                }
+    }
+struct moviestart2: View{
+    
+     private let player1 = AVPlayer(url: Bundle.main.url(forResource:"SDGs 山北-1",withExtension: "mov")!)
+    
+     var body: some View{
+        VideoPlayer(player: player1)
+            .onAppear(){
+                player1.play()
+                
             }
-}
-
+            .onDisappear(){
+                player1.pause()
+            }
+        }
+    }
 
 
 struct MovieViewTest_Previews: PreviewProvider {

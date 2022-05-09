@@ -30,8 +30,11 @@ struct VisulalizationViewTest: View {
                             .shadow(color: .gray, radius: 3, x: 10, y: 10)
                         VStack{
                             Text("節水量")
+                                .font(.title)
+                                .offset(y: -80)
                             Text("\(waterData.MonthTotal)L")
-                            }
+                                .font(.largeTitle)
+                        }
                     }
                     
                     ZStack{
@@ -40,61 +43,61 @@ struct VisulalizationViewTest: View {
                             .cornerRadius(30)
                             .shadow(color: .gray, radius: 3, x: 10, y: 10)
                         VStack{
-                            Text("コップいっぱい")
                             //画面の中央で節水量に応じて画像を切り替える
                             if waterData.MonthTotal < 10{
+                                Text("コップいっぱい")
+                                    .font(.title)
+                                    .bold()
                                 Image("コップ1")
                                     .resizable()
                                     .frame(width: 300, height: 200)
                                     .clipShape(Circle())
-                                Text("コップいっぱい")
-                                    .bold()
-                                    .offset(y:50)
                             }else if waterData.MonthTotal < 50{
+                                Text("ペットボトルいっぱい")
+                                    .font(.title)
+                                    .bold()
                                 Image("コップ2")
                                     .resizable()
                                     .frame(width: 300, height: 200)
                                     .clipShape(Circle())
-                                Text("ペットボトルいっぱい")
-                                    .bold()
-                                    .offset(y:50)
                             }else if waterData.MonthTotal < 100{
+                                Text("バケツいっぱい")
+                                    .font(.title)
+                                    .bold()
                                 Image("バケツ")
                                     .resizable()
                                     .frame(width: 300, height: 200)
                                     .clipShape(Circle())
-                                Text("バケツいっぱい")
-                                    .bold()
-                                    .offset(y:50)
                             }else if waterData.MonthTotal < 200{
+                                Text("お風呂いっぱい")
+                                    .font(.title)
+                                    .bold()
                                 Image("お風呂")
                                     .resizable()
                                     .frame(width: 300, height: 200)
                                     .clipShape(Circle())
-                                Text("お風呂いっぱい")
-                                    .bold()
-                                    .offset(y:50)
                             }else if waterData.MonthTotal < 300{
+                                Text("コップいっぱい")
+                                    .font(.title)
+                                    .bold()
                                 Image("飛行機窓")
                                     .resizable()
                                     .frame(width: 300, height: 200)
                                     .clipShape(Circle())
-                                Text("コップいっぱい")
-                                    .bold()
-                                    .offset(y:50)
                             }else{
+                                Text("コップいっぱい")
+                                    .font(.title)
+                                    .bold()
                                 Image("飛行機窓")
                                     .resizable()
                                     .frame(width: 300, height: 200)
                                     .clipShape(Circle())
-                                Text("コップいっぱい")
-                                    .bold()
-                                    .offset(y:50)
+                                
                             }
-//                            Image("コップ背景")
-//                                .resizable()
-//                                .frame(width: 300, height: 200)
-//                                .clipShape(Circle())
+                            //                            Image("コップ背景")
+                            //                                .resizable()
+                            //                                .frame(width: 300, height: 200)
+                            //                                .clipShape(Circle())
                         }
                     }
                     ZStack{
@@ -134,14 +137,15 @@ struct VisulalizationViewTest: View {
                             .frame(width:800,height: 110)
                             .cornerRadius(30)
                             .shadow(color: .gray, radius: 3, x: 10, y: 10)
-                        Text("きろくする")
+                        Text("節水しよう！")
                             .foregroundColor(.white)
                             .font(.largeTitle)
                             .bold()
-                            
+                        
                     }
-                    //遷移後のボタンのtextを”戻る”にする
-                    .navigationTitle("戻る")
+                    //遷移後のボタンのtextを”記録の結果”にする
+                    .navigationTitle("記録の結果")
+                    .navigationBarTitleDisplayMode(.inline)
                 }
             }
         }
