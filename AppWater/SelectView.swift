@@ -36,42 +36,22 @@ struct SelectView:View{
     @State private var buttonDisabled7 : Bool = true
     @State private var buttonDisabled8 : Bool = true
     @EnvironmentObject var waterData: WaterData
+    let saveprice = 148.5
     
     
     var body: some View {
         ZStack{
-//            Color.yellow
-//            //全画面表示
-//                .resizable()
-//                .scaledToFill()
-//                .edgesIgnoringSafeArea(.all)
-            
-            AngularGradient(gradient: Gradient(colors: [.blue, .white, .blue]), center: .center, angle: .degrees(-45))
-                           .scaledToFill()
-                            .edgesIgnoringSafeArea(.all)
+            Color(red:0.953,green:0.965, blue:0.847)
+                .ignoresSafeArea()
             
             VStack{
                 //記録するボタンを押すと、record変数の値を保存してVisualizationで値を取り出せる状態にする
-                Button(action: {
-                                dismiss()
-                    //データを合計させたい
-                    SelectTotalRecord += SelectTotal
-                    UserDefaults.standard.set(self.SelectTotalRecord,forKey: "SelectTotalRecordData")
-                    waterData.MonthTotal += SelectTotalRecord
-                    UserDefaults.standard.set(self.waterData.MonthTotal,forKey: "MonthTotalData")
+                    Text("節水した行動を選択してね！")
+                        .foregroundColor(.black)
+                        .font(.largeTitle)
+                        .offset(y:-30)
                     
-                    waterData.AllTotal += waterData.MonthTotal
-                    UserDefaults.standard.set(self.waterData.AllTotal,forKey: "AllTotalData")
-                            }){
-                                ZStack{
-                                    Color.yellow
-                                        .frame(width:110,height: 110)
-                                        .cornerRadius(15)
-                                    Text("OK！")
-                                        .foregroundColor(.black)
-                                }
-                            }.fullScreenCover(isPresented: $isShowingView){
-                            }.offset(y:-100)
+                
                 VStack{
                     HStack{
                         ZStack{
@@ -97,8 +77,8 @@ struct SelectView:View{
                                 AudioServicesPlaySystemSound(soundIdRing)
                                 
                             }, label: {
-                                RoundedRectangle(cornerRadius: 30)
-                                    .fill(Color.gray)
+                                RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color.white)
                                                 .frame(width:250, height: 200)
                             })
                             Button(action: {
@@ -106,7 +86,10 @@ struct SelectView:View{
                             }, label: {
                                 VStack{
                                     Text("歯磨きはコップの水で")
-                                    Text("17")
+                                        .foregroundColor(.black)
+                                    Text("17L")
+                                        .font(.largeTitle)
+                                        .foregroundColor(.black)
                                 }
                                         })
                                         .buttonStyle(MyButtonStyle())
@@ -131,8 +114,8 @@ struct SelectView:View{
                                 }
                                 AudioServicesPlaySystemSound(soundIdRing)
                             }, label: {
-                                RoundedRectangle(cornerRadius: 30)
-                                    .fill(Color.gray)
+                                RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color.white)
                                                 .frame(width:250, height: 200)
                             })
                             Button(action: {
@@ -140,7 +123,10 @@ struct SelectView:View{
                             }, label: {
                                 VStack{
                                     Text("シャワーはこまめに")
-                                    Text("36")
+                                        .foregroundColor(.black)
+                                    Text("36L")
+                                        .font(.largeTitle)
+                                        .foregroundColor(.black)
                                 }
                                         })
                                         .buttonStyle(MyButtonStyle())
@@ -164,8 +150,8 @@ struct SelectView:View{
                                 }
                                 AudioServicesPlaySystemSound(soundIdRing)
                             }, label: {
-                                RoundedRectangle(cornerRadius: 30)
-                                    .fill(Color.gray)
+                                RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color.white)
                                                 .frame(width:250, height: 200)
                             })
                             Button(action: {
@@ -173,7 +159,10 @@ struct SelectView:View{
                             }, label: {
                                 VStack{
                                     Text("風呂水は選択に使う")
-                                    Text("55")
+                                        .foregroundColor(.black)
+                                    Text("55L")
+                                        .font(.largeTitle)
+                                        .foregroundColor(.black)
                                 }
                                         })
                                         .buttonStyle(MyButtonStyle())
@@ -197,8 +186,8 @@ struct SelectView:View{
                                 }
                                 AudioServicesPlaySystemSound(soundIdRing)
                             }, label: {
-                                RoundedRectangle(cornerRadius: 30)
-                                    .fill(Color.gray)
+                                RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color.white)
                                                 .frame(width:250, height: 200)
                             })
                             Button(action: {
@@ -206,7 +195,10 @@ struct SelectView:View{
                             }, label: {
                                 VStack{
                                     Text("トイレは一回で流す")
-                                    Text("10")
+                                        .foregroundColor(.black)
+                                    Text("10L")
+                                        .font(.largeTitle)
+                                        .foregroundColor(.black)
                                 }
                                         })
                                         .buttonStyle(MyButtonStyle())
@@ -232,8 +224,8 @@ struct SelectView:View{
                                 }
                                 AudioServicesPlaySystemSound(soundIdRing)
                             }, label: {
-                                RoundedRectangle(cornerRadius: 30)
-                                    .fill(Color.gray)
+                                RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color.white)
                                                 .frame(width:250, height: 200)
                             })
                             Button(action: {
@@ -241,7 +233,10 @@ struct SelectView:View{
                             }, label: {
                                 VStack{
                                     Text("食器はつけおき洗い")
-                                    Text("30")
+                                        .foregroundColor(.black)
+                                    Text("30L")
+                                        .font(.largeTitle)
+                                        .foregroundColor(.black)
                                 }
                                         })
                                         .buttonStyle(MyButtonStyle())
@@ -265,8 +260,8 @@ struct SelectView:View{
                                 }
                                 AudioServicesPlaySystemSound(soundIdRing)
                             }, label: {
-                                RoundedRectangle(cornerRadius: 30)
-                                    .fill(Color.gray)
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(Color.white)
                                                 .frame(width:250, height: 200)
                             })
                             Button(action: {
@@ -274,7 +269,10 @@ struct SelectView:View{
                             }, label: {
                                 VStack{
                                     Text("雨水を有効活用")
-                                    Text("50")
+                                        .foregroundColor(.black)
+                                    Text("50L")
+                                        .font(.largeTitle)
+                                        .foregroundColor(.black)
                                 }
                                         })
                                         .buttonStyle(MyButtonStyle())
@@ -298,8 +296,8 @@ struct SelectView:View{
                                 }
                                 AudioServicesPlaySystemSound(soundIdRing)
                             }, label: {
-                                RoundedRectangle(cornerRadius: 30)
-                                    .fill(Color.gray)
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(Color.white)
                                                 .frame(width:250, height: 200)
                             })
                             Button(action: {
@@ -307,7 +305,10 @@ struct SelectView:View{
                             }, label: {
                                 VStack{
                                     Text("洗濯はまとめ洗い")
-                                    Text("60")
+                                        .foregroundColor(.black)
+                                    Text("60L")
+                                        .font(.largeTitle)
+                                        .foregroundColor(.black)
                                 }
                                         })
                                         .buttonStyle(MyButtonStyle())
@@ -331,8 +332,8 @@ struct SelectView:View{
                                 }
                                 AudioServicesPlaySystemSound(soundIdRing)
                             }, label: {
-                                RoundedRectangle(cornerRadius: 30)
-                                    .fill(Color.gray)
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(Color.white)
                                                 .frame(width:250, height: 200)
                             })
                             Button(action: {
@@ -340,7 +341,10 @@ struct SelectView:View{
                             }, label: {
                                 VStack{
                                     Text("洗顔は洗面器で")
-                                    Text("24")
+                                        .foregroundColor(.black)
+                                    Text("24L")
+                                        .font(.largeTitle)
+                                        .foregroundColor(.black)
                                 }
                                         })
                                         .buttonStyle(MyButtonStyle())
@@ -349,6 +353,33 @@ struct SelectView:View{
                         }
                     }
                 }
+                Button(action: {
+                                dismiss()
+                    //データを合計させたい
+                    SelectTotalRecord += SelectTotal
+                    UserDefaults.standard.set(self.SelectTotalRecord,forKey: "SelectTotalRecordData")
+                    waterData.MonthTotal += SelectTotalRecord
+                    UserDefaults.standard.set(self.waterData.MonthTotal,forKey: "MonthTotalData")
+                    
+                    waterData.price = Int(saveprice) * waterData.MonthTotal/1000
+                    
+                    waterData.UntilGoleMount = waterData.GoleMount - waterData.MonthTotal
+                    
+                    waterData.AllTotal += SelectTotalRecord
+                    UserDefaults.standard.set(self.waterData.AllTotal,forKey: "AllTotalData")
+                            }){
+                                ZStack{
+                                    Color.blue
+                                        .frame(width:700,height: 100)
+                                        .cornerRadius(5)
+                                        .shadow(color: .gray, radius: 3, x: 5, y: 5)
+                                    Text("記録する")
+                                        .foregroundColor(.white)
+                                        .font(.largeTitle)
+                                    
+                                }
+                            }.fullScreenCover(isPresented: $isShowingView){
+                            }.offset(y:20)
             }
         }
     }
@@ -368,7 +399,7 @@ struct MyButtonStyle: ButtonStyle {
                 .opacity(configuration.isPressed ? 0.2 : 1.0)
                 .padding(15)
                 .background(isEnabled ? Color.blue.opacity(0.4) : Color.white)
-                .cornerRadius(10)
+                .cornerRadius(5)
         }
     }
 }

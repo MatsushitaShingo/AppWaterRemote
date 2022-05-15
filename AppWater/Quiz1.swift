@@ -52,9 +52,9 @@ struct Quiz1answer1: View {
                     Image(systemName: "drop.fill")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 50, height: 50)
+                        .frame(width: 70, height: 70)
                         .foregroundColor(.blue)
-                    Text("戻る")
+                    Text("やめる")
                         .padding(.vertical)
                         .foregroundColor(.white)
                 }
@@ -129,6 +129,7 @@ struct MyLabelStyle1: LabelStyle {
 }
 
 struct Quiz1answer1true: View {
+    @State var showingmovie1 = false
     var body: some View {
         VStack(spacing: 30){
             Text("正解")
@@ -150,16 +151,26 @@ struct Quiz1answer1true: View {
             }
             
             HStack {
-                
-                NavigationLink(destination: moviestart1()) {
-                    
-                    Text("動画を見る")
-                        .foregroundColor(.red)
-                        .font(.largeTitle)
-                        .bold()
-                        .frame(width: 200, height: 100)
-                        .border(Color.gray, width: 5)
-                }.ignoresSafeArea()
+                Button(action:{
+                    showingmovie1 = true
+                }){Text("動画を見る")
+                    .foregroundColor(.red)
+                    .font(.largeTitle)
+                    .bold()
+                    .frame(width: 200, height: 100)
+                    .border(Color.gray, width: 5)
+                }.fullScreenCover(isPresented: $showingmovie1){
+                    moviestart1()
+                }
+//                NavigationLink(destination: moviestart1()) {
+//
+//                    Text("動画を見る")
+//                        .foregroundColor(.red)
+//                        .font(.largeTitle)
+//                        .bold()
+//                        .frame(width: 200, height: 100)
+//                        .border(Color.gray, width: 5)
+//                }.ignoresSafeArea()
                 
                 NavigationLink(destination: Quiz1answer2()) {
                     
@@ -174,6 +185,7 @@ struct Quiz1answer1true: View {
         }
     }
 }
+
 struct Quiz1answer1false: View {
     var body: some View {
         VStack(spacing: 30){
@@ -352,6 +364,7 @@ struct Quiz1answer2true: View {
         }
     }
 }
+
 struct Quiz1answer2false: View {
     var body: some View {
         VStack(spacing: 30){
@@ -398,10 +411,6 @@ struct Quiz1answer2false: View {
         }
     }
 }
-
-
-
-
 //地下水３
 struct Quiz1answer3: View {
     @State private var isShowing2View3: Bool = false
@@ -533,6 +542,7 @@ struct Quiz1answer3true: View {
         }
     }
 }
+
 struct Quiz1answer3false: View {
     var body: some View {
         VStack(spacing: 30){
@@ -595,7 +605,6 @@ struct moviestart3: View{
             }
     }
 }
-
 //地下水４
 struct Quiz1answer4: View {
     @State private var isShowing2View4: Bool = false
@@ -725,6 +734,7 @@ struct Quiz1answer4true: View {
         }
     }
 }
+
 struct Quiz1answer4false: View {
     var body: some View {
         VStack(spacing: 30){
@@ -787,8 +797,6 @@ struct moviestart4: View{
             }
     }
 }
-
-
 //地下水５
 struct Quiz1answer5: View {
     @State private var isShowing2View5: Bool = false
@@ -918,6 +926,7 @@ struct Quiz1answer5true: View {
         }
     }
 }
+
 struct Quiz1answer5false: View {
     var body: some View {
         VStack(spacing: 30){

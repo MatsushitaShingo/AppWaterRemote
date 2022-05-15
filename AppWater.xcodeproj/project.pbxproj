@@ -27,6 +27,7 @@
 		1E6382372825A10E00316318 /* VisualizationViewTest2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6382362825A10E00316318 /* VisualizationViewTest2.swift */; };
 		1E6382392825A47E00316318 /* VisualizationViewTest3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6382382825A47E00316318 /* VisualizationViewTest3.swift */; };
 		1E63823B2828394300316318 /* ChartsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63823A2828394300316318 /* ChartsTest.swift */; };
+		1E63823F282C237B00316318 /* SettingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63823E282C237900316318 /* SettingPage.swift */; };
 		1E9D2D5B27E05C870035C405 /* AppWaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D5A27E05C870035C405 /* AppWaterApp.swift */; };
 		1E9D2D5D27E05C870035C405 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D5C27E05C870035C405 /* ContentView.swift */; };
 		1E9D2D5F27E05C880035C405 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D2D5E27E05C880035C405 /* Assets.xcassets */; };
@@ -80,6 +81,7 @@
 		1E6382362825A10E00316318 /* VisualizationViewTest2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizationViewTest2.swift; sourceTree = "<group>"; };
 		1E6382382825A47E00316318 /* VisualizationViewTest3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizationViewTest3.swift; sourceTree = "<group>"; };
 		1E63823A2828394300316318 /* ChartsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsTest.swift; sourceTree = "<group>"; };
+		1E63823E282C237900316318 /* SettingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPage.swift; sourceTree = "<group>"; };
 		1E9D2D5727E05C870035C405 /* AppWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9D2D5A27E05C870035C405 /* AppWaterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWaterApp.swift; sourceTree = "<group>"; };
 		1E9D2D5C27E05C870035C405 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				1E6382362825A10E00316318 /* VisualizationViewTest2.swift */,
 				1E6382382825A47E00316318 /* VisualizationViewTest3.swift */,
 				1E4252FF27F466EF00B12D9F /* SelectView.swift */,
+				1E63823E282C237900316318 /* SettingPage.swift */,
 				1E63821C2811B67400316318 /* calendarTest.swift */,
 				1E63821E2811BE7200316318 /* WaterWave.swift */,
 				1E63822A2813007800316318 /* test.swift */,
@@ -349,6 +352,7 @@
 				1E63821F2811BE7300316318 /* WaterWave.swift in Sources */,
 				1E3BD5C42807059F00E6A405 /* Quiz5.swift in Sources */,
 				1E3BD5BE2807057C00E6A405 /* Quiz2.swift in Sources */,
+				1E63823F282C237B00316318 /* SettingPage.swift in Sources */,
 				1E6382352825946000316318 /* VisulalizationViewTest.swift in Sources */,
 				1E9D2D8527E060FD0035C405 /* MovieView.swift in Sources */,
 				1E42530027F466EF00B12D9F /* SelectView.swift in Sources */,
