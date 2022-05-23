@@ -26,8 +26,9 @@
 		1E6382352825946000316318 /* VisulalizationViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6382342825945F00316318 /* VisulalizationViewTest.swift */; };
 		1E6382372825A10E00316318 /* VisualizationViewTest2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6382362825A10E00316318 /* VisualizationViewTest2.swift */; };
 		1E6382392825A47E00316318 /* VisualizationViewTest3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6382382825A47E00316318 /* VisualizationViewTest3.swift */; };
-		1E63823B2828394300316318 /* ChartsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63823A2828394300316318 /* ChartsTest.swift */; };
+		1E63823B2828394300316318 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63823A2828394300316318 /* LineChart.swift */; };
 		1E63823F282C237B00316318 /* SettingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63823E282C237900316318 /* SettingPage.swift */; };
+		1E6538CE283A80470089F3BB /* CalendarTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6538CD283A80470089F3BB /* CalendarTestView.swift */; };
 		1E9D2D5B27E05C870035C405 /* AppWaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D5A27E05C870035C405 /* AppWaterApp.swift */; };
 		1E9D2D5D27E05C870035C405 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D5C27E05C870035C405 /* ContentView.swift */; };
 		1E9D2D5F27E05C880035C405 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D2D5E27E05C880035C405 /* Assets.xcassets */; };
@@ -40,6 +41,9 @@
 		1E9D2D8927E0613B0035C405 /* Visualization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D8827E0613B0035C405 /* Visualization.swift */; };
 		1E9D2D9027E074BA0035C405 /* movie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D2D8E27E074BA0035C405 /* movie.mp4 */; };
 		1E9D2D9127E074BA0035C405 /* mov_hts-samp001.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D2D8F27E074BA0035C405 /* mov_hts-samp001.mp4 */; };
+		82DC081582E2521867033C98 /* Pods_AppWaterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 732B4533618BE7DBB5ABCDF9 /* Pods_AppWaterTests.framework */; };
+		D9D7FA60795EB85D0251576F /* Pods_AppWater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02B8E8510460F2D97E002554 /* Pods_AppWater.framework */; };
+		F8DA53C21B1E6D7F7FDC5824 /* Pods_AppWater_AppWaterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB027EF1619BB044F202311 /* Pods_AppWater_AppWaterUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02B8E8510460F2D97E002554 /* Pods_AppWater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppWater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E1E9FAC27E4A1FA00B244D9 /* Corporate-Logo-Medium-ver2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Corporate-Logo-Medium-ver2.ttf"; sourceTree = "<group>"; };
 		1E1E9FAE27E4A73E00B244D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1E3BD5B728068CA000E6A405 /* 熊本の水２　仮完成.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "熊本の水２　仮完成.mp4"; sourceTree = "<group>"; };
@@ -80,8 +85,9 @@
 		1E6382342825945F00316318 /* VisulalizationViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisulalizationViewTest.swift; sourceTree = "<group>"; usesTabs = 0; };
 		1E6382362825A10E00316318 /* VisualizationViewTest2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizationViewTest2.swift; sourceTree = "<group>"; };
 		1E6382382825A47E00316318 /* VisualizationViewTest3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizationViewTest3.swift; sourceTree = "<group>"; };
-		1E63823A2828394300316318 /* ChartsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsTest.swift; sourceTree = "<group>"; };
+		1E63823A2828394300316318 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		1E63823E282C237900316318 /* SettingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPage.swift; sourceTree = "<group>"; };
+		1E6538CD283A80470089F3BB /* CalendarTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTestView.swift; sourceTree = "<group>"; };
 		1E9D2D5727E05C870035C405 /* AppWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9D2D5A27E05C870035C405 /* AppWaterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWaterApp.swift; sourceTree = "<group>"; };
 		1E9D2D5C27E05C870035C405 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,6 +103,14 @@
 		1E9D2D8827E0613B0035C405 /* Visualization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visualization.swift; sourceTree = "<group>"; };
 		1E9D2D8E27E074BA0035C405 /* movie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = movie.mp4; sourceTree = "<group>"; };
 		1E9D2D8F27E074BA0035C405 /* mov_hts-samp001.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mov_hts-samp001.mp4"; sourceTree = "<group>"; };
+		3D9D3434F2B180E368C1A4B4 /* Pods-AppWater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppWater.release.xcconfig"; path = "Target Support Files/Pods-AppWater/Pods-AppWater.release.xcconfig"; sourceTree = "<group>"; };
+		4BA8FF04073C6F2AB635A335 /* Pods-AppWater-AppWaterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppWater-AppWaterUITests.debug.xcconfig"; path = "Target Support Files/Pods-AppWater-AppWaterUITests/Pods-AppWater-AppWaterUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5FF5C6244F4C3E8FFA7AAA5A /* Pods-AppWaterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppWaterTests.debug.xcconfig"; path = "Target Support Files/Pods-AppWaterTests/Pods-AppWaterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		66C048C608915F5DBECA48F6 /* Pods-AppWater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppWater.debug.xcconfig"; path = "Target Support Files/Pods-AppWater/Pods-AppWater.debug.xcconfig"; sourceTree = "<group>"; };
+		732B4533618BE7DBB5ABCDF9 /* Pods_AppWaterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppWaterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEB027EF1619BB044F202311 /* Pods_AppWater_AppWaterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppWater_AppWaterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6B915F9DDCA6C14145D9B92 /* Pods-AppWaterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppWaterTests.release.xcconfig"; path = "Target Support Files/Pods-AppWaterTests/Pods-AppWaterTests.release.xcconfig"; sourceTree = "<group>"; };
+		C057B47E561E39F6471CCD1F /* Pods-AppWater-AppWaterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppWater-AppWaterUITests.release.xcconfig"; path = "Target Support Files/Pods-AppWater-AppWaterUITests/Pods-AppWater-AppWaterUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9D7FA60795EB85D0251576F /* Pods_AppWater.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82DC081582E2521867033C98 /* Pods_AppWaterTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8DA53C21B1E6D7F7FDC5824 /* Pods_AppWater_AppWaterUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +155,8 @@
 				1E9D2D6A27E05C880035C405 /* AppWaterTests */,
 				1E9D2D7427E05C880035C405 /* AppWaterUITests */,
 				1E9D2D5827E05C870035C405 /* Products */,
+				D10D5539E2AC396251BDC777 /* Pods */,
+				C94B237FF3DA468905BB228D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,7 +194,8 @@
 				1E63821E2811BE7200316318 /* WaterWave.swift */,
 				1E63822A2813007800316318 /* test.swift */,
 				1E63822C2813011E00316318 /* Audiotest.swift */,
-				1E63823A2828394300316318 /* ChartsTest.swift */,
+				1E63823A2828394300316318 /* LineChart.swift */,
+				1E6538CD283A80470089F3BB /* CalendarTestView.swift */,
 				1E9D2D5E27E05C880035C405 /* Assets.xcassets */,
 				1E9D2D6027E05C880035C405 /* Preview Content */,
 			);
@@ -207,6 +227,29 @@
 			path = AppWaterUITests;
 			sourceTree = "<group>";
 		};
+		C94B237FF3DA468905BB228D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02B8E8510460F2D97E002554 /* Pods_AppWater.framework */,
+				AEB027EF1619BB044F202311 /* Pods_AppWater_AppWaterUITests.framework */,
+				732B4533618BE7DBB5ABCDF9 /* Pods_AppWaterTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D10D5539E2AC396251BDC777 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				66C048C608915F5DBECA48F6 /* Pods-AppWater.debug.xcconfig */,
+				3D9D3434F2B180E368C1A4B4 /* Pods-AppWater.release.xcconfig */,
+				4BA8FF04073C6F2AB635A335 /* Pods-AppWater-AppWaterUITests.debug.xcconfig */,
+				C057B47E561E39F6471CCD1F /* Pods-AppWater-AppWaterUITests.release.xcconfig */,
+				5FF5C6244F4C3E8FFA7AAA5A /* Pods-AppWaterTests.debug.xcconfig */,
+				B6B915F9DDCA6C14145D9B92 /* Pods-AppWaterTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -214,9 +257,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E9D2D7B27E05C880035C405 /* Build configuration list for PBXNativeTarget "AppWater" */;
 			buildPhases = (
+				3A0282038EC752F0B6395396 /* [CP] Check Pods Manifest.lock */,
 				1E9D2D5327E05C870035C405 /* Sources */,
 				1E9D2D5427E05C870035C405 /* Frameworks */,
 				1E9D2D5527E05C870035C405 /* Resources */,
+				C9679BDFCF829EDA91C076AC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,6 +276,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E9D2D7E27E05C880035C405 /* Build configuration list for PBXNativeTarget "AppWaterTests" */;
 			buildPhases = (
+				95EFE863BA184CCC26E93598 /* [CP] Check Pods Manifest.lock */,
 				1E9D2D6327E05C880035C405 /* Sources */,
 				1E9D2D6427E05C880035C405 /* Frameworks */,
 				1E9D2D6527E05C880035C405 /* Resources */,
@@ -249,9 +295,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E9D2D8127E05C880035C405 /* Build configuration list for PBXNativeTarget "AppWaterUITests" */;
 			buildPhases = (
+				0016E27CC5C98A9AC06C2792 /* [CP] Check Pods Manifest.lock */,
 				1E9D2D6D27E05C880035C405 /* Sources */,
 				1E9D2D6E27E05C880035C405 /* Frameworks */,
 				1E9D2D6F27E05C880035C405 /* Resources */,
+				3EDFFE78588721305BE9ADCA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -339,6 +387,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0016E27CC5C98A9AC06C2792 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppWater-AppWaterUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A0282038EC752F0B6395396 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppWater-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3EDFFE78588721305BE9ADCA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppWater-AppWaterUITests/Pods-AppWater-AppWaterUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppWater-AppWaterUITests/Pods-AppWater-AppWaterUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppWater-AppWaterUITests/Pods-AppWater-AppWaterUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95EFE863BA184CCC26E93598 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppWaterTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9679BDFCF829EDA91C076AC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppWater/Pods-AppWater-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppWater/Pods-AppWater-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppWater/Pods-AppWater-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1E9D2D5327E05C870035C405 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -356,12 +507,13 @@
 				1E6382352825946000316318 /* VisulalizationViewTest.swift in Sources */,
 				1E9D2D8527E060FD0035C405 /* MovieView.swift in Sources */,
 				1E42530027F466EF00B12D9F /* SelectView.swift in Sources */,
+				1E6538CE283A80470089F3BB /* CalendarTestView.swift in Sources */,
 				1E6382332825923500316318 /* MovieViewTest.swift in Sources */,
 				1E9D2D8727E061130035C405 /* StudyView.swift in Sources */,
 				1E3BD5BC280704F700E6A405 /* Quiz1.swift in Sources */,
 				1E9D2D5B27E05C870035C405 /* AppWaterApp.swift in Sources */,
 				1E6382392825A47E00316318 /* VisualizationViewTest3.swift in Sources */,
-				1E63823B2828394300316318 /* ChartsTest.swift in Sources */,
+				1E63823B2828394300316318 /* LineChart.swift in Sources */,
 				1E9D2D8927E0613B0035C405 /* Visualization.swift in Sources */,
 				1E63822D2813011E00316318 /* Audiotest.swift in Sources */,
 				1E63822B2813007800316318 /* test.swift in Sources */,
@@ -519,6 +671,7 @@
 		};
 		1E9D2D7C27E05C880035C405 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66C048C608915F5DBECA48F6 /* Pods-AppWater.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -551,6 +704,7 @@
 		};
 		1E9D2D7D27E05C880035C405 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D9D3434F2B180E368C1A4B4 /* Pods-AppWater.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -583,6 +737,7 @@
 		};
 		1E9D2D7F27E05C880035C405 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FF5C6244F4C3E8FFA7AAA5A /* Pods-AppWaterTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -602,6 +757,7 @@
 		};
 		1E9D2D8027E05C880035C405 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6B915F9DDCA6C14145D9B92 /* Pods-AppWaterTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -621,6 +777,7 @@
 		};
 		1E9D2D8227E05C880035C405 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BA8FF04073C6F2AB635A335 /* Pods-AppWater-AppWaterUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -638,6 +795,7 @@
 		};
 		1E9D2D8327E05C880035C405 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C057B47E561E39F6471CCD1F /* Pods-AppWater-AppWaterUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
