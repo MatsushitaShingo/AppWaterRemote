@@ -7,8 +7,10 @@
 
 import SwiftUI
 
+
+
 struct StudyView: View {
-    @State private var isShowingView1: Bool = false
+   @State private var isShowingView1: Bool = false
     @State private var isShowingView2: Bool = false
     @State private var isShowingView3: Bool = false
     @State private var isShowingView4: Bool = false
@@ -23,6 +25,7 @@ struct StudyView: View {
                         .scaledToFit()
                         .frame(width: 200, height: 200)
                         .foregroundColor(.yellow)
+                        .navigationBarHidden(true)
                     Text("クイズ１")
                         .padding(.vertical)
                         .foregroundColor(.white)

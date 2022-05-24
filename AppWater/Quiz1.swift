@@ -14,13 +14,15 @@ struct ModalView1: View {
     
     var body: some View {
         NavigationView{
+            
+
             NavigationLink(destination: Quiz1answer1()){
                 ZStack{
                     Image(systemName: "drop.fill")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 200, height: 200)
-                        .foregroundColor(.yellow)
+                        .foregroundColor(.black)
                     Text("START!")
                         .padding(.vertical)
                         .foregroundColor(.white)
@@ -33,9 +35,10 @@ struct ModalView1: View {
                 }
 
           }.navigationViewStyle(.stack)
-
+            
+        }
         
-      }
+
     }
 }
 
@@ -44,134 +47,175 @@ struct Quiz1answer1: View {
     @State private var isShowing2View1: Bool = false
     
     var body: some View {
-
-        
-        VStack (spacing: 10){
-            Button(action: {self.isShowing2View1.toggle()}){
-                ZStack{
-                    Image(systemName: "drop.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 50, height: 50)
-                        .foregroundColor(.blue)
-                    Text("戻る")
-                        .padding(.vertical)
-                        .foregroundColor(.white)
-                }
-            }.fullScreenCover(isPresented:$isShowing2View1){
-                finishView()
-            }.offset(x:500,y: -100)
-            
-            Text("地下水１")
-                .font(.largeTitle)
-                .fontWeight(.heavy)
-                .padding()
-            
-
-            ZStack{
-                   Rectangle()
-                    .stroke(lineWidth: 5)
-                    .frame(width:800,height: 300)
-                                Text("熊本の地下水を汚染している代表的な物質はどれ？")
-                                    .foregroundColor(.black)
-                                    .font(.largeTitle)
-                                    .bold()
-                                    .multilineTextAlignment(.center)
-                            }
-
-                .padding()
-                .padding()
-            HStack {
-
-                NavigationLink(destination: Quiz1answer1true()) {
-
-                    Label("硝酸性窒素", systemImage: "suit.heart.fill")
-                        .labelStyle(MyLabelStyle1(color: .red))
-                }
-                        
-                NavigationLink(destination: Quiz1answer1false()) {
-
-                    Label("全シアン", systemImage: "suit.club.fill")
-                        .labelStyle(MyLabelStyle1(color: .green))
-                }
-                        
-                NavigationLink(destination: Quiz1answer1false()) {
-
-                    Label("四塩化炭素", systemImage: "suit.diamond.fill")
-                        .labelStyle(MyLabelStyle1(color: .yellow))
-
-                }
-
-             
+        ZStack{
+            Color(red: 0.965, green: 0.878, blue: 0.216)
+                .ignoresSafeArea()
+            VStack (spacing: 10){
+                
+                Button(action: {self.isShowing2View1.toggle()}){
+                    ZStack{
+                        Image(systemName: "drop.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 50, height: 50)
+                            .foregroundColor(.blue)
+                        Text("戻る")
+                            .padding(.vertical)
+                            .foregroundColor(.white)
                     }
-            
-        }
-    }
-}
+                }.fullScreenCover(isPresented:$isShowing2View1){
+                    finishView()
+                }.offset(x:500,y: -100)
+                
+                HStack{
+                    ZStack{
+                        Image(systemName: "circle.fill")
 
-struct MyLabelStyle1: LabelStyle {
-    let color: Color
-    
-    func makeBody(configuration: Configuration) -> some View {
- 
-        HStack {
-            configuration.icon      // アイコン
-                .padding(10)
-                .background(Circle().fill(color))
-            
-            configuration.title     // タイトル
-                .padding(.trailing, 10)
-                .lineLimit(1)       // 改行させない
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 200, height: 100)
+                            .foregroundColor(Color( red:0.937,green:0.537,blue:0.698))
+                        Text("1")
+                            .font(.largeTitle)
+                            
+                    }.offset(x:-275,y: -100)
+                    
+                    Text("熊本の地下水")
+                        .font(.largeTitle)
+                        .fontWeight(.heavy)
+                        .padding()
+                        .offset(x:275,y: -100)
+                    
+                }
+
+                ZStack{
+                       Rectangle()
+                        .fill(Color.white)
+                        .border(Color.black, width: 3)
+                        .frame(width:800,height: 300)
+                                    Text("熊本の地下水を汚染している代表的な物質はどれ？")
+                                        .foregroundColor(.black)
+                                        .font(.largeTitle)
+                                        .bold()
+                                        .multilineTextAlignment(.center)
+                    
+                                        
+                }.offset(y: -80)
+
+                HStack {
+
+                    NavigationLink(destination: Quiz1answer1true()) {
+                        ZStack{
+                               Rectangle()
+                                .fill(Color.white)
+                                .border(Color.black, width: 3)
+                                .frame(width:350,height: 150)
+                                            Text("硝酸性窒素")
+                                .font(.largeTitle)
+                                .background(Color.white)
+                                .foregroundColor(Color.black)
+                                .frame(width: 300, height: 100)
+                                                
+                        }
+                            
+                    }
+                            
+                    NavigationLink(destination: Quiz1answer1false()) {
+
+                        ZStack{
+                               Rectangle()
+                                .fill(Color.white)
+                                .border(Color.black, width: 3)
+                                .frame(width:350,height: 150)
+                                            Text("全シアン")
+                                .font(.largeTitle)
+                                .background(Color.white)
+                                .foregroundColor(Color.black)
+                                .frame(width: 300, height: 100)
+                                                
+                        }
+                    }
+                            
+                    
+                    NavigationLink(destination: Quiz1answer1false()) {
+
+                        ZStack{
+                               Rectangle()
+                                .fill(Color.white)
+                                .border(Color.black, width: 3)
+                                .frame(width:350,height: 150)
+                                            Text("四塩化炭素")
+                                . font(.largeTitle)
+                                .background(Color.white)
+                                .foregroundColor(Color.black)
+                                .frame(width: 300, height: 100)
+                                                
+                        }
+
+
+                    }
+
+                 
+                        }
         }
-        .padding(6)
-        .background(RoundedRectangle(cornerRadius: 10).stroke(color, lineWidth: 3))
+
+            
+        }
     }
 }
 
 struct Quiz1answer1true: View {
     var body: some View {
-        VStack(spacing: 30){
-            Text("正解")
-            .fontWeight(.heavy)
-            .font(.system(size: 80, weight: .black, design: .default))
-            
-            Image(systemName: "poweroff")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 200, height: 200)
-                .foregroundColor(.red)
-            ZStack{
-                    Color.red
-                    .frame(width:650,height: 200)
-                    Text("解説")
-                    .foregroundColor(.black)
-                    .font(.largeTitle)
-                    .bold()
-                            }
-            
-            HStack {
+        ZStack{
+            Color(red: 0.965, green: 0.878, blue: 0.216)
+                .ignoresSafeArea()
+            VStack(spacing: 30){
+                Text("正解")
+                .fontWeight(.heavy)
+                .font(.system(size: 80, weight: .black, design: .default))
+                
+                Image(systemName: "poweroff")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 200, height: 200)
+                    .foregroundColor(.red)
+                ZStack{
+                        Color.white
+                        .frame(width:650,height: 200)
 
-                NavigationLink(destination: moviestart1()) {
+                        .border(Color.black, width: 3)
 
-                    Text("動画を見る")
-                        .foregroundColor(.red)
+                        Text("解説")
+                        .foregroundColor(.black)
                         .font(.largeTitle)
                         .bold()
-                        .frame(width: 200, height: 100)
-                        .border(Color.gray, width: 5)
-                }
-                        
-                NavigationLink(destination: Quiz1answer2()) {
+                                }
+                
+                HStack {
 
-                    Text("次の問題へ")
-                        .foregroundColor(.red)
-                        .font(.largeTitle)
-                        .bold()
-                        .frame(width: 200, height: 100)
-                        .border(Color.gray, width: 5)
-                }
+                    NavigationLink(destination: moviestart1()) {
+
+                        Text("動画を見る")
+                            .foregroundColor(.red)
+                            .font(.largeTitle)
+                            .bold()
+                            .frame(width: 200, height: 100)
+                            .border(Color.gray, width: 5)
+                    }
+                            
+                    NavigationLink(destination: Quiz1answer2()) {
+
+                        Text("次の問題へ")
+                            .foregroundColor(.red)
+                            .font(.largeTitle)
+                            .bold()
+                            .frame(width: 200, height: 100)
+                            .border(Color.gray, width: 5)
+                    }
+            }
         }
-    }
+        }
+
 }
 }
 struct Quiz1answer1false: View {
@@ -272,52 +316,63 @@ struct Quiz1answer2: View {
                                     .multilineTextAlignment(.center)
                             }
 
-                .padding()
-                .padding()
             HStack {
 
                 NavigationLink(destination: Quiz1answer2false()) {
 
-                    Label("30%", systemImage: "suit.heart.fill")
-                        .labelStyle(MyLabelStyle2(color: .red))
+                    ZStack{
+                           Rectangle()
+                            .fill(Color.white)
+                            .border(Color.black, width: 3)
+                            .frame(width:350,height: 150)
+                                        Text("30%")
+                            .font(.largeTitle)
+                            .background(Color.white)
+                            .foregroundColor(Color.black)
+                            .frame(width: 300, height: 100)
+                                            
+                    }
+                        
                 }
                         
                 NavigationLink(destination: Quiz1answer2true()) {
 
-                    Label("10%", systemImage: "suit.club.fill")
-                        .labelStyle(MyLabelStyle2(color: .green))
+                    ZStack{
+                           Rectangle()
+                            .fill(Color.white)
+                            .border(Color.black, width: 3)
+                            .frame(width:350,height: 150)
+                                        Text("10%")
+                            .font(.largeTitle)
+                            .background(Color.white)
+                            .foregroundColor(Color.black)
+                            .frame(width: 300, height: 100)
+                                            
+                    }
+                        
                 }
                         
                 NavigationLink(destination: Quiz1answer2false()) {
 
-                    Label("50%", systemImage: "suit.diamond.fill")
-                        .labelStyle(MyLabelStyle2(color: .yellow))
-
+                    ZStack{
+                           Rectangle()
+                            .fill(Color.white)
+                            .border(Color.black, width: 3)
+                            .frame(width:350,height: 150)
+                                        Text("50%")
+                            .font(.largeTitle)
+                            .background(Color.white)
+                            .foregroundColor(Color.black)
+                            .frame(width: 300, height: 100)
+                                            
+                    }
+                        
                 }
 
              
                     }
             
         }
-    }
-}
-
-struct MyLabelStyle2: LabelStyle {
-    let color: Color
-    
-    func makeBody(configuration: Configuration) -> some View {
- 
-        HStack {
-            configuration.icon      // アイコン
-                .padding(10)
-                .background(Circle().fill(color))
-            
-            configuration.title     // タイトル
-                .padding(.trailing, 10)
-                .lineLimit(1)       // 改行させない
-        }
-        .padding(6)
-        .background(RoundedRectangle(cornerRadius: 10).stroke(color, lineWidth: 3))
     }
 }
 
@@ -460,33 +515,59 @@ struct Quiz1answer3: View {
                 Rectangle()
                  .stroke(lineWidth: 5)
                  .frame(width:1050,height: 300)
-                                Text("地下水が減少している理由は2つあり、一つは、水田が畑になっていることである。もう一つは？")
+                                Text("地下水が減少している理由は2つあり、\n一つは、水田が畑になっていることである。もう一つは？")
                                     .foregroundColor(.black)
                                     .font(.largeTitle)
                                     .bold()
                                     .multilineTextAlignment(.center)
                             }
 
-                .padding()
-                .padding()
             HStack {
 
                 NavigationLink(destination: Quiz1answer3false()) {
-
-                    Label("街が広がって、雨水が染み込まないから", systemImage: "suit.heart.fill")
-                        .labelStyle(MyLabelStyle3(color: .red))
+                    ZStack{
+                           Rectangle()
+                            .fill(Color.white)
+                            .border(Color.black, width: 3)
+                            .frame(width:350,height: 150)
+                                        Text("街が広がって、\n雨水が染み込まないから")
+                            .font(.title2)
+                            .background(Color.white)
+                            .foregroundColor(Color.black)
+                            .frame(width: 300, height: 100)
+                                            
+                    }
+                        
                 }
                         
                 NavigationLink(destination: Quiz1answer3false()) {
-
-                    Label("森が広がって、雨水が染み込まないから", systemImage: "suit.club.fill")
-                        .labelStyle(MyLabelStyle3(color: .green))
+                    ZStack{
+                           Rectangle()
+                            .fill(Color.white)
+                            .border(Color.black, width: 3)
+                            .frame(width:350,height: 150)
+                                        Text("森が広がって、\n雨水が染み込まないから")
+                            .font(.title2)
+                            .background(Color.white)
+                            .foregroundColor(Color.black)
+                            .frame(width: 300, height: 100)
+                                            
+                    }
                 }
                         
                 NavigationLink(destination: Quiz1answer3true()) {
-
-                    Label("土地が汚れて、雨水が染み込まないから", systemImage: "suit.diamond.fill")
-                        .labelStyle(MyLabelStyle3(color: .yellow))
+                    ZStack{
+                           Rectangle()
+                            .fill(Color.white)
+                            .border(Color.black, width: 3)
+                            .frame(width:350,height: 150)
+                                        Text("土地が汚れて、\n雨水が染み込まないから")
+                            .font(.title2)
+                            .background(Color.white)
+                            .foregroundColor(Color.black)
+                            .frame(width: 300, height: 100)
+                                            
+                    }
 
                 }
 
@@ -497,24 +578,6 @@ struct Quiz1answer3: View {
     }
 }
 
-struct MyLabelStyle3: LabelStyle {
-    let color: Color
-    
-    func makeBody(configuration: Configuration) -> some View {
- 
-        HStack {
-            configuration.icon      // アイコン
-                .padding(10)
-                .background(Circle().fill(color))
-            
-            configuration.title     // タイトル
-                .padding(.trailing, 10)
-                .lineLimit(1)       // 改行させない
-        }
-        .padding(6)
-        .background(RoundedRectangle(cornerRadius: 10).stroke(color, lineWidth: 3))
-    }
-}
 
 struct Quiz1answer3true: View {
     var body: some View {
@@ -1013,11 +1076,12 @@ struct moviestart5: View{
 struct finishView: View{
     
      var body: some View{
+         NavigationView{
              VStack{
                          Text("　中止しますか？")
                              .font(.system(size: 70, weight: .black))
                          HStack{
-                             NavigationLink(destination: StudyView()){
+                             NavigationLink(destination: ContentView()){
                                  
                                  Text("はい")
                                      .foregroundColor(.red)
@@ -1037,20 +1101,25 @@ struct finishView: View{
                              }
                          }
                      }
+         }
+
 
     }
 }
 
 struct Quiz1End: View{
     
+    
      var body: some View{
          VStack{
+             
                      Text("５問中〇〇問正解しました！")
                          .font(.system(size: 70, weight: .black, design: .default))
                          .bold()
                          .padding()
                          .padding()
                          .padding()
+                         .navigationBarHidden(true)
                      NavigationLink(destination: StudyView()){
                          ZStack{
                              Color.red
@@ -1059,12 +1128,12 @@ struct Quiz1End: View{
                                  .foregroundColor(.black)
                                  .font(.largeTitle)
                                  .bold()
+                             
                          }
                      }
                  }
     }
 }
-
 
 struct Quiz1_Previews: PreviewProvider {
     static var previews: some View {

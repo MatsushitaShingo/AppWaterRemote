@@ -20,6 +20,7 @@ struct ContentView: View {
                         Text("動画再生機能")
                             .padding(.vertical)
                             .foregroundColor(.white)
+                            .navigationBarHidden(true)
                     }
                 }
                 //ナビゲーションの戻るボタンのテキスト変更

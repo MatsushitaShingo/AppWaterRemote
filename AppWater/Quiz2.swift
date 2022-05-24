@@ -85,7 +85,7 @@ struct Quiz2: View {
             Spacer()
             Text(quiz.presentQuiz.question).font(.title)
             Spacer()
-            ForEach( 0..<4) { i in
+            ForEach( 0..<3) { i in
                 Button(action: {
                     quiz.judge(answeredNumber: i)
                 }){
@@ -154,5 +154,6 @@ func load<T: Decodable>(_ filename: String) -> T {
 struct Quiz2_Previews: PreviewProvider {
     static var previews: some View {
         Quiz2()
+.previewInterfaceOrientation(.landscapeLeft)
     }
 }

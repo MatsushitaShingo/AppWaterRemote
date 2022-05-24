@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct ModalView4: View {
+    
+    @State private var isActive = false
     @Environment(\.presentationMode)var PresentationMode
+   
     var body: some View {
         NavigationView{
             NavigationLink(destination: Quiz4()){
@@ -37,7 +40,7 @@ struct ModalView4: View {
     }
 }
 
-struct Quiz4: View {
+struct Quiz4: View {    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
