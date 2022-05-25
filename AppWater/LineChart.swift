@@ -43,5 +43,6 @@ struct LineChart : UIViewRepresentable {
 struct LineChart_Previews: PreviewProvider {
     static var previews: some View {
         LineChart()
+            .previewInterfaceOrientation(.portraitUpsideDown)
     }
 }

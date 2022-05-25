@@ -29,6 +29,7 @@
 		1E63823B2828394300316318 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63823A2828394300316318 /* LineChart.swift */; };
 		1E63823F282C237B00316318 /* SettingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63823E282C237900316318 /* SettingPage.swift */; };
 		1E6538CE283A80470089F3BB /* CalendarTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6538CD283A80470089F3BB /* CalendarTestView.swift */; };
+		1E6538D4283BD13C0089F3BB /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E6538D2283BD13C0089F3BB /* Data.xcdatamodeld */; };
 		1E9D2D5B27E05C870035C405 /* AppWaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D5A27E05C870035C405 /* AppWaterApp.swift */; };
 		1E9D2D5D27E05C870035C405 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D5C27E05C870035C405 /* ContentView.swift */; };
 		1E9D2D5F27E05C880035C405 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D2D5E27E05C880035C405 /* Assets.xcassets */; };
@@ -88,6 +89,7 @@
 		1E63823A2828394300316318 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		1E63823E282C237900316318 /* SettingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPage.swift; sourceTree = "<group>"; };
 		1E6538CD283A80470089F3BB /* CalendarTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTestView.swift; sourceTree = "<group>"; };
+		1E6538D3283BD13C0089F3BB /* Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Data.xcdatamodel; sourceTree = "<group>"; };
 		1E9D2D5727E05C870035C405 /* AppWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9D2D5A27E05C870035C405 /* AppWaterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWaterApp.swift; sourceTree = "<group>"; };
 		1E9D2D5C27E05C870035C405 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				1E63822C2813011E00316318 /* Audiotest.swift */,
 				1E63823A2828394300316318 /* LineChart.swift */,
 				1E6538CD283A80470089F3BB /* CalendarTestView.swift */,
+				1E6538D2283BD13C0089F3BB /* Data.xcdatamodeld */,
 				1E9D2D5E27E05C880035C405 /* Assets.xcassets */,
 				1E9D2D6027E05C880035C405 /* Preview Content */,
 			);
@@ -515,6 +518,7 @@
 				1E6382392825A47E00316318 /* VisualizationViewTest3.swift in Sources */,
 				1E63823B2828394300316318 /* LineChart.swift in Sources */,
 				1E9D2D8927E0613B0035C405 /* Visualization.swift in Sources */,
+				1E6538D4283BD13C0089F3BB /* Data.xcdatamodeld in Sources */,
 				1E63822D2813011E00316318 /* Audiotest.swift in Sources */,
 				1E63822B2813007800316318 /* test.swift in Sources */,
 			);
@@ -851,6 +855,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1E6538D2283BD13C0089F3BB /* Data.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1E6538D3283BD13C0089F3BB /* Data.xcdatamodel */,
+			);
+			currentVersion = 1E6538D3283BD13C0089F3BB /* Data.xcdatamodel */;
+			path = Data.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1E9D2D4F27E05C870035C405 /* Project object */;
 }
