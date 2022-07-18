@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreData
-
+//エンティティに固有の実装を定義するファイル
 @objc(WaterData)
 public class WaterData: NSManagedObject {
 

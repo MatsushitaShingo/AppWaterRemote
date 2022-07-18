@@ -9,12 +9,12 @@
 import Foundation
 import CoreData
 
+//エンティティの属性情報を定義するファイル
+extension WaterDataEntities {
 
-extension WaterData {
-
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<WaterData> {
-        return NSFetchRequest<WaterData>(entityName: "WaterData")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<WaterDataEntities> {
+        return NSFetchRequest<WaterDataEntities>(entityName: "WaterDataEntities")
     }
-
+    @NSManaged public var alldataattribute:Int32?
 
 }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Charts
+//import CoreData
 
 struct LineChart : UIViewRepresentable {
     
@@ -21,14 +22,13 @@ struct LineChart : UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: LineChartView, context: Context) {
- 
     }
     
     let yValue:[ChartDataEntry] = [
         ChartDataEntry(x: 1, y: 10.0),
         ChartDataEntry(x: 2, y: 20.0),
-        ChartDataEntry(x: 3, y: 30.0),
-        ChartDataEntry(x: 4, y: 40.0),
+        ChartDataEntry(x: 3, y: 100.0),
+        ChartDataEntry(x: 4, y: 10.0),
         ChartDataEntry(x: 5, y: 20.0)
     ]
     

@@ -27,5 +27,6 @@ struct CalendarTestView: UIViewRepresentable {
 struct CalendarTestView_Previews: PreviewProvider {
     static var previews: some View {
         CalendarTestView()
+            .previewInterfaceOrientation(.landscapeRight)
     }
 }

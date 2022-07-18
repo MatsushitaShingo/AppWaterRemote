@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Entity" representedClassName="Entity" syncable="YES" codeGenerationType="class"/>
+    <entity name="WaterDataEntities" representedClassName="WaterDataEntities" syncable="YES" codeGenerationType="class">
+        <attribute name="alldataattribute" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="WaterDataEntities" positionX="-54" positionY="-9" width="128" height="58"/>
+        <element name="Entity" positionX="124.4140625" positionY="20.05859375" width="128" height="29"/>
+    </elements>
+</model>

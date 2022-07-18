@@ -6,7 +6,7 @@
 
 import SwiftUI
 import AudioToolbox
-
+import CoreData
 
 struct SelectView:View{
     
@@ -38,20 +38,21 @@ struct SelectView:View{
     @EnvironmentObject var waterData: WaterData
     let saveprice = 148.5
     
+    //coredataを使うための処理
+    @Environment(\.managedObjectContext)  var viewContext
+    @State var alldataattirbute = 0
     
     var body: some View {
         ZStack{
-            Color(red:0.953,green:0.965, blue:0.847)
+            Color(red:0.754,green:0.887, blue:0.914)
                 .ignoresSafeArea()
             
             VStack{
                 //記録するボタンを押すと、record変数の値を保存してVisualizationで値を取り出せる状態にする
-                    Text("節水した行動を選択してね！")
+                    Text("できたことを1つ選んでね")
                         .foregroundColor(.black)
                         .font(.largeTitle)
-                        .offset(y:-30)
-                    
-                
+                        .offset(y:-30)              
                 VStack{
                     HStack{
                         ZStack{
@@ -353,34 +354,38 @@ struct SelectView:View{
                         }
                     }
                 }
-                Button(action: {
-                                dismiss()
-                    //データを合計させたい
-                    SelectTotalRecord += SelectTotal
-                    UserDefaults.standard.set(self.SelectTotalRecord,forKey: "SelectTotalRecordData")
-                    waterData.MonthTotal += SelectTotalRecord
-                    UserDefaults.standard.set(self.waterData.MonthTotal,forKey: "MonthTotalData")
-                    
-                    waterData.price = Int(saveprice) * waterData.MonthTotal/1000
-                    
-                    waterData.UntilGoleMount = waterData.GoleMount - waterData.MonthTotal
-                    
-                    waterData.AllTotal += SelectTotalRecord
-                    UserDefaults.standard.set(self.waterData.AllTotal,forKey: "AllTotalData")
-                            }){
-                                ZStack{
-                                    Color.blue
-                                        .frame(width:700,height: 100)
-                                        .cornerRadius(5)
-                                        .shadow(color: .gray, radius: 3, x: 5, y: 5)
-                                    Text("記録する")
-                                        .foregroundColor(.white)
-                                        .font(.largeTitle)
-                                    
-                                }
-                            }.fullScreenCover(isPresented: $isShowingView){
-                            }.offset(y:20)
             }
+            Button(action: {
+                            dismiss()
+                //データを合計させたい
+                SelectTotalRecord += SelectTotal
+                UserDefaults.standard.set(self.SelectTotalRecord,forKey: "SelectTotalRecordData")
+                waterData.MonthTotal += SelectTotalRecord
+                UserDefaults.standard.set(self.waterData.MonthTotal,forKey: "MonthTotalData")
+                
+                waterData.price = Int(saveprice) * waterData.MonthTotal/1000
+                
+                waterData.UntilGoleMount = waterData.GoleMount - waterData.MonthTotal
+                
+                waterData.AllTotal += SelectTotalRecord
+                UserDefaults.standard.set(self.waterData.AllTotal,forKey: "AllTotalData")
+                
+                
+                let waterdataentities = WaterDataEntities(context: viewContext)
+                    waterdataentities.alldataattribute = Int32(alldataattirbute)
+                alldataattirbute = SelectTotalRecord
+                try? viewContext.save()
+                print(alldataattirbute)
+                        }){
+                            ZStack{
+                                Color(red:0.441,green:0.719, blue:0.75)
+                                    .frame(width:1080,height: 100)
+                                Text("きろくする\(alldataattirbute)")
+                                    .foregroundColor(.white)
+                                    .font(.largeTitle)
+                            }
+                        }.fullScreenCover(isPresented: $isShowingView){
+                        }.offset(y:320)
         }
     }
 }
@@ -407,8 +412,8 @@ struct MyButtonStyle: ButtonStyle {
 struct SelectView_Previews: PreviewProvider {
     static var previews: some View {
         SelectView()
-        
             .previewInterfaceOrientation(.landscapeLeft)
-
+        // ManagedObjectContextを環境変数に設定
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

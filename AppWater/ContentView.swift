@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 //データ管理
 class WaterData: ObservableObject {

@@ -9,10 +9,15 @@ import SwiftUI
 
 @main
 struct AppWaterApp: App {
+    // 永続コンテナのコントローラー生成
+    let persistenceController = PersistenceController.shared
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(WaterData()) 
+                .environmentObject(WaterData())
+            // ManagedObjectContextを環境変数に追加
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
