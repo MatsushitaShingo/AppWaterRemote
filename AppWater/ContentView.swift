@@ -11,6 +11,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             HStack{
+                
                 NavigationLink(destination: MovieView()){
                     ZStack{
                         Image(systemName: "drop.fill")
@@ -36,6 +37,7 @@ struct ContentView: View {
                             .foregroundColor(.white)
                     }
                 }
+                
                 NavigationLink(destination: Visualization()){
                     ZStack{
                         Image(systemName: "drop.fill")

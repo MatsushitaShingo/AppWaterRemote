@@ -162,7 +162,7 @@ struct selectView:View{
                     Button{
                         record = self.finalrecord + self.select3
                     }label: {
-                        Text("シャワ")
+                        Text("シャワー")
                             .foregroundColor(.red)
                             .font(.largeTitle)
                             .background(Circle()
@@ -184,7 +184,7 @@ struct selectView:View{
                     Button{
                         record = self.finalrecord + self.select5
                     }label: {
-                        Text("洗顔ー")
+                        Text("洗顔")
                             .foregroundColor(.red)
                             .font(.largeTitle)
                             .background(Circle()

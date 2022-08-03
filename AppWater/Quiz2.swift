@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct ModalView2: View {
+    
     @Environment(\.presentationMode)var PresentationMode
+    
+    
     var body: some View {
         NavigationView{
             NavigationLink(destination: Quiz2()){
+                
                 ZStack{
                     Image(systemName: "drop.fill")
                         .resizable()

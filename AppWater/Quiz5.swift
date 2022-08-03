@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+class EnvironmentData: ObservableObject {
+    @Published var isNavigationActive: Binding<Bool> = Binding<Bool>.constant(false)
+}
+
 struct ModalView5: View {
     @Environment(\.presentationMode)var PresentationMode
     var body: some View {
@@ -38,13 +42,60 @@ struct ModalView5: View {
 }
 
 struct Quiz5: View {
+
+    @State private var isActive = false
+        
+        var body: some View {
+                NavigationLink(destination: SecondView(isFirstViewActive: $isActive), isActive: $isActive) {
+                    Button(action: {
+                        self.isActive = true
+                    }, label: {
+                        Text("Forward to Second View.")
+                    })
+                }
+                .navigationViewStyle(.stack)
+                .navigationBarTitle("First View")
+
+        }
+    
+}
+
+struct SecondView: View {
+    
+    @State private var isActive = false
+    @Binding var isFirstViewActive: Bool
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationLink(destination: ThirdView(isFirstViewActive: $isFirstViewActive), isActive: $isActive) {
+            Button(action: {
+                self.isActive = true
+            }, label: {
+                Text("Forward to Third View.")
+            })
+        }
+        .isDetailLink(false)
+        .navigationBarTitle("Second View")
     }
 }
+
+struct ThirdView: View {
+    
+    @Binding var isFirstViewActive: Bool
+    
+    var body: some View {
+        Button(action: {
+            self.isFirstViewActive = false
+        }, label: {
+            Text("Back to First View.")
+        })
+        .navigationBarTitle("Third View")
+    }
+}
+
 
 struct Quiz5_Previews: PreviewProvider {
     static var previews: some View {
         Quiz5()
+            .previewInterfaceOrientation(.landscapeLeft)
     }
 }

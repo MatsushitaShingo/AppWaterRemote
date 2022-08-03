@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import AVKit
+
 
 struct ModalView3: View {
     @Environment(\.presentationMode)var PresentationMode
@@ -45,7 +47,7 @@ struct Quiz3decodable: Decodable {
 
 class QuizesManager3: ObservableObject {
     var quiz = [Quiz]()
-    @Published var presentQuiz = Quiz(question: "", answer: "",choice: ["","","",""])
+    @Published var presentQuiz = Quiz(question: "", answer: "",choice: ["","",""])
     @Published var isFinished = false// クイズが終わったかどうか
     var number = 0 //問題番号.今何問目なのか示す
     var correct = 0// 正解数
@@ -106,15 +108,17 @@ struct Quiz3: View {
             
                 HStack {
 
-                    NavigationLink(destination: Quiz1answer1true()) {
+                    NavigationLink(destination: Quiz3answer1true()) {
 
                         Button(action: {
                                             quiz.judge(answeredNumber: 1)
                                         }){
                                             HStack {
-                                                Text(quiz.presentQuiz.choice [1])
+                                                Text(quiz.presentQuiz.choice [0])
+                                                    .fontWeight(.heavy)
                                             }
                                         }
+                        
                                         .frame(width: 300, height: 150)
                                         .disabled(quiz.isFinished)
                                         .cornerRadius(25)
@@ -127,13 +131,43 @@ struct Quiz3: View {
                             
                     NavigationLink(destination: Quiz1answer1false()) {
 
-                        Label("全シアン", systemImage: "suit.club.fill")
+                        Button(action: {
+                                            quiz.judge(answeredNumber: 2)
+                                        }){
+                                            HStack {
+                                                Text(quiz.presentQuiz.choice [1])
+                                                    .fontWeight(.heavy)
+                                            }
+                                        }
+                                        .frame(width: 300, height: 150)
+                                        .disabled(quiz.isFinished)
+                                        .cornerRadius(25)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 25)
+                                                .stroke(Color.blue))
+                                        .padding(2)
+                        
                            
                     }
                             
                     NavigationLink(destination: Quiz1answer1false()) {
 
-                        Label("四塩化炭素", systemImage: "suit.diamond.fill")
+                        Button(action: {
+                                            quiz.judge(answeredNumber: 3)
+                                        }){
+                                            HStack {
+                                                Text(quiz.presentQuiz.choice [2])
+                                                    .fontWeight(.heavy)
+                                            }
+                                        }
+                                        .frame(width: 300, height: 150)
+                                        .disabled(quiz.isFinished)
+                                        .cornerRadius(25)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 25)
+                                                .stroke(Color.blue))
+                                        .padding(2)
+                        
                             
                     }
 
@@ -177,6 +211,115 @@ struct Quiz3: View {
         quiz.quiz = load("QuizAnswer.json")
     }
 }
+
+struct Quiz3answer1true: View {
+    
+    @ObservedObject var quiz = QuizesManager3()
+    
+    var body: some View {
+        ZStack{
+            Color(red: 0.965, green: 0.878, blue: 0.216)
+                .ignoresSafeArea()
+            VStack(spacing: 30){
+                Text("正解")
+                .fontWeight(.heavy)
+                .font(.system(size: 80, weight: .black, design: .default))
+                
+                Image(systemName: "poweroff")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 200, height: 200)
+                    .foregroundColor(.red)
+                ZStack{
+                        Color.white
+                        .frame(width:650,height: 200)
+
+                        .border(Color.black, width: 3)
+
+                        Text("解説")
+                        .foregroundColor(.black)
+                        .font(.largeTitle)
+                        .bold()
+                                }
+                
+                HStack {
+
+                    NavigationLink(destination: moviestart3()) {
+
+                        Text("動画を見る")
+                            .foregroundColor(.red)
+                            .font(.largeTitle)
+                            .bold()
+                            .frame(width: 200, height: 100)
+                            .border(Color.gray, width: 5)
+                    }
+                            
+                    NavigationLink(destination: Quiz1answer2()) {
+
+                        Text("次の問題へ")
+                            .foregroundColor(.red)
+                            .font(.largeTitle)
+                            .bold()
+                            .frame(width: 200, height: 100)
+                            .border(Color.gray, width: 5)
+                    }
+            }
+        }
+        }
+
+}
+}
+struct Quiz3answer1false: View {
+    
+    @ObservedObject var quiz = QuizesManager3()
+    
+    var body: some View {
+        VStack(spacing: 30){
+            Text("不正解")
+            .fontWeight(.heavy)
+            .font(.system(size: 80, weight: .black, design: .default))
+            
+            Image(systemName: "multiply")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 200, height: 200)
+                .foregroundColor(.blue)
+            ZStack{
+                    Color.blue
+                    .frame(width:650,height: 200)
+                    Text("解説")
+                    .foregroundColor(.black)
+                    .font(.largeTitle)
+                    .bold()
+                            }
+            
+            HStack {
+
+                NavigationLink(destination: moviestart3()) {
+
+                    Text("動画を見る")
+                        .foregroundColor(.red)
+                        .font(.largeTitle)
+                        .bold()
+                        .frame(width: 200, height: 100)
+                        .border(Color.gray, width: 5)
+                }
+                        
+                NavigationLink(destination: Quiz1answer2()) {
+
+                    Text("次の問題へ")
+                        .foregroundColor(.red)
+                        .font(.largeTitle)
+                        .bold()
+                        .frame(width: 200, height: 100)
+                        .border(Color.gray, width: 5)
+                }
+        }
+    }
+}
+}
+
+
 
 struct ResultView3: View {
     var numberOfQuestion: Int
