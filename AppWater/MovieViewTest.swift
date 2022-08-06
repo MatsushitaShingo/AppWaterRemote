@@ -217,60 +217,60 @@ struct MovieViewTest: View {
                     }
                 }){
                     if selectmoview1 == true{
-                        Image("サムネ")
+                        Image("熊本の水1")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 700, height: 400)
                     }else if selectmoview2 == true{
-                        Image("水族館")
+                        Image("熊本の水2")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 700, height: 400)
                     }
                     else if selectmoview3 == true{
-                        Image("飛行機窓")
+                        Image("SDGs数字")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 700, height: 400)
                     }
                     else if selectmoview4 == true{
-                        Image("夜景")
+                        Image("SDGs")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 700, height: 400)
                     }
                     else if selectmoview5 == true{
-                        Image("飛行機窓")
+                        Image("地下水1")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 700, height: 400)
                     }
                     else if selectmoview6 == true{
-                        Image("水族館")
+                        Image("地下水2")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 700, height: 400)
                     }
                     else if selectmoview7 == true{
-                        Image("バケツ")
+                        Image("熊本の歴史1")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 700, height: 400)
                     }
                     else if selectmoview8 == true{
-                        Image("コップ1")
+                        Image("熊本の歴史2")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 700, height: 400)
                     }
                     else if selectmoview9 == true{
-                        Image("コップ2")
+                        Image("節水1")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 700, height: 400)
                     }
                     else if selectmoview10 == true{
-                        Image("夜景")
+                        Image("節水2")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 700, height: 400)
@@ -278,25 +278,24 @@ struct MovieViewTest: View {
                 }.fullScreenCover(isPresented: $showingmovie1){
                     moviestart1()
                 }.fullScreenCover(isPresented: $showingmovie2){
-                    moviestart2()}
-    //            }.fullScreenCover(isPresented: $showingmovie3){
-    //                moviestart3()
-    //            }.fullScreenCover(isPresented: $showingmovie4){
-    //                moviestart4()
-    //            }.fullScreenCover(isPresented: $showingmovie5){
-    //                moviestart5()
-    //            }.fullScreenCover(isPresented: $showingmovie6){
-    //                moviestart6()
-    //            }.fullScreenCover(isPresented: $showingmovie7){
-    //                moviestart7()
-    //            }.fullScreenCover(isPresented: $showingmovie8){
-    //                moviestart8()
-    //            }.fullScreenCover(isPresented: $showingmovie9){
-    //                moviestart9()
-    //            }.fullScreenCover(isPresented: $showingmovie10){
-    //                moviestart10()
-    //            }
-                
+                    moviestart2()
+                }.fullScreenCover(isPresented: $showingmovie3){
+                    moviestart3()
+                }.fullScreenCover(isPresented: $showingmovie4){
+                    moviestart4()
+                }.fullScreenCover(isPresented: $showingmovie5){
+                    moviestart5()
+                }.fullScreenCover(isPresented: $showingmovie6){
+                    moviestart6()
+                }.fullScreenCover(isPresented: $showingmovie7){
+                    moviestart7()
+                }.fullScreenCover(isPresented: $showingmovie8){
+                    moviestart8()
+                }.fullScreenCover(isPresented: $showingmovie9){
+                    moviestart9()
+                }.fullScreenCover(isPresented: $showingmovie10){
+                    moviestart10()
+                }
                 .padding()
                 
     //            //クイズ機能に飛ぶ
@@ -383,7 +382,7 @@ struct MovieViewTest: View {
                             }.padding(.horizontal)//2
                         }
                         Text("熊本の水")
-                                .font(.title2)
+                            .font(Font.mainFont(size: 20))
                                 .bold()
                             .foregroundColor(Color(red:0.441,green:0.719, blue:0.75))
                             .offset(x:-20,y:-80)
@@ -456,7 +455,7 @@ struct MovieViewTest: View {
                             
                         }
                         Text("世界の水")
-                            .font(.title2)
+                            .font(Font.mainFont(size: 20))
                             .bold()
                         .foregroundColor(Color(red:0.441,green:0.719, blue:0.75))
                         .offset(x:-20,y:-80)
@@ -529,7 +528,7 @@ struct MovieViewTest: View {
                             
                         }
                             Text("地下水")
-                            .font(.title2)
+                            .font(Font.mainFont(size: 20))
                             .bold()
                         .foregroundColor(Color(red:0.441,green:0.719, blue:0.75))
                         .offset(x:-20,y:-80)
@@ -601,7 +600,7 @@ struct MovieViewTest: View {
                             }.padding(.horizontal)//8
                         }
                             Text("歴史")
-                            .font(.title2)
+                            .font(Font.mainFont(size: 20))
                             .bold()
                         .foregroundColor(Color(red:0.441,green:0.719, blue:0.75))
                         .offset(x:-20,y:-80)
@@ -674,7 +673,7 @@ struct MovieViewTest: View {
                             }.padding(.horizontal)//10
                         }
                             Text("節水")
-                            .font(.title2)
+                            .font(Font.mainFont(size: 20))
                             .bold()
                         .foregroundColor(Color(red:0.441,green:0.719, blue:0.75))
                         .offset(x:-20,y:-80)
@@ -690,62 +689,62 @@ struct MovieViewTest: View {
                                                 .stroke(Color(red:0.441,green:0.719, blue:0.75),lineWidth:7)
                                                        )
                     if selectmoview1 == true{
-                        Text("この動画では水の硬度や、熊本水遺産について説明するよ！")
+                        Text("地下水が豊富な理由について説明するよ！")
                             .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
-                            .font(.title)
+                            .font(Font.mainFont(size: 28))
                             .bold()
                     }else if selectmoview2 == true{
-                        Text("ここに説明222222")
+                        Text("この動画では水の硬度や、熊本水遺産について説明するよ！")
                             .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
-                            .font(.title)
+                            .font(Font.mainFont(size: 28))
                             .bold()
                     }
                     else if selectmoview3 == true{
-                        Text("ここに説明333333")
+                        Text("世界の水について説明するよ！")
                             .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
-                            .font(.title)
+                            .font(Font.mainFont(size: 28))
                             .bold()
                     }
                     else if selectmoview4 == true{
-                        Text("ここに説明444444")
+                        Text("SDGsと水について説明するよ！")
                             .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
-                            .font(.title)
+                            .font(Font.mainFont(size: 28))
                             .bold()
                     }
                     else if selectmoview5 == true{
-                        Text("ここに説明555555")
+                        Text("雨の行方や地下水の減少について説明するよ！")
                             .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
-                            .font(.title)
+                            .font(Font.mainFont(size: 28))
                             .bold()
                     }
                     else if selectmoview6 == true{
-                        Text("ここに説明666666")
+                        Text("地下水が汚れている理由や守る活動について説明するよ！")
                             .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
-                            .font(.title)
+                            .font(Font.mainFont(size: 28))
                             .bold()
                     }
                     else if selectmoview7 == true{
-                        Text("ここに説明777777")
+                        Text("加藤清正と水について説明するよ！")
                             .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
-                            .font(.title)
+                            .font(Font.mainFont(size: 28))
                             .bold()
                     }
                     else if selectmoview8 == true{
-                        Text("ここに説明888888")
+                        Text("水道水がどこからきているのか説明するよ！")
                             .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
-                            .font(.title)
+                            .font(Font.mainFont(size: 28))
                             .bold()
                     }
                     else if selectmoview9 == true{
-                        Text("ここに説明999999")
+                        Text("節水について熊本市の取り組みや目標についてみていくよ！")
                             .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
-                            .font(.title)
+                            .font(Font.mainFont(size: 28))
                             .bold()
                     }
                     else if selectmoview10 == true{
-                        Text("ここに説明101010")
+                        Text("節水につながる行動についてみていくよ！")
                             .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
-                            .font(.title)
+                            .font(Font.mainFont(size: 28))
                             .bold()
                     }
                     
@@ -766,6 +765,7 @@ struct MovieViewTest: View {
         }
     }
 }
+
 struct MyButtonStyle2: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         MyButton2(configuration:configuration)
@@ -784,33 +784,151 @@ struct MyButtonStyle2: ButtonStyle {
         }
     }
 }
+
 struct moviestart1: View{
     
-     private let player = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
+     private let player1 = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
     
+     var body: some View{
+        VideoPlayer(player: player1)
+            .onAppear(){
+                player1.play()
+            }
+            .onDisappear(){
+                player1.pause()
+            }
+        }
+    }
+struct moviestart2: View{
+    
+     private let player2 = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
+    
+     var body: some View{
+        VideoPlayer(player: player2)
+            .onAppear(){
+                player2.play()
+            }
+            .onDisappear(){
+                player2.pause()
+            }
+        }
+    }
+struct moviestart3: View{
+    
+     private let player3 = AVPlayer(url: Bundle.main.url(forResource:"SDGs数字系_5",withExtension: "mp4")!)
+
+     var body: some View{
+        VideoPlayer(player: player3)
+            .onAppear(){
+                player3.play()
+            }
+            .onDisappear(){
+                player3.pause()
+            }
+        }
+    }
+struct moviestart4: View{
+
+     private let player = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
+
      var body: some View{
         VideoPlayer(player: player)
             .onAppear(){
                 player.play()
-                
+
             }
             .onDisappear(){
                 player.pause()
             }
         }
     }
-struct moviestart2: View{
-    
-     private let player1 = AVPlayer(url: Bundle.main.url(forResource:"SDGs 山北-1",withExtension: "mov")!)
-    
+struct moviestart5: View{
+
+     private let player = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
+
      var body: some View{
-        VideoPlayer(player: player1)
+        VideoPlayer(player: player)
             .onAppear(){
-                player1.play()
-                
+                player.play()
+
             }
             .onDisappear(){
-                player1.pause()
+                player.pause()
+            }
+        }
+    }
+struct moviestart6: View{
+
+     private let player = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
+
+     var body: some View{
+        VideoPlayer(player: player)
+            .onAppear(){
+                player.play()
+
+            }
+            .onDisappear(){
+                player.pause()
+            }
+        }
+    }
+struct moviestart7: View{
+
+     private let player = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
+
+     var body: some View{
+        VideoPlayer(player: player)
+            .onAppear(){
+                player.play()
+
+            }
+            .onDisappear(){
+                player.pause()
+            }
+        }
+    }
+struct moviestart8: View{
+
+     private let player = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
+
+     var body: some View{
+        VideoPlayer(player: player)
+            .onAppear(){
+                player.play()
+
+            }
+            .onDisappear(){
+                player.pause()
+            }
+        }
+    }
+struct moviestart9: View{
+
+     private let player = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
+
+     var body: some View{
+        VideoPlayer(player: player)
+            .onAppear(){
+                player.play()
+
+            }
+            .onDisappear(){
+                player.pause()
+            }
+        }
+    }
+struct moviestart10: View{
+
+     private let player = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
+
+     var body: some View{
+        VideoPlayer(player: player)
+            .onAppear(){
+                player.play()
+
+            }
+            .onDisappear(){
+                player.pause()
             }
         }
     }

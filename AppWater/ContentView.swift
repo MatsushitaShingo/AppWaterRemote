@@ -56,8 +56,16 @@ class WaterData: ObservableObject {
         }
 }
 
+extension Font {
+    static func mainFont (size: CGFloat) -> Font {
+        return Font.custom("07NikumaruFont", size: size)
+    }
+}
+
 struct ContentView: View {
+    
     var body: some View {
+        
             NavigationView{
                 ZStack{
                     Image("タイトル画面Ver1")
@@ -69,9 +77,9 @@ struct ContentView: View {
                         Color.blue
                             .frame(width:600,height: 140)
                             .cornerRadius(30)
-                        Text("アプリ名")
+                        Text("ウォタべる")
                             .foregroundColor(.white)
-                            .font(.largeTitle)
+                            .font(Font.mainFont(size: 40))
                             .bold()
                         
                     }.offset(y:-110)
@@ -87,6 +95,7 @@ struct ContentView: View {
                                     .shadow(color: .gray, radius: 3, x: 5, y: 5)
                                 Text("どうが")
                                     .foregroundColor(.white)
+                                    .font(Font.mainFont(size: 40))
                                     .font(.largeTitle)
                             }
                         }.offset(x: -50, y: 100)
@@ -99,7 +108,7 @@ struct ContentView: View {
                                     .foregroundColor(Color(red:0.443,green:0.721, blue:0.752))
                                     .shadow(color: .gray, radius: 3, x: 5, y: 5)
                                 Text("クイズ")
-                                    .font(.largeTitle)
+                                    .font(Font.mainFont(size: 40))
                                     .foregroundColor(.white)
                             }
                         }.offset(x: 0, y: 200)
@@ -112,7 +121,7 @@ struct ContentView: View {
                                     .foregroundColor(Color(red:0.443,green:0.721, blue:0.752))
                                     .shadow(color: .gray, radius: 3, x: 5, y: 5)
                                 Text("きろく")
-                                    .font(.largeTitle)
+                                    .font(Font.mainFont(size: 40))
                                     .foregroundColor(.white)
                             }
                         }.offset(x: 50, y: 100)
@@ -128,6 +137,10 @@ struct ContentView: View {
 //        .onAppear(){
 //            playSound()
 //        }
+    }
+    
+    func savedata(){
+        
     }
 }
 struct ContentView_Previews: PreviewProvider {

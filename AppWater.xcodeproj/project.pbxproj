@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E1E9FAD27E4A1FA00B244D9 /* Corporate-Logo-Medium-ver2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E1E9FAC27E4A1FA00B244D9 /* Corporate-Logo-Medium-ver2.ttf */; };
-		1E3BD5B828068CA000E6A405 /* 熊本の水２　仮完成.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E3BD5B728068CA000E6A405 /* 熊本の水２　仮完成.mp4 */; };
+		1E2CC8CA2898EF17004B5FA9 /* SDGs数字系_5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E2CC8C92898EF17004B5FA9 /* SDGs数字系_5.mp4 */; };
 		1E3BD5BA28068E0A00E6A405 /* SDGs 山北-1.mov in Resources */ = {isa = PBXBuildFile; fileRef = 1E3BD5B928068E0A00E6A405 /* SDGs 山北-1.mov */; };
 		1E3BD5BC280704F700E6A405 /* Quiz1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3BD5BB280704F700E6A405 /* Quiz1.swift */; };
 		1E3BD5BE2807057C00E6A405 /* Quiz2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3BD5BD2807057C00E6A405 /* Quiz2.swift */; };
@@ -26,6 +25,7 @@
 		1E63823F282C237B00316318 /* SettingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63823E282C237900316318 /* SettingPage.swift */; };
 		1E6538CE283A80470089F3BB /* CalendarTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6538CD283A80470089F3BB /* CalendarTestView.swift */; };
 		1E6538D4283BD13C0089F3BB /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E6538D2283BD13C0089F3BB /* Data.xcdatamodeld */; };
+		1E717D3128964F0B009ACFB7 /* DataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E717D3028964F0B009ACFB7 /* DataList.swift */; };
 		1E99458D2840947F00547CA7 /* VisualizationViewTest3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6382382825A47E00316318 /* VisualizationViewTest3.swift */; };
 		1E99458E2840948100547CA7 /* VisualizationViewTest2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6382362825A10E00316318 /* VisualizationViewTest2.swift */; };
 		1E99458F2840948800547CA7 /* calendarTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63821C2811B67400316318 /* calendarTest.swift */; };
@@ -41,9 +41,8 @@
 		1E9D2D7627E05C880035C405 /* AppWaterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D7527E05C880035C405 /* AppWaterUITests.swift */; };
 		1E9D2D7827E05C880035C405 /* AppWaterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D7727E05C880035C405 /* AppWaterUITestsLaunchTests.swift */; };
 		1E9D2D8727E061130035C405 /* StudyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D8627E061130035C405 /* StudyView.swift */; };
-		1E9D2D9027E074BA0035C405 /* movie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D2D8E27E074BA0035C405 /* movie.mp4 */; };
-		1E9D2D9127E074BA0035C405 /* mov_hts-samp001.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D2D8F27E074BA0035C405 /* mov_hts-samp001.mp4 */; };
 		1EA42FB228579F1D00B6647B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA42FB128579F1D00B6647B /* Persistence.swift */; };
+		1EAC60A128893B3900686D9A /* 07にくまるフォント.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1EAC60A028893B3900686D9A /* 07にくまるフォント.otf */; };
 		82DC081582E2521867033C98 /* Pods_AppWaterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 732B4533618BE7DBB5ABCDF9 /* Pods_AppWaterTests.framework */; };
 		D9D7FA60795EB85D0251576F /* Pods_AppWater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02B8E8510460F2D97E002554 /* Pods_AppWater.framework */; };
 		F8DA53C21B1E6D7F7FDC5824 /* Pods_AppWater_AppWaterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB027EF1619BB044F202311 /* Pods_AppWater_AppWaterUITests.framework */; };
@@ -68,9 +67,8 @@
 
 /* Begin PBXFileReference section */
 		02B8E8510460F2D97E002554 /* Pods_AppWater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppWater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E1E9FAC27E4A1FA00B244D9 /* Corporate-Logo-Medium-ver2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Corporate-Logo-Medium-ver2.ttf"; sourceTree = "<group>"; };
 		1E1E9FAE27E4A73E00B244D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		1E3BD5B728068CA000E6A405 /* 熊本の水２　仮完成.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "熊本の水２　仮完成.mp4"; sourceTree = "<group>"; };
+		1E2CC8C92898EF17004B5FA9 /* SDGs数字系_5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SDGs数字系_5.mp4"; sourceTree = "<group>"; };
 		1E3BD5B928068E0A00E6A405 /* SDGs 山北-1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "SDGs 山北-1.mov"; sourceTree = "<group>"; };
 		1E3BD5BB280704F700E6A405 /* Quiz1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz1.swift; sourceTree = "<group>"; };
 		1E3BD5BD2807057C00E6A405 /* Quiz2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz2.swift; sourceTree = "<group>"; };
@@ -93,6 +91,7 @@
 		1E63823E282C237900316318 /* SettingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPage.swift; sourceTree = "<group>"; };
 		1E6538CD283A80470089F3BB /* CalendarTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTestView.swift; sourceTree = "<group>"; };
 		1E6538D3283BD13C0089F3BB /* Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Data.xcdatamodel; sourceTree = "<group>"; };
+		1E717D3028964F0B009ACFB7 /* DataList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataList.swift; sourceTree = "<group>"; };
 		1E9945942848F67800547CA7 /* Data 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Data 2.xcdatamodel"; sourceTree = "<group>"; };
 		1E9D2D5727E05C870035C405 /* AppWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9D2D5A27E05C870035C405 /* AppWaterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWaterApp.swift; sourceTree = "<group>"; };
@@ -107,9 +106,8 @@
 		1E9D2D8427E060FD0035C405 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
 		1E9D2D8627E061130035C405 /* StudyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyView.swift; sourceTree = "<group>"; };
 		1E9D2D8827E0613B0035C405 /* Visualization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visualization.swift; sourceTree = "<group>"; };
-		1E9D2D8E27E074BA0035C405 /* movie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = movie.mp4; sourceTree = "<group>"; };
-		1E9D2D8F27E074BA0035C405 /* mov_hts-samp001.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mov_hts-samp001.mp4"; sourceTree = "<group>"; };
 		1EA42FB128579F1D00B6647B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		1EAC60A028893B3900686D9A /* 07にくまるフォント.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "07にくまるフォント.otf"; sourceTree = "<group>"; };
 		3D9D3434F2B180E368C1A4B4 /* Pods-AppWater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppWater.release.xcconfig"; path = "Target Support Files/Pods-AppWater/Pods-AppWater.release.xcconfig"; sourceTree = "<group>"; };
 		4BA8FF04073C6F2AB635A335 /* Pods-AppWater-AppWaterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppWater-AppWaterUITests.debug.xcconfig"; path = "Target Support Files/Pods-AppWater-AppWaterUITests/Pods-AppWater-AppWaterUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5FF5C6244F4C3E8FFA7AAA5A /* Pods-AppWaterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppWaterTests.debug.xcconfig"; path = "Target Support Files/Pods-AppWaterTests/Pods-AppWaterTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,10 +163,8 @@
 			children = (
 				1E3BD5B928068E0A00E6A405 /* SDGs 山北-1.mov */,
 				1E3F5BDF28846CDC00807E36 /* 熊本の水２音声あり.mp4 */,
-				1E3BD5B728068CA000E6A405 /* 熊本の水２　仮完成.mp4 */,
-				1E9D2D8F27E074BA0035C405 /* mov_hts-samp001.mp4 */,
-				1E9D2D8E27E074BA0035C405 /* movie.mp4 */,
-				1E1E9FAC27E4A1FA00B244D9 /* Corporate-Logo-Medium-ver2.ttf */,
+				1E2CC8C92898EF17004B5FA9 /* SDGs数字系_5.mp4 */,
+				1EAC60A028893B3900686D9A /* 07にくまるフォント.otf */,
 				1E63822E2813070A00316318 /* 海岸3.mp3 */,
 				1E63823028190F5000316318 /* QuizAnswer.json */,
 				1E9D2D5927E05C870035C405 /* AppWater */,
@@ -201,10 +197,11 @@
 				1E9D2D8627E061130035C405 /* StudyView.swift */,
 				1E3F5BDD2875DE5500807E36 /* Quiz */,
 				1E6382342825945F00316318 /* VisulalizationViewTest.swift */,
+				1E63823A2828394300316318 /* LineChart.swift */,
 				1E4252FF27F466EF00B12D9F /* SelectView.swift */,
 				1E63823E282C237900316318 /* SettingPage.swift */,
-				1E63823A2828394300316318 /* LineChart.swift */,
 				1E6538CD283A80470089F3BB /* CalendarTestView.swift */,
+				1E717D3028964F0B009ACFB7 /* DataList.swift */,
 				1E6538D2283BD13C0089F3BB /* Data.xcdatamodeld */,
 				1E9D2D5E27E05C880035C405 /* Assets.xcassets */,
 				1E9D2D6027E05C880035C405 /* Preview Content */,
@@ -379,11 +376,9 @@
 			files = (
 				1E63823128190F5000316318 /* QuizAnswer.json in Resources */,
 				1E3BD5BA28068E0A00E6A405 /* SDGs 山北-1.mov in Resources */,
-				1E3BD5B828068CA000E6A405 /* 熊本の水２　仮完成.mp4 in Resources */,
-				1E9D2D9027E074BA0035C405 /* movie.mp4 in Resources */,
-				1E9D2D9127E074BA0035C405 /* mov_hts-samp001.mp4 in Resources */,
-				1E1E9FAD27E4A1FA00B244D9 /* Corporate-Logo-Medium-ver2.ttf in Resources */,
+				1EAC60A128893B3900686D9A /* 07にくまるフォント.otf in Resources */,
 				1E9D2D6227E05C880035C405 /* Preview Assets.xcassets in Resources */,
+				1E2CC8CA2898EF17004B5FA9 /* SDGs数字系_5.mp4 in Resources */,
 				1E3F5BE028846CDC00807E36 /* 熊本の水２音声あり.mp4 in Resources */,
 				1E9D2D5F27E05C880035C405 /* Assets.xcassets in Resources */,
 				1E63822F2813070A00316318 /* 海岸3.mp3 in Resources */,
@@ -525,6 +520,7 @@
 				1E42530027F466EF00B12D9F /* SelectView.swift in Sources */,
 				1E6538CE283A80470089F3BB /* CalendarTestView.swift in Sources */,
 				1E6382332825923500316318 /* MovieViewTest.swift in Sources */,
+				1E717D3128964F0B009ACFB7 /* DataList.swift in Sources */,
 				1E9D2D8727E061130035C405 /* StudyView.swift in Sources */,
 				1E3BD5BC280704F700E6A405 /* Quiz1.swift in Sources */,
 				1E9D2D5B27E05C870035C405 /* AppWaterApp.swift in Sources */,
@@ -710,6 +706,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -743,6 +740,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

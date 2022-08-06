@@ -15,6 +15,6 @@ extension WaterDataEntities {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<WaterDataEntities> {
         return NSFetchRequest<WaterDataEntities>(entityName: "WaterDataEntities")
     }
-    @NSManaged public var alldataattribute:Int32?
+    @NSManaged public var alldataattribute
 
 }

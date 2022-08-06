@@ -13,87 +13,102 @@ struct SettingPage: View {
     @State private var selection = "1㎥~10㎥"
     var body: some View {
         ZStack{
-            Color(red:0.443,green:0.722, blue:0.753)
+            Color(red:0.754,green:0.887, blue:0.914)
                 .ignoresSafeArea()
-            ZStack{
-                Color.blue
-                    .frame(width:1080,height: 100)
-                Text("せっていする")
-                    .foregroundColor(.white)
-                    .font(.largeTitle)
-            }.offset(y:320)
+//            ZStack{
+//                Color(red:0.441,green:0.719, blue:0.75)
+//                    .frame(width:1080,height: 100)
+//                Text("せっていする")
+//                    .foregroundColor(.white)
+//                    .font(Font.mainFont(size: 40))
+//            }.offset(y:320)
             HStack{
-                VStack{
-                ZStack{
-                Color.blue
-                    .frame(width:200,height: 80)
-                    .cornerRadius(40)
-                Text("目標節水量")
-                    .font(.largeTitle)
-                    .foregroundColor(Color.white)
-            }
-                    HStack{
-                        TextField("数字を入力してください", value: $waterData.GoleMount,formatter: NumberFormatter(),
-                                  
-                                  onEditingChanged: { begin in
-                            /// 入力開始処理
-                            if begin {
-                                /// 入力終了処理
-                            } else {
-                                self.editting = false   // 編集フラグをオフ
-                                self.editting = true
+                HStack{
+                    VStack{
+                        ZStack{
+                        Color(red:0.441,green:0.719, blue:0.75)
+                        .frame(width:200,height: 80)
+                        .cornerRadius(40)
+                    Text("目標節水量")
+                                .font(Font.mainFont(size: 30))
+                        .foregroundColor(Color.white)
+                            
+                        }
+                        ZStack{
+                            Color.white
+                                .frame(width:300,height: 150)
+                                .cornerRadius(30)
+                            TextField("数字を入力してください", value: $waterData.GoleMount,formatter: NumberFormatter(),
+                                      
+                                      onEditingChanged: { begin in
+                                /// 入力開始処理
+                                if begin {
+                                    /// 入力終了処理
+                                } else {
+                                    self.editting = false   // 編集フラグをオフ
+                                    self.editting = true
 
-                                UserDefaults.standard.set(waterData.GoleMount,forKey: "GoleMountData")
-                            }
-                        }).foregroundColor(.black)
-                            .font(.title)
-                            .keyboardType(.numbersAndPunctuation).multilineTextAlignment(.center).textFieldStyle(RoundedBorderTextFieldStyle())
-                            .frame(width: 150, height: 20, alignment: .center)
-                            Text("L")
-                                .font(.largeTitle)
+                                    UserDefaults.standard.set(waterData.GoleMount,forKey: "GoleMountData")
+                                }
+                            }).foregroundColor(.black)
+                                .font(Font.mainFont(size: 40))
+                                .keyboardType(.numbersAndPunctuation).multilineTextAlignment(.center).textFieldStyle(RoundedBorderTextFieldStyle())
+                                .frame(width: 150, height: 20, alignment: .center)
+                            
+                        }
                     }
+                    Text("L")
+                    .font(Font.mainFont(size: 40))
+                    .offset(y:60)
                 }
             
-            VStack{
-                ZStack{
-                Color.blue
-                    .frame(width:200,height: 80)
-                    .cornerRadius(40)
-                Text("　目標料金　")
-                    .font(.largeTitle)
-                    .foregroundColor(Color.white)
+            HStack{
+                VStack{
+                    ZStack{
+                        Color(red:0.441,green:0.719, blue:0.75)
+                        .frame(width:200,height: 80)
+                        .cornerRadius(40)
+                    Text("　目標料金　")
+                            .font(Font.mainFont(size: 30))
+                        .foregroundColor(Color.white)
+                    }
+                    ZStack{
+                        
+                        Color.white
+                            .frame(width:300,height: 150)
+                            .cornerRadius(30)
+                        Text("\(Int(waterData.GoleMount) *  148/1000)")
+                            .font(Font.mainFont(size: 30))
+                            //.foregroundColor(Color(red:0.443,green:0.722, blue:0.753))
+//                        TextField("\(Int(waterData.GoleMount) *  waterData.MonthTotal/1000)", value: $waterData.Golemoney,formatter: NumberFormatter(),
+//
+//                                  onEditingChanged: { begin in
+//                            /// 入力開始処理
+//                            if begin {
+//                                /// 入力終了処理
+//                            } else {
+//                                self.editting = false   // 編集フラグをオフ
+//                                self.editting = true
+//
+//                                UserDefaults.standard.set(waterData.Golemoney,forKey: "GolemoneyData")
+//                            }
+//                        })
+//                        .foregroundColor(.green)
+//                        .keyboardType(.numbersAndPunctuation).multilineTextAlignment(.center).textFieldStyle(RoundedBorderTextFieldStyle())
+//                        .frame(width: 150, height: 20, alignment: .center)
+                    }
                 }
-                ZStack{
-                    Text("目標料金  \(Int(waterData.GoleMount) *  148/1000)円")
-                        .font(.largeTitle)
-                        .foregroundColor(Color(red:0.443,green:0.722, blue:0.753))
-                    Color.white
-                        .frame(width:300,height: 150)
-                        .cornerRadius(30)
-                    TextField("\(Int(waterData.GoleMount) *  waterData.MonthTotal/1000)", value: $waterData.Golemoney,formatter: NumberFormatter(),
-
-                              onEditingChanged: { begin in
-                        /// 入力開始処理
-                        if begin {
-                            /// 入力終了処理
-                        } else {
-                            self.editting = false   // 編集フラグをオフ
-                            self.editting = true
-
-                            UserDefaults.standard.set(waterData.Golemoney,forKey: "GolemoneyData")
-                        }
-                    })
-                    .foregroundColor(.green)
-                    .keyboardType(.numbersAndPunctuation).multilineTextAlignment(.center).textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(width: 150, height: 20, alignment: .center)
-                }
+                Text("円")
+                    .font(Font.mainFont(size: 40))
+                    .offset(y:60)
             }
             VStack{
-                ZStack{Color.blue
+                ZStack{
+                    Color(red:0.441,green:0.719, blue:0.75)
                     .frame(width:200,height: 80)
                     .cornerRadius(40)
-                Text("目標節水量")
-                    .font(.largeTitle)
+                Text("水使用量")
+                        .font(Font.mainFont(size: 30))
                     .foregroundColor(Color.white)
             }
             ZStack{

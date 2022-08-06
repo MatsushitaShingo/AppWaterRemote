@@ -9,6 +9,8 @@ import SwiftUI
 
 
 struct StudyView: View {
+    @State private var isActive1 = false
+    
     @State  var isShowingView1: Bool = false
     @State private var isShowingView2: Bool = false
     @State private var isShowingView3: Bool = false
@@ -26,8 +28,9 @@ struct StudyView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 200, height: 200)
-                        .foregroundColor(.yellow)
+                        .foregroundColor(Color(red: 0.671, green: 0.863, blue: 0.678))
                     Text("地下水")
+                        .font(Font.mainFont(size: 30))
                         .padding(.vertical)
                         .foregroundColor(.white)
                 }
@@ -42,8 +45,9 @@ struct StudyView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 200, height: 200)
-                        .foregroundColor(.red)
+                        .foregroundColor(Color(red: 0.945, green: 0.698, blue: 0.498))
                     Text("節水")
+                        .font(Font.mainFont(size: 30))
                         .padding(.vertical)
                         .foregroundColor(.white)
                 }
@@ -59,8 +63,9 @@ struct StudyView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 200, height: 200)
-                        .foregroundColor(.blue)
+                        .foregroundColor(Color(red: 0.667, green: 0.816, blue: 0.816))
                     Text("熊本の水")
+                        .font(Font.mainFont(size: 30))
                         .padding(.vertical)
                         .foregroundColor(.white)
                 }
@@ -76,8 +81,9 @@ struct StudyView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 200, height: 200)
-                        .foregroundColor(.purple)
+                        .foregroundColor(Color(red: 0.741, green: 0.678, blue: 0.827))
                     Text("歴史")
+                        .font(Font.mainFont(size: 30))
                         .padding(.vertical)
                         .foregroundColor(.white)
                 }
@@ -91,8 +97,9 @@ struct StudyView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 200, height: 200)
-                        .foregroundColor(.green)
+                        .foregroundColor(Color(red: 0.937, green: 0.957, blue: 0.561))
                     Text("世界の水")
+                        .font(Font.mainFont(size: 30))
                         .padding(.vertical)
                         .foregroundColor(.white)
                 }

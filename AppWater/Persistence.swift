@@ -13,8 +13,8 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        let waterdataentities = WaterDataEntities(context: viewContext)
-            waterdataentities.alldataattribute = Int32()
+//        let waterdataentities = WaterDataEntities(context: viewContext)
+//            waterdataentities.alldataattribute
         
         do {
             try viewContext.save()
@@ -30,8 +30,8 @@ struct PersistenceController {
     let container: NSPersistentContainer
 
     init(inMemory: Bool = false) {
-        container = NSPersistentContainer(name: "Data")
         //(name: "anotherNewCoreData")を、じぶんのデータベースのEntityの名前にあわせる。
+        container = NSPersistentContainer(name: "Data")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }

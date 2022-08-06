@@ -10,18 +10,11 @@ import CoreData
 
 struct VisulalizationViewTest: View {
     
-//    @EnvironmentObject var waterData: WaterData
+    @EnvironmentObject var waterData: WaterData
     @State private var selectDate = Date()
     
     @State var progress: CGFloat = 0.5
     @State var startAnimation:CGFloat = 0
-    
-     //データベースよりデータを取得
-//    @FetchRequest(
-//        sortDescriptors: [NSSortDescriptor(keyPath:  \WaterDataEntities.alldataattribute,ascending: true)],animation:.default
-//    )
-//     var fetchedwaterdataentities: FetchedResults<WaterDataEntities>
-//    @ObservedObject var waterdataentities :WaterDataEntities
     
     var body: some View {
         ZStack{
@@ -29,16 +22,18 @@ struct VisulalizationViewTest: View {
             //Wave Form Shepe
             Waterwave(progress: progress, waveHeght: 0.03, offset: startAnimation)
                 .fill(Color(red:0.754,green:0.887, blue:0.914))
+            
             VStack(spacing: 20){
                 Text("今日も節水頑張ろう！")
                 .foregroundColor(Color(red:0.441,green:0.719, blue:0.75))
-                    .font(.largeTitle)
+                .font(Font.mainFont(size: 40))
                     .bold()
                     .padding()
                     .padding()
                     .frame(width:700,height: 120)
                     .overlay(RoundedRectangle(cornerRadius: 30)
-                        .stroke(Color(red:0.441,green:0.719, blue:0.75),lineWidth:7)
+                        .stroke(Color(red:0.441,green:0.719, blue:0.75),lineWidth:8)
+                        .shadow(color: .gray, radius: 3, x: 3, y: 3)
                                )
                 //カレンダー表示
 //                DatePicker("日付",selection:$selectDate,displayedComponents: .date)
@@ -52,19 +47,21 @@ struct VisulalizationViewTest: View {
                         VStack{
                             //節水量リセット機能
                             Button(action: {
-//                                waterData.MonthTotal = 0
-//                                waterData.AllTotal = 0
-//                                waterData.price = 0
+                                waterData.MonthTotal = 0
+                                waterData.AllTotal = 0
+                                waterData.price = 0
                             }) {
                                 Text("リセット")
+                                    .font(Font.mainFont(size: 20))
                             }.offset(y:-85)
                             Text("節水量")
                                 .foregroundColor(.white)
-                                .font(.title)
+                                .font(Font.mainFont(size: 30))
                                 .offset(y: -80)
-//                            Text("\(waterData.MonthTotal)L")
-//                                .font(.largeTitle)
-//                                .bold()
+                            Text("\(waterData.MonthTotal)L")
+                                .font(Font.mainFont(size: 40))
+                                .foregroundColor(.white)
+                                .bold()
                         }
                     }
                     
@@ -74,18 +71,19 @@ struct VisulalizationViewTest: View {
                             .frame(width:250,height: 250)
                         VStack{
                             Text("ペットボトル")
-                                .font(.title)
+                                .font(Font.mainFont(size: 30))
                                 .foregroundColor(.white)
                             HStack{
-//                                Text("\(waterData.MonthTotal*2)")
-//                                    .font(.largeTitle)
-//                                    .bold()
+                                Text("\(waterData.MonthTotal*2)")
+                                    .font(Font.mainFont(size: 40))
+                                    .foregroundColor(.white)
+                                    .bold()
                                 Text("本分")
-                                    .font(.title)
+                                    .font(Font.mainFont(size: 30))
                                     .foregroundColor(.white)
                             }
                             Text("節水したよ！")
-                                .font(.title)
+                                .font(Font.mainFont(size: 30))
                                 .foregroundColor(.white)
                             //画面の中央で節水量に応じて画像を切り替える
 //                            if waterData.MonthTotal < 10{
@@ -146,11 +144,15 @@ struct VisulalizationViewTest: View {
                         VStack{
                             Text("料金")
                                 .foregroundColor(.white)
-                                .font(.title)
+                                .font(Font.mainFont(size: 30))
                                 .offset(y:-60)
-                            Text("〇〇円")
+                            Text("\(waterData.price)円")
                                 .foregroundColor(.white)
-                                .font(.title)
+                                .font(Font.mainFont(size: 40))
+                                .bold()
+//                            Text("〇〇円")
+//                                .foregroundColor(.white)
+//                                .font(Font.mainFont(size: 30))
 //                            Button(action: {
 //                                waterData.UntilGoleMount = 0
 //                            }) {
@@ -233,7 +235,7 @@ struct VisulalizationViewTest: View {
                                 .cornerRadius(30)
                                 .shadow(color: .gray, radius: 3, x: 5, y: 5)
                             Text("記録する")
-                                .font(.largeTitle)
+                                .font(Font.mainFont(size: 40))
                                 .bold()
                                 .foregroundColor(Color(red:0.441,green:0.719, blue:0.75))
                         }
@@ -246,7 +248,7 @@ struct VisulalizationViewTest: View {
                     .navigationTitle("記録の結果")
                     .navigationBarTitleDisplayMode(.inline)
                 }
-                    NavigationLink(destination: LineChart()){
+                    NavigationLink(destination: contentview()){
                 ZStack{
                     Color.white
                         .frame(width:120,height: 120)
