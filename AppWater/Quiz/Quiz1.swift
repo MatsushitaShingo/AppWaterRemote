@@ -1016,32 +1016,34 @@ struct ModalView1: View {
     @Environment(\.presentationMode)var PresentationMode
     
     var body: some View {
-        NavigationView{
-            
-
-            NavigationLink(destination: Quiz1answer1()){
-                ZStack{
-                    Image(systemName: "drop.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 200, height: 200)
-                        .foregroundColor(Color(red: 0.671, green: 0.863, blue: 0.678))
-                    Text("START!")
-                        .padding(.vertical)
-                        .foregroundColor(.white)
-                        .navigationBarItems(trailing:Button(action:{self.PresentationMode.wrappedValue.dismiss()
-                        })
-                                            {
-                            Text("戻る")
-                        })
-                    
+        ZStack{
+            Color(red: 1, green: 0.965, blue: 0.826)
+                .ignoresSafeArea()
+            VStack(spacing: 50){
+                Text("地下水")
+                    .font(Font.mainFont(size: 60))
+                Text("熊本の地下水について\n考えてみよう！")
+                    .font(Font.mainFont(size: 40))
+                NavigationLink(destination: Quiz1answer1()){
+                    ZStack{
+                        Color(red: 0.898,green: 0.361,blue:0.306)
+                            .frame(width:500,height: 120)
+                            .cornerRadius(40)
+                            .shadow(color: .gray, radius: 3, x: 5, y: 5)
+                        Text("スタート！")
+                            .font(Font.mainFont(size: 40))
+                            .padding(.vertical)
+                            .foregroundColor(.white)
+                            .navigationBarItems(trailing:Button(action:{self.PresentationMode.wrappedValue.dismiss()
+                            })
+                                                {
+                            })
+                    }
+                    .customBackButton()
+                    .navigationViewStyle(.stack)
                 }
-
-          }.navigationViewStyle(.stack)
-            
+            }
         }
-        
-
     }
 }
 
@@ -1060,7 +1062,6 @@ struct Quiz1answer1: View {
             Waterwave(progress: progress, waveHeght: 0.015, offset: startAnimation)
                 .fill(Color.white)
             VStack (spacing: 10){
-                
                 Button(action: {self.isShowing1View1.toggle()}){
                     ZStack{
                         Image(systemName: "drop.fill")
@@ -1075,105 +1076,73 @@ struct Quiz1answer1: View {
                 }.fullScreenCover(isPresented:$isShowing1View1){
                     finishView()
                 }.offset(x:500,y: -100)
-                
                     Text("第１問")
                         .font(Font.mainFont(size: 60))
                         .fontWeight(.heavy)
                         .padding()
                         .offset(y: -100)
                         .foregroundColor(Color(red: 0.275,green: 0.459,blue:0.255))
-
                 ZStack{
-                                    Text("熊本の地下水を汚染している\n代表的な物質はどれ？")
-                                        .font(Font.mainFont(size: 60))
-                                        .bold()
-                                        .multilineTextAlignment(.center)
-                                        .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
-                    
-                                        
+                    Text("熊本の地下水をよごしている物は\nなんでしょう？")
+                        .font(Font.mainFont(size: 60))
+                        .bold()
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
                 }.offset(y: -80)
-
                 HStack {
-
                     NavigationLink(destination: Quiz1answer1true()) {
                         ZStack{
-                               Rectangle()
+                            Rectangle()
                                 .fill(Color.white)
                                 .frame(width:250,height: 150)
                                 .cornerRadius(10)
                                 .shadow(color: .gray, radius: 3, x: 5, y: 5)
-                                            Text("硝酸性窒素")
+                            Text("硝酸性窒素")
                                 .font(Font.mainFont(size: 40))
                                 .background(Color.white)
                                 .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
                                 .frame(width: 300, height: 100)
-                                                
                         }
-                            
                     }
-                            
                     NavigationLink(destination: Quiz1answer1false()) {
-
                         ZStack{
-                               Rectangle()
+                            Rectangle()
                                 .fill(Color.white)
-                                
                                 .shadow(color: .gray, radius: 3, x: 5, y: 5)
                                 .frame(width:250,height: 150)
                                 .cornerRadius(10)
                                 .shadow(color: .gray, radius: 3, x: 5, y: 5)
-                                            Text("全シアン")
+                            Text("直列性窒素")
                                 .font(Font.mainFont(size: 40))
                                 .background(Color.white)
                                 .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
                                 .frame(width: 300, height: 100)
-                                                
                         }
                     }
-                            
-                    
                     NavigationLink(destination: Quiz1answer1false()) {
-
                         ZStack{
-                               Rectangle()
+                            Rectangle()
                                 .fill(Color.white)
-                                
                                 .shadow(color: .gray, radius: 3, x: 5, y: 5)
                                 .frame(width:250,height: 150)
                                 .cornerRadius(10)
                                 .shadow(color: .gray, radius: 3, x: 5, y: 5)
-                                            Text("四塩化炭素")
+                            Text("並列性窒素")
                                 .font(Font.mainFont(size: 40))
                                 .background(Color.white)
                                 .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
                                 .frame(width: 300, height: 100)
-                                                
                         }
-
-
                     }
-
-                 
-                        }
-                .padding()
-                .padding()
-                ZStack{
-                    Color(red: 0.898,green: 0.361,blue:0.306)
-                        .frame(width:500,height: 120)
-                        .cornerRadius(30)
-                    Text("こたえる")
-                        .font(Font.mainFont(size: 40))
-                        .bold()
-                        .foregroundColor(.white)
                 }
-        }
-
-            
-        }
+            }
+        }.customBackButton()
     }
 }
 
 struct Quiz1answer1true: View {
+    @State var showingmovie1 = false
+        @State var selectmoview1 = true
     var body: some View {
         ZStack{
             Color(red: 0.671, green: 0.863, blue: 0.678)
@@ -1182,8 +1151,8 @@ struct Quiz1answer1true: View {
             VStack(spacing: 30){
                 Text("正解")
                     .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
-                .fontWeight(.heavy)
-                .font(.system(size: 80, weight: .black, design: .default))
+                    .fontWeight(.heavy)
+                    .font(.system(size: 80, weight: .black, design: .default))
                 
                 Image(systemName: "poweroff")
                     .resizable()
@@ -1191,28 +1160,32 @@ struct Quiz1answer1true: View {
                     .frame(width: 200, height: 200)
                     .foregroundColor(.red)
                 ZStack{
-                    Text("解説")
-                                        .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
-                                        .font(Font.mainFont(size: 40))
-                                        .bold()
-                                        .frame(width:650,height: 200)
-                                        .border(Color.red, width: 10)
-                                }
+                    Color.white
+                        .frame(width:1000,height: 250)
+                    Text("硝酸性窒素などによごされていないか\nチェックするために\n熊本市の地下水観そく局や井戸など、\n約250カ所で地下水しつの調査をしているよ。")
+                        .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
+                        .font(Font.mainFont(size: 40))
+                        .bold()
+                        .frame(width:1000,height: 250)
+                        .border(Color.red, width: 10)
+                }
                 
                 HStack {
-
-                    NavigationLink(destination: moviestart1()) {
-
+                    Button(action: {
+                    if selectmoview1 == true {
+                        showingmovie1 = true
+                    }
+                    }){
                         Text("動画を見る")
                             .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
                             .font(Font.mainFont(size: 40))
                             .bold()
                             .frame(width: 200, height: 100)
                             .border(Color.gray, width: 5)
-                    }
+                    }.sheet(isPresented: $showingmovie1){
+                        moviestart1()}
                             
                     NavigationLink(destination: Quiz1answer2()) {
-
                         Text("次の問題へ")
                             .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
                             .font(Font.mainFont(size: 40))
@@ -1220,52 +1193,55 @@ struct Quiz1answer1true: View {
                             .frame(width: 200, height: 100)
                             .border(Color.gray, width: 5)
                     }
+                }
             }
-        }
-        }
-
-}
+        }.customBackButton()
+    }
 }
 struct Quiz1answer1false: View {
+    @State var showingmovie1 = false
+        @State var selectmoview1 = true
     var body: some View {
         
         ZStack{
             Color(red: 0.671, green: 0.863, blue: 0.678)
                 .ignoresSafeArea()
-        VStack(spacing: 30){
-            Text("不正解")
+            VStack(spacing: 30){
+                Text("不正解")
             .fontWeight(.heavy)
             .font(.system(size: 80, weight: .black, design: .default))
             .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
             
-            Image(systemName: "multiply")
-                .resizable()
-                .scaledToFit()
+                Image(systemName: "multiply")
+                    .resizable()
+                    .scaledToFit()
                 .frame(width: 200, height: 200)
                 .foregroundColor(.blue)
-            ZStack{
-                    Text("解説")
+                ZStack{
+                Color.white
+                    .frame(width:1000,height: 250)
+                Text("硝酸性窒素などによごされていないかチェックするために\n熊本市の地下水観そく局や井戸など、\n約250カ所で地下水しつの調査をしているよ。")
                     .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
                     .font(Font.mainFont(size: 40))
                     .bold()
-                    .frame(width:650,height: 200)
-                    .border(Color.blue, width: 10)
-                            }
-            
-            HStack {
-
-                NavigationLink(destination: moviestart1()) {
-
+                    .frame(width:1000,height: 250)
+                }
+                HStack {
+                    Button(action: {
+                        if selectmoview1 == true {
+                            showingmovie1 = true
+                    }
+                }){
                     Text("動画を見る")
                         .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
                         .font(Font.mainFont(size: 40))
                         .bold()
                         .frame(width: 200, height: 100)
                         .border(Color.gray, width: 5)
-                }
-                        
+                }.sheet(isPresented: $showingmovie1){
+                    moviestart1()}
+                
                 NavigationLink(destination: Quiz1answer2()) {
-
                     Text("次の問題へ")
                         .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
                         .font(Font.mainFont(size: 40))
@@ -1273,10 +1249,10 @@ struct Quiz1answer1false: View {
                         .frame(width: 200, height: 100)
                         .border(Color.gray, width: 5)
                 }
+            }
         }
+        }.customBackButton()
     }
-        }
-}
 }
 //地下水2
 struct Quiz1answer2: View {
@@ -1315,7 +1291,7 @@ struct Quiz1answer2: View {
             
 
             ZStack{
-                                Text("川の水源や地下水を守るために\n水を蓄える働きをする森を何という？")
+                                Text("地下水を守るために\n水をたくわえるはたらきをする森は\nなんというでしょう？")
                     .font(Font.mainFont(size: 60))
                                     .bold()
                                     .multilineTextAlignment(.center)
@@ -1336,7 +1312,7 @@ struct Quiz1answer2: View {
                             .frame(width:250,height: 150)
                             .cornerRadius(10)
                             .shadow(color: .gray, radius: 3, x: 5, y: 5)
-                                        Text("間違い")
+                                        Text("水質\nかんよう林")
                             .font(Font.mainFont(size: 40))
                             .background(Color.white)
                             .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
@@ -1356,7 +1332,7 @@ struct Quiz1answer2: View {
                             .frame(width:250,height: 150)
                             .cornerRadius(10)
                             .shadow(color: .gray, radius: 3, x: 5, y: 5)
-                                        Text("水源かん養林")
+                                        Text("水源\nかんよう林")
                             .font(Font.mainFont(size: 40))
                             .background(Color.white)
                             .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
@@ -1376,7 +1352,7 @@ struct Quiz1answer2: View {
                             .frame(width:250,height: 150)
                             .cornerRadius(10)
                             .shadow(color: .gray, radius: 3, x: 5, y: 5)
-                                        Text("間違い")
+                                        Text("水源\nかんよう林")
                             .font(Font.mainFont(size: 40))
                             .background(Color.white)
                             .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
@@ -1388,23 +1364,25 @@ struct Quiz1answer2: View {
 
              
                     }
-            .padding()
-            .padding()
-            ZStack{
-                Color(red: 0.898,green: 0.361,blue:0.306)
-                    .frame(width:500,height: 120)
-                    .cornerRadius(30)
-                Text("こたえる")
-                    .font(Font.mainFont(size: 40))
-                    .bold()
-                    .foregroundColor(.white)
-            }
+//            .padding()
+//            .padding()
+//            ZStack{
+//                Color(red: 0.898,green: 0.361,blue:0.306)
+//                    .frame(width:500,height: 120)
+//                    .cornerRadius(30)
+//                Text("こたえる")
+//                    .font(Font.mainFont(size: 40))
+//                    .bold()
+//                    .foregroundColor(.white)
+//            }
         }
-        }
+        }.customBackButton()
     }
 }
 
 struct Quiz1answer2true: View {
+    @State var showingmovie1 = false
+        @State var selectmoview1 = true
     var body: some View {
         ZStack{
             Color(red: 0.671, green: 0.863, blue: 0.678)
@@ -1420,25 +1398,31 @@ struct Quiz1answer2true: View {
                 .frame(width: 200, height: 200)
                 .foregroundColor(.red)
             ZStack{
-                Text("解説")
+                Color.white
+                    .frame(width:1000,height: 250)
+                Text("白川流いきや熊本地いきを中心に約880haにわたって\n水げんかん養林を整びしているよ。\nまた、ショッピングセンターなどのちゅう車場などは\n雨が地下にしみこみやすいものになっているところもあるよ。")
                                                         .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
-                                                        .font(Font.mainFont(size: 40))
+                                                        .font(Font.mainFont(size: 35))
                                                         .bold()
-                                                        .frame(width:650,height: 200)
+                                                        .frame(width:1000,height: 250)
                                                         .border(Color.red, width: 10)
                             }
             
             HStack {
 
-                NavigationLink(destination: moviestart2()) {
-
-                    Text("動画を見る")
-                        .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
-                        .font(Font.mainFont(size: 40))
-                        .bold()
-                        .frame(width: 200, height: 100)
-                        .border(Color.gray, width: 5)
-                }
+                Button(action: {
+                                                if selectmoview1 == true {
+                                                    showingmovie1 = true
+                                                }
+                                }){
+                                    Text("動画を見る")
+                                        .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
+                                        .font(Font.mainFont(size: 40))
+                                        .bold()
+                                        .frame(width: 200, height: 100)
+                                        .border(Color.gray, width: 5)
+                                }.sheet(isPresented: $showingmovie1){
+                                    moviestart1()}
                         
                 NavigationLink(destination: Quiz1answer3()) {
 
@@ -1451,10 +1435,12 @@ struct Quiz1answer2true: View {
                 }
         }
     }
-        }
+        }.customBackButton()
 }
 }
 struct Quiz1answer2false: View {
+    @State var showingmovie1 = false
+        @State var selectmoview1 = true
     var body: some View {
         ZStack{
             Color(red: 0.671, green: 0.863, blue: 0.678)
@@ -1471,25 +1457,31 @@ struct Quiz1answer2false: View {
                 .frame(width: 200, height: 200)
                 .foregroundColor(.blue)
             ZStack{
-                Text("解説")
+                Color.white
+                    .frame(width:1000,height: 250)
+                Text("白川流いきや熊本地いきを中心に約880haにわたって\n水げんかん養林を整びしているよ。\nまた、ショッピングセンターなどのちゅう車場などは\n雨が地下にしみこみやすいものになっているところもあるよ。")
                                     .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
-                                    .font(Font.mainFont(size: 40))
+                                    .font(Font.mainFont(size: 35))
                                     .bold()
-                                    .frame(width:650,height: 200)
+                                    .frame(width:1000,height: 250)
                                     .border(Color.blue, width: 10)
                             }
             
             HStack {
 
-                NavigationLink(destination: moviestart2()) {
-
-                    Text("動画を見る")
-                        .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
-                        .font(Font.mainFont(size: 40))
-                        .bold()
-                        .frame(width: 200, height: 100)
-                        .border(Color.gray, width: 5)
-                }
+                Button(action: {
+                                                if selectmoview1 == true {
+                                                    showingmovie1 = true
+                                                }
+                                }){
+                                    Text("動画を見る")
+                                        .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
+                                        .font(Font.mainFont(size: 40))
+                                        .bold()
+                                        .frame(width: 200, height: 100)
+                                        .border(Color.gray, width: 5)
+                                }.sheet(isPresented: $showingmovie1){
+                                    moviestart1()}
                         
                 NavigationLink(destination: Quiz1answer3()) {
 
@@ -1502,7 +1494,7 @@ struct Quiz1answer2false: View {
                 }
         }
     }
-        }
+        }.customBackButton()
 }
 }
 
@@ -1541,11 +1533,8 @@ struct Quiz1answer3: View {
                 .offset(y: -100)
                 .foregroundColor(Color(red: 0.275,green: 0.459,blue:0.255))
                 .font(.system(size: 80, weight: .black, design: .default))
-            
-            
-
             ZStack{
-                                Text("地下水を育む田畑で栽培された農産物や、\nそれを食べて育った畜産物を購入・消費することで\n地下水保全につながる、\n熊本市独自の取り組みをなんというか")
+                                Text("地下水をはぐくむ田畑で作られた野菜などを\n買ったり食べたりすることで地下水を守ることにつながる\n熊本市の取り組みをなんというでしょう？")
                     .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
                                     .font(Font.mainFont(size: 40))
                                     .bold()
@@ -1563,7 +1552,7 @@ struct Quiz1answer3: View {
                             .frame(width:250,height: 150)
                             .cornerRadius(10)
                             .shadow(color: .gray, radius: 3, x: 5, y: 5)
-                                        Text("間違い")
+                                        Text("ウォーター\nオンセット")
                             .font(Font.mainFont(size: 40))
                             .background(Color.white)
                             .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
@@ -1582,7 +1571,7 @@ struct Quiz1answer3: View {
                             .frame(width:250,height: 150)
                             .cornerRadius(10)
                             .shadow(color: .gray, radius: 3, x: 5, y: 5)
-                                        Text("間違い")
+                                        Text("ゲーム\nオブセット")
                             .font(Font.mainFont(size: 40))
                             .background(Color.white)
                             .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
@@ -1612,24 +1601,26 @@ struct Quiz1answer3: View {
 
              
                     }
-            .padding()
-                            .padding()
-                            ZStack{
-                                Color(red: 0.898,green: 0.361,blue:0.306)
-                                    .frame(width:500,height: 120)
-                                    .cornerRadius(30)
-                                Text("こたえる")
-                                    .font(Font.mainFont(size: 40))
-                                    .bold()
-                                    .foregroundColor(.white)
-                            }
+//            .padding()
+//                            .padding()
+//                            ZStack{
+//                                Color(red: 0.898,green: 0.361,blue:0.306)
+//                                    .frame(width:500,height: 120)
+//                                    .cornerRadius(30)
+//                                Text("こたえる")
+//                                    .font(Font.mainFont(size: 40))
+//                                    .bold()
+//                                    .foregroundColor(.white)
+//                            }
         }
-        }
+        }.customBackButton()
     }
 }
 
 
 struct Quiz1answer3true: View {
+    @State var showingmovie1 = false
+        @State var selectmoview1 = true
     var body: some View {
         ZStack{
             Color(red: 0.671, green: 0.863, blue: 0.678)
@@ -1645,25 +1636,31 @@ struct Quiz1answer3true: View {
                 .frame(width: 200, height: 200)
                 .foregroundColor(.red)
             ZStack{
-                Text("解説")
+                Color.white
+                    .frame(width:1000,height: 250)
+                Text("地下水をはぐくむ田畑で作られたお米を1ぱい分食べると、\nお風呂6ぱい分の地下水がはぐくまれるよ。動画で登場した牛肉は\n『えこめ牛』と呼ばれていて、かんきょうにやさしいという意味の\nエコと、米をかけあわせて名づけられた牛のことだよ。")
                                                         .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
-                                                        .font(Font.mainFont(size: 40))
+                                                        .font(Font.mainFont(size: 35))
                                                         .bold()
-                                                        .frame(width:650,height: 200)
+                                                        .frame(width:1000,height: 250)
                                                         .border(Color.red, width: 10)
                             }
             
             HStack {
 
-                NavigationLink(destination: moviestart3()) {
-
-                    Text("動画を見る")
-                        .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
-                        .font(Font.mainFont(size: 40))
-                        .bold()
-                        .frame(width: 200, height: 100)
-                        .border(Color.gray, width: 5)
-                }
+                Button(action: {
+                                                if selectmoview1 == true {
+                                                    showingmovie1 = true
+                                                }
+                                }){
+                                    Text("動画を見る")
+                                        .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
+                                        .font(Font.mainFont(size: 40))
+                                        .bold()
+                                        .frame(width: 200, height: 100)
+                                        .border(Color.gray, width: 5)
+                                }.sheet(isPresented: $showingmovie1){
+                                    moviestart1()}
                         
                 NavigationLink(destination: Quiz1answer4()) {
 
@@ -1676,10 +1673,12 @@ struct Quiz1answer3true: View {
                 }
         }
     }
-        }
+        }.customBackButton()
 }
 }
 struct Quiz1answer3false: View {
+    @State var showingmovie1 = false
+        @State var selectmoview1 = true
     var body: some View {
         ZStack{
             Color(red: 0.671, green: 0.863, blue: 0.678)
@@ -1696,25 +1695,31 @@ struct Quiz1answer3false: View {
                 .frame(width: 200, height: 200)
                 .foregroundColor(.blue)
             ZStack{
-                Text("解説")
+                Color.white
+                    .frame(width:1000,height: 250)
+                Text("地下水をはぐくむ田畑で作られたお米を1ぱい分食べると、\nお風呂6ぱい分の地下水がはぐくまれるよ。動画で登場した牛肉は\n『えこめ牛』と呼ばれていて、かんきょうにやさしいという意味の\nエコと、米をかけあわせて名づけられた牛のことだよ。")
                                     .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
-                                    .font(Font.mainFont(size: 40))
+                                    .font(Font.mainFont(size: 35))
                                     .bold()
-                                    .frame(width:650,height: 200)
+                                    .frame(width:1000,height: 250)
                                     .border(Color.blue, width: 10)
                             }
             
             HStack {
 
-                NavigationLink(destination: moviestart3()) {
-
-                    Text("動画を見る")
-                        .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
-                        .font(Font.mainFont(size: 40))
-                        .bold()
-                        .frame(width: 200, height: 100)
-                        .border(Color.gray, width: 5)
-                }
+                Button(action: {
+                                                if selectmoview1 == true {
+                                                    showingmovie1 = true
+                                                }
+                                }){
+                                    Text("動画を見る")
+                                        .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
+                                        .font(Font.mainFont(size: 40))
+                                        .bold()
+                                        .frame(width: 200, height: 100)
+                                        .border(Color.gray, width: 5)
+                                }.sheet(isPresented: $showingmovie1){
+                                    moviestart1()}
                         
                 NavigationLink(destination: Quiz1answer4()) {
 
@@ -1727,7 +1732,7 @@ struct Quiz1answer3false: View {
                 }
         }
     }
-        }
+        }.customBackButton()
 }
 }
 
@@ -1767,7 +1772,7 @@ struct Quiz1answer4: View {
                 .font(.system(size: 80, weight: .black, design: .default))
 
             ZStack{
-                                Text("海の水は蒸発して（）になり、\nその後山に雨がふります。\nそして地面に浸透して地下水になります。")
+                                Text("海の水は、じょう発すると（）になり、\nその後、山に雨をふらせます。\nそして地面にしみこんでいくと（）になります。")
                                     .font(Font.mainFont(size: 40))
                                     .bold()
                                     .multilineTextAlignment(.center)
@@ -1789,7 +1794,7 @@ struct Quiz1answer4: View {
                             .frame(width:250,height: 150)
                             .cornerRadius(10)
                             .shadow(color: .gray, radius: 3, x: 5, y: 5)
-                                        Text("雲")
+                                        Text("雲・地下水")
                             .font(Font.mainFont(size: 40))
                             .background(Color.white)
                             .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
@@ -1809,7 +1814,7 @@ struct Quiz1answer4: View {
                             .frame(width:250,height: 150)
                             .cornerRadius(10)
                             .shadow(color: .gray, radius: 3, x: 5, y: 5)
-                                        Text("間違い")
+                                        Text("きり・\nたんさん水")
                             .font(Font.mainFont(size: 40))
                             .background(Color.white)
                             .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
@@ -1829,7 +1834,7 @@ struct Quiz1answer4: View {
                             .frame(width:250,height: 150)
                             .cornerRadius(10)
                             .shadow(color: .gray, radius: 3, x: 5, y: 5)
-                                        Text("間違い")
+                                        Text("地下水・雲")
                             .font(Font.mainFont(size: 40))
                             .background(Color.white)
                             .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
@@ -1842,25 +1847,29 @@ struct Quiz1answer4: View {
 
              
                     }
-            .padding()
-                            .padding()
-                            ZStack{
-                                Color(red: 0.898,green: 0.361,blue:0.306)
-                                    .frame(width:500,height: 120)
-                                    .cornerRadius(30)
-                                Text("こたえる")
-                                    .font(Font.mainFont(size: 40))
-                                    .bold()
-                                    .foregroundColor(.white)
-                            }
+//            .padding()
+//                            .padding()
+//                            ZStack{
+//                                Color(red: 0.898,green: 0.361,blue:0.306)
+//                                    .frame(width:500,height: 120)
+//                                    .cornerRadius(30)
+//                                Text("こたえる")
+//                                    .font(Font.mainFont(size: 40))
+//                                    .bold()
+//                                    .foregroundColor(.white)
+//                            }
         }
-        }
+        }.customBackButton()
     }
 }
 
 
 
 struct Quiz1answer4true: View {
+    
+    @State var showingmovie1 = false
+        @State var selectmoview1 = true
+    
     var body: some View {
         ZStack{
             Color(red: 0.671, green: 0.863, blue: 0.678)
@@ -1877,25 +1886,30 @@ struct Quiz1answer4true: View {
                 .frame(width: 200, height: 200)
                 .foregroundColor(.red)
             ZStack{
-                Text("解説")
+                Color.white
+                    .frame(width:1000,height: 250)
+                Text("水のじゅんかんには私たちの生活も深く関わっているよ。\nお家の台所も水じゅんかんに関わっているから\n水をよごさない工夫や正しい使い方をすれば、\nずっときれいな水を使うことができるんだ")
                                     .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
                                     .font(Font.mainFont(size: 40))
                                     .bold()
-                                    .frame(width:650,height: 200)
+                                    .frame(width:1000,height: 250)
                                     .border(Color.red, width: 10)
                             }
             
             HStack {
-
-                NavigationLink(destination: moviestart4()) {
-
+                Button(action: {
+                                if selectmoview1 == true {
+                                    showingmovie1 = true
+                                }
+                }){
                     Text("動画を見る")
                         .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
                         .font(Font.mainFont(size: 40))
                         .bold()
                         .frame(width: 200, height: 100)
                         .border(Color.gray, width: 5)
-                }
+                }.sheet(isPresented: $showingmovie1){
+                    moviestart1()}
                         
                 NavigationLink(destination: Quiz1answer5()) {
 
@@ -1908,10 +1922,12 @@ struct Quiz1answer4true: View {
                 }
         }
     }
-        }
+        }.customBackButton()
 }
 }
 struct Quiz1answer4false: View {
+    @State var showingmovie1 = false
+        @State var selectmoview1 = true
     var body: some View {
         ZStack{
             Color(red: 0.671, green: 0.863, blue: 0.678)
@@ -1928,25 +1944,31 @@ struct Quiz1answer4false: View {
                 .frame(width: 200, height: 200)
                 .foregroundColor(.blue)
             ZStack{
-                Text("解説")
+                Color.white
+                    .frame(width:1000,height: 250)
+                Text("水のじゅんかんには私たちの生活も深く関わっているよ。\nお家の台所も水じゅんかんに関わっているから\n水をよごさない工夫や正しい使い方をすれば、\nずっときれいな水を使うことができるんだ")
                                     .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
                                     .font(Font.mainFont(size: 40))
                                     .bold()
-                                    .frame(width:650,height: 200)
+                                    .frame(width:1000,height: 250)
                                     .border(Color.blue, width: 10)
                             }
             
             HStack {
 
-                NavigationLink(destination: moviestart4()) {
-
-                    Text("動画を見る")
-                        .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
-                        .font(Font.mainFont(size: 40))
-                        .bold()
-                        .frame(width: 200, height: 100)
-                        .border(Color.gray, width: 5)
-                }
+                Button(action: {
+                                                if selectmoview1 == true {
+                                                    showingmovie1 = true
+                                                }
+                                }){
+                                    Text("動画を見る")
+                                        .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
+                                        .font(Font.mainFont(size: 40))
+                                        .bold()
+                                        .frame(width: 200, height: 100)
+                                        .border(Color.gray, width: 5)
+                                }.sheet(isPresented: $showingmovie1){
+                                    moviestart1()}
                         
                 NavigationLink(destination: Quiz1answer5()) {
 
@@ -1959,7 +1981,7 @@ struct Quiz1answer4false: View {
                 }
         }
     }
-        }
+        }.customBackButton()
 }
 }
 
@@ -2000,16 +2022,12 @@ struct Quiz1answer5: View {
                 .foregroundColor(Color(red: 0.275,green: 0.459,blue:0.255))
                 .font(.system(size: 80, weight: .black, design: .default))
 
-            ZStack{
-                                Text("地下水が減少している理由は２つあります。\n一つは街が広がって地面がコンクリートに なっていること。\nもう一つは")
+            ZStack{ Text("地下水がへっている理由はたくさんあります。\n一つは町が広がって地面がコンクリートに\nなっていることです。\nもう一つはなんでしょう？")
                                     .font(Font.mainFont(size: 50))
                                     .bold()
                                     .multilineTextAlignment(.center)
                                     .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
-                
-                                    
             }.offset(y: -80)
-
 
             HStack {
 
@@ -2017,19 +2035,16 @@ struct Quiz1answer5: View {
                     ZStack{
                            Rectangle()
                             .fill(Color.white)
-                            
                                 .shadow(color: .gray, radius: 3, x: 5, y: 5)
                             .frame(width:250,height: 150)
                             .cornerRadius(10)
                             .shadow(color: .gray, radius: 3, x: 5, y: 5)
-                                        Text("水田が畑に\nなっているから")
+                                        Text("田んぼが畑に\nなっているから")
                             .font(Font.mainFont(size: 30))
                             .background(Color.white)
                             .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
                             .frame(width: 300, height: 100)
-                                            
                     }
-                        
                 }
                         
                 NavigationLink(destination: Quiz1answer5false()) {
@@ -2042,16 +2057,14 @@ struct Quiz1answer5: View {
                             .frame(width:250,height: 150)
                             .cornerRadius(10)
                             .shadow(color: .gray, radius: 3, x: 5, y: 5)
-                                        Text("間違い")
-                            .font(Font.mainFont(size: 40))
+                                        Text("地下にきょ人がいて\nのんでいるから")
+                            .font(Font.mainFont(size: 25))
                             .background(Color.white)
                             .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
                             .frame(width: 300, height: 100)
-                                            
                     }
                 }
-                        
-                
+                      
                 NavigationLink(destination: Quiz1answer5false()) {
 
                     ZStack{
@@ -2062,36 +2075,35 @@ struct Quiz1answer5: View {
                             .frame(width:250,height: 150)
                             .cornerRadius(10)
                             .shadow(color: .gray, radius: 3, x: 5, y: 5)
-                                        Text("間違い")
-                            .font(Font.mainFont(size: 40))
+                                        Text("地球の中心まで\nしみこんでしまうから")
+                            .font(Font.mainFont(size: 25))
                             .background(Color.white)
                             .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
                             .frame(width: 300, height: 100)
                                             
                     }
-
-
                 }
-
-             
-                    }
-            .padding()
-                            .padding()
-                            ZStack{
-                                Color(red: 0.898,green: 0.361,blue:0.306)
-                                    .frame(width:500,height: 120)
-                                    .cornerRadius(30)
-                                Text("こたえる")
-                                    .font(Font.mainFont(size: 40))
-                                    .bold()
-                                    .foregroundColor(.white)
-                            }
+            }
+//            .padding()
+//                            .padding()
+//                            ZStack{
+//                                Color(red: 0.898,green: 0.361,blue:0.306)
+//                                    .frame(width:500,height: 120)
+//                                    .cornerRadius(30)
+//                                Text("こたえる")
+//                                    .font(Font.mainFont(size: 40))
+//                                    .bold()
+//                                    .foregroundColor(.white)
+//                            }
+            
         }
-        }
+        }.customBackButton()
     }
 }
 
 struct Quiz1answer5true: View {
+    @State var showingmovie1 = false
+        @State var selectmoview1 = true
     var body: some View {
         ZStack{
             Color(red: 0.671, green: 0.863, blue: 0.678)
@@ -2108,25 +2120,31 @@ struct Quiz1answer5true: View {
                 .frame(width: 200, height: 200)
                 .foregroundColor(.red)
             ZStack{
-                Text("解説")
+                Color.white
+                    .frame(width:1000,height: 250)
+                Text("水田や畑など地下水がしみ込みやすい土地を、涵養域(かんよういき)、\nアスファルトやコンクリートでおおわれた土地を\n非涵養域(ひかんよういき)というよ。森林がへって、\n山の保水力(ほすいりょく：水をためこむ力)が\n少なくなっていることも\n地下水がへってきている理由のひとつだよ。")
                                     .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
-                                    .font(Font.mainFont(size: 40))
+                                    .font(Font.mainFont(size: 30))
                                     .bold()
-                                    .frame(width:650,height: 200)
+                                    .frame(width:1000,height: 250)
                                     .border(Color.red, width: 10)
                             }
             
             HStack {
 
-                NavigationLink(destination: moviestart5()) {
-
-                    Text("動画を見る")
-                        .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
-                        .font(Font.mainFont(size: 40))
-                        .bold()
-                        .frame(width: 200, height: 100)
-                        .border(Color.gray, width: 5)
-                }
+                Button(action: {
+                                                if selectmoview1 == true {
+                                                    showingmovie1 = true
+                                                }
+                                }){
+                                    Text("動画を見る")
+                                        .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
+                                        .font(Font.mainFont(size: 40))
+                                        .bold()
+                                        .frame(width: 200, height: 100)
+                                        .border(Color.gray, width: 5)
+                                }.sheet(isPresented: $showingmovie1){
+                                    moviestart1()}
                         
                 NavigationLink(destination: Quiz1End()) {
 
@@ -2139,10 +2157,12 @@ struct Quiz1answer5true: View {
                 }
         }
     }
-        }
+        }.customBackButton()
 }
 }
 struct Quiz1answer5false: View {
+    @State var showingmovie1 = false
+        @State var selectmoview1 = true
     var body: some View {
         ZStack{
             Color(red: 0.671, green: 0.863, blue: 0.678)
@@ -2159,25 +2179,31 @@ struct Quiz1answer5false: View {
                 .frame(width: 200, height: 200)
                 .foregroundColor(.blue)
             ZStack{
-                Text("解説")
+                Color.white
+                    .frame(width:1000,height: 250)
+                Text("水田や畑など地下水がしみ込みやすい土地を、涵養域(かんよういき)、\nアスファルトやコンクリートでおおわれた土地を\n非涵養域(ひかんよういき)というよ。森林がへって、\n山の保水力(ほすいりょく：水をためこむ力)が\n少なくなっていることも\n地下水がへってきている理由のひとつだよ。")
                                     .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
-                                    .font(Font.mainFont(size: 40))
+                                    .font(Font.mainFont(size: 30))
                                     .bold()
-                                    .frame(width:650,height: 200)
+                                    .frame(width:1000,height: 250)
                                     .border(Color.blue, width: 10)
                             }
             
             HStack {
 
-                NavigationLink(destination: moviestart5()) {
-
-                    Text("動画を見る")
-                        .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
-                        .font(Font.mainFont(size: 40))
-                        .bold()
-                        .frame(width: 200, height: 100)
-                        .border(Color.gray, width: 5)
-                }
+                Button(action: {
+                                                if selectmoview1 == true {
+                                                    showingmovie1 = true
+                                                }
+                                }){
+                                    Text("動画を見る")
+                                        .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
+                                        .font(Font.mainFont(size: 40))
+                                        .bold()
+                                        .frame(width: 200, height: 100)
+                                        .border(Color.gray, width: 5)
+                                }.sheet(isPresented: $showingmovie1){
+                                    moviestart1()}
                         
                 NavigationLink(destination: Quiz1End()) {
 
@@ -2190,7 +2216,7 @@ struct Quiz1answer5false: View {
                 }
         }
     }
-        }
+        }.customBackButton()
 }
 }
 
@@ -2226,7 +2252,7 @@ struct finishView: View{
                              }
                          }
                      }
-             }
+             }.customBackButton()
          }
 
 
@@ -2235,33 +2261,42 @@ struct finishView: View{
 
 struct Quiz1End: View{
     
+    @EnvironmentObject var envData: EnvironmentData
+    @State var quizscore = 5
+    //@ObservedObject var bbb = false
     
      var body: some View{
          ZStack{
              Color(red: 0.671, green: 0.863, blue: 0.678)
                  .ignoresSafeArea()
          VStack{
-             
-                     Text("５問中〇〇問正解しました！")
-                         .font(.system(size: 70, weight: .black, design: .default))
-                         .bold()
-                         .padding()
-                         .padding()
-                         .padding()
-                         .navigationBarHidden(true)
-                         .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
-                     NavigationLink(destination: StudyView()){
-                         ZStack{
-                             Color.red
-                                 .frame(width:200,height: 110)
-                             Text("終了")
-                                 .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))                                 .font(Font.mainFont(size: 40))
-                                 .bold()
-                             
-                         }
-                     }
+             Text("５問中3問正解しました！")
+                 .font(.system(size: 70, weight: .black, design: .default))
+                 .bold()
+                 .padding()
+                 .padding()
+                 .padding()
+                 .navigationBarHidden(true)
+                 .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
+             Button(action: {
+                 envData.isNavigationActive.wrappedValue = false
+                 if quizscore == 5 {
+                     envData.bbb = true
+                     UserDefaults.standard.bool(forKey: "bbb")
+                     envData.ccc = true
                  }
+             }){
+                 ZStack{
+                     Color.red
+                         .frame(width:200,height: 110)
+                     Text("終了")
+                         .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
+                         .font(Font.mainFont(size: 40))
+                         .bold()
+                 }
+             }
          }
+         }.customBackButton()
     }
 }
 

@@ -14,8 +14,9 @@ struct AppWaterApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LaunchScreen()
                 .environmentObject(WaterData())
+                .environmentObject(EnvironmentData())
             // ManagedObjectContextを環境変数に追加=containerのcontextを使えるようにする
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }

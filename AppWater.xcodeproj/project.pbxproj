@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E0DEB7328F3F63800E242F0 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0DEB7228F3F63800E242F0 /* Content.swift */; };
+		1E0DEB7728F6C5A000E242F0 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0DEB7628F6C5A000E242F0 /* LaunchScreen.swift */; };
+		1E0DEB7928F7E27300E242F0 /* testaa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0DEB7828F7E27300E242F0 /* testaa.swift */; };
+		1E0DEB7E2901EAA400E242F0 /* VSQSE_0649_river_02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1E0DEB7D2901EAA400E242F0 /* VSQSE_0649_river_02.mp3 */; };
+		1E0DEB822907A26E00E242F0 /* art.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0DEB812907A26E00E242F0 /* art.swift */; };
+		1E0DEB87290C384100E242F0 /* ExplainSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0DEB86290C384100E242F0 /* ExplainSelect.swift */; };
+		1E0DEB89290F80D800E242F0 /* buttontest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0DEB88290F80D800E242F0 /* buttontest.swift */; };
+		1E0DEBC9291D668100E242F0 /* TransitionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0DEBC8291D668100E242F0 /* TransitionTest.swift */; };
+		1E0DEBCB29200F0F00E242F0 /* CharaExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0DEBCA29200F0F00E242F0 /* CharaExp.swift */; };
+		1E1B57EE28CDF4F100DFD179 /* 動画背景.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1E1B57EC28CDF4F000DFD179 /* 動画背景.gif */; };
+		1E1B57EF28CDF4F100DFD179 /* 背景.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1E1B57ED28CDF4F000DFD179 /* 背景.gif */; };
 		1E2CC8CA2898EF17004B5FA9 /* SDGs数字系_5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1E2CC8C92898EF17004B5FA9 /* SDGs数字系_5.mp4 */; };
 		1E3BD5BA28068E0A00E6A405 /* SDGs 山北-1.mov in Resources */ = {isa = PBXBuildFile; fileRef = 1E3BD5B928068E0A00E6A405 /* SDGs 山北-1.mov */; };
 		1E3BD5BC280704F700E6A405 /* Quiz1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3BD5BB280704F700E6A405 /* Quiz1.swift */; };
@@ -19,12 +30,13 @@
 		1E42530027F466EF00B12D9F /* SelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4252FF27F466EF00B12D9F /* SelectView.swift */; };
 		1E63822F2813070A00316318 /* 海岸3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1E63822E2813070A00316318 /* 海岸3.mp3 */; };
 		1E63823128190F5000316318 /* QuizAnswer.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E63823028190F5000316318 /* QuizAnswer.json */; };
-		1E6382332825923500316318 /* MovieViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6382322825923400316318 /* MovieViewTest.swift */; };
-		1E6382352825946000316318 /* VisulalizationViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6382342825945F00316318 /* VisulalizationViewTest.swift */; };
+		1E6382332825923500316318 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6382322825923400316318 /* MovieView.swift */; };
+		1E6382352825946000316318 /* VisulalizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6382342825945F00316318 /* VisulalizationView.swift */; };
 		1E63823B2828394300316318 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63823A2828394300316318 /* LineChart.swift */; };
 		1E63823F282C237B00316318 /* SettingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63823E282C237900316318 /* SettingPage.swift */; };
 		1E6538CE283A80470089F3BB /* CalendarTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6538CD283A80470089F3BB /* CalendarTestView.swift */; };
 		1E6538D4283BD13C0089F3BB /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E6538D2283BD13C0089F3BB /* Data.xcdatamodeld */; };
+		1E6FBBD928F1501E00B5AAF4 /* Pods_AppWater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6FBBD828F1501E00B5AAF4 /* Pods_AppWater.framework */; };
 		1E717D3128964F0B009ACFB7 /* DataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E717D3028964F0B009ACFB7 /* DataList.swift */; };
 		1E99458D2840947F00547CA7 /* VisualizationViewTest3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6382382825A47E00316318 /* VisualizationViewTest3.swift */; };
 		1E99458E2840948100547CA7 /* VisualizationViewTest2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6382362825A10E00316318 /* VisualizationViewTest2.swift */; };
@@ -43,8 +55,8 @@
 		1E9D2D8727E061130035C405 /* StudyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D2D8627E061130035C405 /* StudyView.swift */; };
 		1EA42FB228579F1D00B6647B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA42FB128579F1D00B6647B /* Persistence.swift */; };
 		1EAC60A128893B3900686D9A /* 07にくまるフォント.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1EAC60A028893B3900686D9A /* 07にくまるフォント.otf */; };
+		1EACE13F28F13EE7006E106A /* クイズ背景.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1EACE13E28F13EE7006E106A /* クイズ背景.gif */; };
 		82DC081582E2521867033C98 /* Pods_AppWaterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 732B4533618BE7DBB5ABCDF9 /* Pods_AppWaterTests.framework */; };
-		D9D7FA60795EB85D0251576F /* Pods_AppWater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02B8E8510460F2D97E002554 /* Pods_AppWater.framework */; };
 		F8DA53C21B1E6D7F7FDC5824 /* Pods_AppWater_AppWaterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB027EF1619BB044F202311 /* Pods_AppWater_AppWaterUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +79,17 @@
 
 /* Begin PBXFileReference section */
 		02B8E8510460F2D97E002554 /* Pods_AppWater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppWater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E0DEB7228F3F63800E242F0 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		1E0DEB7628F6C5A000E242F0 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
+		1E0DEB7828F7E27300E242F0 /* testaa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testaa.swift; sourceTree = "<group>"; };
+		1E0DEB7D2901EAA400E242F0 /* VSQSE_0649_river_02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = VSQSE_0649_river_02.mp3; path = ../../../../Downloads/VSQSE_0649_river_02.mp3; sourceTree = "<group>"; };
+		1E0DEB812907A26E00E242F0 /* art.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = art.swift; sourceTree = "<group>"; };
+		1E0DEB86290C384100E242F0 /* ExplainSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplainSelect.swift; sourceTree = "<group>"; };
+		1E0DEB88290F80D800E242F0 /* buttontest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttontest.swift; sourceTree = "<group>"; };
+		1E0DEBC8291D668100E242F0 /* TransitionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionTest.swift; sourceTree = "<group>"; };
+		1E0DEBCA29200F0F00E242F0 /* CharaExp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharaExp.swift; sourceTree = "<group>"; };
+		1E1B57EC28CDF4F000DFD179 /* 動画背景.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "動画背景.gif"; sourceTree = "<group>"; };
+		1E1B57ED28CDF4F000DFD179 /* 背景.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "背景.gif"; sourceTree = "<group>"; };
 		1E1E9FAE27E4A73E00B244D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1E2CC8C92898EF17004B5FA9 /* SDGs数字系_5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SDGs数字系_5.mp4"; sourceTree = "<group>"; };
 		1E3BD5B928068E0A00E6A405 /* SDGs 山北-1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "SDGs 山北-1.mov"; sourceTree = "<group>"; };
@@ -83,14 +106,15 @@
 		1E63822C2813011E00316318 /* Audiotest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audiotest.swift; sourceTree = "<group>"; };
 		1E63822E2813070A00316318 /* 海岸3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "海岸3.mp3"; sourceTree = "<group>"; };
 		1E63823028190F5000316318 /* QuizAnswer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = QuizAnswer.json; sourceTree = "<group>"; };
-		1E6382322825923400316318 /* MovieViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewTest.swift; sourceTree = "<group>"; };
-		1E6382342825945F00316318 /* VisulalizationViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisulalizationViewTest.swift; sourceTree = "<group>"; usesTabs = 0; };
+		1E6382322825923400316318 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
+		1E6382342825945F00316318 /* VisulalizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisulalizationView.swift; sourceTree = "<group>"; usesTabs = 0; };
 		1E6382362825A10E00316318 /* VisualizationViewTest2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizationViewTest2.swift; sourceTree = "<group>"; };
 		1E6382382825A47E00316318 /* VisualizationViewTest3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizationViewTest3.swift; sourceTree = "<group>"; };
 		1E63823A2828394300316318 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		1E63823E282C237900316318 /* SettingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPage.swift; sourceTree = "<group>"; };
 		1E6538CD283A80470089F3BB /* CalendarTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTestView.swift; sourceTree = "<group>"; };
 		1E6538D3283BD13C0089F3BB /* Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Data.xcdatamodel; sourceTree = "<group>"; };
+		1E6FBBD828F1501E00B5AAF4 /* Pods_AppWater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_AppWater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E717D3028964F0B009ACFB7 /* DataList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataList.swift; sourceTree = "<group>"; };
 		1E9945942848F67800547CA7 /* Data 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Data 2.xcdatamodel"; sourceTree = "<group>"; };
 		1E9D2D5727E05C870035C405 /* AppWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +132,8 @@
 		1E9D2D8827E0613B0035C405 /* Visualization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visualization.swift; sourceTree = "<group>"; };
 		1EA42FB128579F1D00B6647B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		1EAC60A028893B3900686D9A /* 07にくまるフォント.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "07にくまるフォント.otf"; sourceTree = "<group>"; };
+		1EACE13E28F13EE7006E106A /* クイズ背景.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "クイズ背景.gif"; sourceTree = "<group>"; };
+		1EACE14028F14FD8006E106A /* AppWater.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = AppWater.xcodeproj; sourceTree = "<group>"; };
 		3D9D3434F2B180E368C1A4B4 /* Pods-AppWater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppWater.release.xcconfig"; path = "Target Support Files/Pods-AppWater/Pods-AppWater.release.xcconfig"; sourceTree = "<group>"; };
 		4BA8FF04073C6F2AB635A335 /* Pods-AppWater-AppWaterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppWater-AppWaterUITests.debug.xcconfig"; path = "Target Support Files/Pods-AppWater-AppWaterUITests/Pods-AppWater-AppWaterUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5FF5C6244F4C3E8FFA7AAA5A /* Pods-AppWaterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppWaterTests.debug.xcconfig"; path = "Target Support Files/Pods-AppWaterTests/Pods-AppWaterTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,7 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9D7FA60795EB85D0251576F /* Pods_AppWater.framework in Frameworks */,
+				1E6FBBD928F1501E00B5AAF4 /* Pods_AppWater.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,9 +172,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E0DEB7C28FA422E00E242F0 /* visualization */ = {
+			isa = PBXGroup;
+			children = (
+				1E6382342825945F00316318 /* VisulalizationView.swift */,
+				1E4252FF27F466EF00B12D9F /* SelectView.swift */,
+				1E0DEB86290C384100E242F0 /* ExplainSelect.swift */,
+			);
+			path = visualization;
+			sourceTree = "<group>";
+		};
+		1E0DEB85290BE57600E242F0 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				1E63823A2828394300316318 /* LineChart.swift */,
+				1E63823E282C237900316318 /* SettingPage.swift */,
+				1E0DEB7828F7E27300E242F0 /* testaa.swift */,
+				1E6538CD283A80470089F3BB /* CalendarTestView.swift */,
+				1E717D3028964F0B009ACFB7 /* DataList.swift */,
+				1E0DEB7228F3F63800E242F0 /* Content.swift */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
 		1E3F5BDD2875DE5500807E36 /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				1E9D2D8627E061130035C405 /* StudyView.swift */,
 				1E3BD5BB280704F700E6A405 /* Quiz1.swift */,
 				1E3BD5BD2807057C00E6A405 /* Quiz2.swift */,
 				1E3BD5C12807059100E6A405 /* Quiz3.swift */,
@@ -164,6 +214,7 @@
 				1E3BD5B928068E0A00E6A405 /* SDGs 山北-1.mov */,
 				1E3F5BDF28846CDC00807E36 /* 熊本の水２音声あり.mp4 */,
 				1E2CC8C92898EF17004B5FA9 /* SDGs数字系_5.mp4 */,
+				1E0DEB7D2901EAA400E242F0 /* VSQSE_0649_river_02.mp3 */,
 				1EAC60A028893B3900686D9A /* 07にくまるフォント.otf */,
 				1E63822E2813070A00316318 /* 海岸3.mp3 */,
 				1E63823028190F5000316318 /* QuizAnswer.json */,
@@ -192,16 +243,19 @@
 				1E1E9FAE27E4A73E00B244D9 /* Info.plist */,
 				1E9D2D5A27E05C870035C405 /* AppWaterApp.swift */,
 				1EA42FB128579F1D00B6647B /* Persistence.swift */,
+				1E0DEB812907A26E00E242F0 /* art.swift */,
+				1E0DEB7628F6C5A000E242F0 /* LaunchScreen.swift */,
 				1E9D2D5C27E05C870035C405 /* ContentView.swift */,
-				1E6382322825923400316318 /* MovieViewTest.swift */,
-				1E9D2D8627E061130035C405 /* StudyView.swift */,
+				1E0DEBCA29200F0F00E242F0 /* CharaExp.swift */,
+				1E0DEBC8291D668100E242F0 /* TransitionTest.swift */,
+				1E0DEB88290F80D800E242F0 /* buttontest.swift */,
+				1E6382322825923400316318 /* MovieView.swift */,
 				1E3F5BDD2875DE5500807E36 /* Quiz */,
-				1E6382342825945F00316318 /* VisulalizationViewTest.swift */,
-				1E63823A2828394300316318 /* LineChart.swift */,
-				1E4252FF27F466EF00B12D9F /* SelectView.swift */,
-				1E63823E282C237900316318 /* SettingPage.swift */,
-				1E6538CD283A80470089F3BB /* CalendarTestView.swift */,
-				1E717D3028964F0B009ACFB7 /* DataList.swift */,
+				1E0DEB7C28FA422E00E242F0 /* visualization */,
+				1E0DEB85290BE57600E242F0 /* test */,
+				1E1B57EC28CDF4F000DFD179 /* 動画背景.gif */,
+				1E1B57ED28CDF4F000DFD179 /* 背景.gif */,
+				1EACE13E28F13EE7006E106A /* クイズ背景.gif */,
 				1E6538D2283BD13C0089F3BB /* Data.xcdatamodeld */,
 				1E9D2D5E27E05C880035C405 /* Assets.xcassets */,
 				1E9D2D6027E05C880035C405 /* Preview Content */,
@@ -242,9 +296,16 @@
 			path = AppWaterUITests;
 			sourceTree = "<group>";
 		};
+		1EACE14128F14FD8006E106A /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C94B237FF3DA468905BB228D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1E6FBBD828F1501E00B5AAF4 /* Pods_AppWater.framework */,
+				1EACE14028F14FD8006E106A /* AppWater.xcodeproj */,
 				02B8E8510460F2D97E002554 /* Pods_AppWater.framework */,
 				AEB027EF1619BB044F202311 /* Pods_AppWater_AppWaterUITests.framework */,
 				732B4533618BE7DBB5ABCDF9 /* Pods_AppWaterTests.framework */,
@@ -356,10 +417,17 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 1E9D2D4E27E05C870035C405;
 			productRefGroup = 1E9D2D5827E05C870035C405 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1EACE14128F14FD8006E106A /* Products */;
+					ProjectRef = 1EACE14028F14FD8006E106A /* AppWater.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1E9D2D5627E05C870035C405 /* AppWater */,
@@ -375,10 +443,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E63823128190F5000316318 /* QuizAnswer.json in Resources */,
+				1EACE13F28F13EE7006E106A /* クイズ背景.gif in Resources */,
 				1E3BD5BA28068E0A00E6A405 /* SDGs 山北-1.mov in Resources */,
 				1EAC60A128893B3900686D9A /* 07にくまるフォント.otf in Resources */,
 				1E9D2D6227E05C880035C405 /* Preview Assets.xcassets in Resources */,
+				1E0DEB7E2901EAA400E242F0 /* VSQSE_0649_river_02.mp3 in Resources */,
 				1E2CC8CA2898EF17004B5FA9 /* SDGs数字系_5.mp4 in Resources */,
+				1E1B57EF28CDF4F100DFD179 /* 背景.gif in Resources */,
+				1E1B57EE28CDF4F100DFD179 /* 動画背景.gif in Resources */,
 				1E3F5BE028846CDC00807E36 /* 熊本の水２音声あり.mp4 in Resources */,
 				1E9D2D5F27E05C880035C405 /* Assets.xcassets in Resources */,
 				1E63822F2813070A00316318 /* 海岸3.mp3 in Resources */,
@@ -511,21 +583,29 @@
 			files = (
 				1E3BD5C22807059100E6A405 /* Quiz3.swift in Sources */,
 				1E3BD5C02807058600E6A405 /* Quiz4.swift in Sources */,
+				1E0DEBC9291D668100E242F0 /* TransitionTest.swift in Sources */,
 				1EA42FB228579F1D00B6647B /* Persistence.swift in Sources */,
 				1E9D2D5D27E05C870035C405 /* ContentView.swift in Sources */,
 				1E3BD5C42807059F00E6A405 /* Quiz5.swift in Sources */,
 				1E3BD5BE2807057C00E6A405 /* Quiz2.swift in Sources */,
 				1E63823F282C237B00316318 /* SettingPage.swift in Sources */,
-				1E6382352825946000316318 /* VisulalizationViewTest.swift in Sources */,
+				1E0DEBCB29200F0F00E242F0 /* CharaExp.swift in Sources */,
+				1E0DEB87290C384100E242F0 /* ExplainSelect.swift in Sources */,
+				1E6382352825946000316318 /* VisulalizationView.swift in Sources */,
 				1E42530027F466EF00B12D9F /* SelectView.swift in Sources */,
 				1E6538CE283A80470089F3BB /* CalendarTestView.swift in Sources */,
-				1E6382332825923500316318 /* MovieViewTest.swift in Sources */,
+				1E6382332825923500316318 /* MovieView.swift in Sources */,
+				1E0DEB7728F6C5A000E242F0 /* LaunchScreen.swift in Sources */,
 				1E717D3128964F0B009ACFB7 /* DataList.swift in Sources */,
 				1E9D2D8727E061130035C405 /* StudyView.swift in Sources */,
+				1E0DEB822907A26E00E242F0 /* art.swift in Sources */,
+				1E0DEB7328F3F63800E242F0 /* Content.swift in Sources */,
+				1E0DEB89290F80D800E242F0 /* buttontest.swift in Sources */,
 				1E3BD5BC280704F700E6A405 /* Quiz1.swift in Sources */,
 				1E9D2D5B27E05C870035C405 /* AppWaterApp.swift in Sources */,
 				1E63823B2828394300316318 /* LineChart.swift in Sources */,
 				1E6538D4283BD13C0089F3BB /* Data.xcdatamodeld in Sources */,
+				1E0DEB7928F7E27300E242F0 /* testaa.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,7 +775,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppWater/Preview Content\"";
-				DEVELOPMENT_TEAM = XVAXRG42G2;
+				DEVELOPMENT_TEAM = N8CX38UQC4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppWater/Info.plist;
@@ -716,7 +796,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -729,7 +809,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppWater/Preview Content\"";
-				DEVELOPMENT_TEAM = XVAXRG42G2;
+				DEVELOPMENT_TEAM = N8CX38UQC4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppWater/Info.plist;
@@ -750,7 +830,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
