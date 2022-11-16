@@ -62,26 +62,36 @@ struct VisualizationView: View {
                     .foregroundColor(Color.init(red:0.754,green:0.887, blue:0.914).opacity(1))
                     .offset(x: isAnimated ? -1*(universalSize.width*2) : 0)
                     .animation(Animation.linear(duration: 10).repeatForever(autoreverses: false), value: isAnimated)
-            
+            NavigationLink(destination: NantyanEx()){
             Image("キャラナンちゃん")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 400, height: 400)
-                .offset(x: -480)
                 .scaleEffect(scale ? 1.0 : 1.0)
                     .animation(.easeOut(duration: 3.5).repeatForever(), value: scale)
+            }.offset(x: -480)
+            NavigationLink(destination: KoukunEx()){
             Image("キャラコウくん")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 400, height:400)
-                .offset(x: 480)
                 .scaleEffect(scale ? 1.0 : 1.0)
                     .animation(.easeOut(duration: 4.0).repeatForever(), value: scale)
+            }.offset(x: 480)
             
-            Image("カエル先生")
-                .resizable()
-                .frame(width: 100, height: 100)
-                .offset(x:-270,y:-250)
+            NavigationLink(destination: KaeruEx()){
+                Image("カエル先生")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+            }.offset(x:-270,y:-250)
+            NavigationLink(destination: TakashiEx()){
+                Image("キャラたかし")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 300, height:300)
+            }.offset(x:430,y:-300)
+           
+                
                 //.scaleEffect(scale ? 1.1 : 0.5)
                 //.rotationEffect(.init(degrees: scale ? 20 : -20),anchor: UnitPoint.topLeading)
                 //.rotationEffect(Angle(degrees: scale ? 20 : -20)) // Viewの回転
@@ -238,7 +248,7 @@ struct VisualizationView: View {
 //                            .repeatForever()
 //                            .delay(0.5)
 //                        )
-                    .padding()
+                    //.padding()
                     
                     Button(action: {
                         self.ShowingMoneyEx.toggle()
@@ -379,12 +389,13 @@ struct VisualizationView: View {
             .onAppear(){
                 self.scale.toggle()
                 self.isAnimated.toggle()
-                player.play()
+                //音再生
+                //player.play()
                 waterData.display = true
             }.onDisappear{
                 self.scale.toggle()
                 self.isAnimated.toggle()
-                player.pause()
+                //player.pause()
             }
         }.customBackButton()
     }
@@ -514,5 +525,37 @@ struct MoneyEx:View{
                 .foregroundColor(.white)
                 .offset(x:-50,y:300)
         }
+    }
+}
+struct KaeruEx : View{
+    var body: some View{
+        VStack{
+            Image("説明カエル先生")
+                .ignoresSafeArea()
+        }.customBackButton()
+    }
+}
+struct KoukunEx : View{
+    var body: some View{
+        VStack{
+            Image("説明コウくん")
+                .ignoresSafeArea()
+        }.customBackButton()
+    }
+}
+struct NantyanEx : View{
+    var body: some View{
+        VStack{
+            Image("説明ナンちゃん")
+                .ignoresSafeArea()
+        }.customBackButton()
+    }
+}
+struct TakashiEx : View{
+    var body: some View{
+        VStack{
+            Image("説明たかしくん")
+                .ignoresSafeArea()
+        }.customBackButton()
     }
 }

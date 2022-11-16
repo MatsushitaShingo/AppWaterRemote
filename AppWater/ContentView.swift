@@ -79,7 +79,7 @@ struct ContentView: View {
     @State private var flag = false
     
     @EnvironmentObject var waterData: WaterData
-    
+    @EnvironmentObject var envData: EnvironmentData
     var body: some View {
         
             NavigationView{
@@ -93,27 +93,33 @@ struct ContentView: View {
                         .animation(.linear(duration: 3).repeatForever(), value: scale)
                     
                     NavigationLink(destination: CharaEcp()){
-                        HStack{
-                            Image("キャラナンちゃん")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 300, height: 300)
-                                .offset(y:30)
-                            Image("キャラコウくん")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 300, height: 300)
-                                .offset(x:-30,y:50)
-                            Image("カエル先生")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 100, height: 100)
-//                            Image("キャラたかし")
-//                                .scaledToFit()
-//                                .frame(width: 20, height: 20)
-                        }
-                    }.offset(y: 280)
-                       
+                        Image("キャラたかし")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 200, height: 200)
+                            
+                    }.offset(x:-300,y: 270)
+                    NavigationLink(destination: CharaEcp()){
+                        Image("キャラナンちゃん")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 300, height: 300)
+                            
+                    }.offset(x:-100,y:300)
+                    NavigationLink(destination: CharaEcp()){
+                        Image("キャラコウくん")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 300, height: 300)
+                            
+                    }.offset(x:100,y:320)
+                    NavigationLink(destination: CharaEcp()){
+                        Image("カエル先生")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 100, height: 100)
+                            
+                    }.offset(x:300,y: 270)
                    
                         
 //                    Image("キャラコウくん")
@@ -209,7 +215,7 @@ struct ContentView: View {
                         
 //                        .offset(y: flag ? 0 : 10)
 //                            .animation(.linear(duration: 1.7).repeatForever(), value: flag)
-                        NavigationLink(destination: TransitionTest()){
+                        NavigationLink(destination: StudyView()){
                                 ZStack{
                                     ZStack{
                                         Color(red: 0.901, green: 0.937, blue: 0.620)
@@ -256,7 +262,7 @@ struct ContentView: View {
                             }
                         }.offset(y: flag ? -3: 5)
                             .animation(.linear(duration: 1.0).repeatForever(), value: flag)
-                    }.offset(y:150)
+                    }.offset(y:130)
                 }
                 .onAppear{
                     self.scale.toggle()
@@ -267,6 +273,7 @@ struct ContentView: View {
                     self.scale.toggle()
                     self.flag.toggle()
                     //waterData.display = true
+                    self.envData.bbb=false
                 }
             }
         //遷移後のボタンのtextを”戻る”にする

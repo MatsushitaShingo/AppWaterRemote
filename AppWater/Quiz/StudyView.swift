@@ -69,7 +69,7 @@ struct StudyView: View {
                 }
                 if envData.ccc == true{
                     Image("阿蘇山")
-                        .offset(x:378,y:-201)
+                        .offset(x:377,y:-201)
                     Image("雨")
                         .offset(x:378,y:-370)
                 }

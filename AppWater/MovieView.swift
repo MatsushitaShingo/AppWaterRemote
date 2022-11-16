@@ -149,82 +149,82 @@ struct MovieView: View {
                     .opacity(scale ? 1:0.95)
                     //.rotationEffect(Angle(degrees: scale ? 180 : 0))
                     .animation(.linear(duration: 1.6).repeatForever(), value: scale)
-                    
+
             }
-            .offset(y:-35)
-            
-            Group{
-                Image(systemName: "plus")
-                    .resizable()
-                    .frame(width: 50, height: 50)
-                    .foregroundColor(.blue)
-                    //.offset(y:-100)
-                    .rotationEffect(Angle(degrees: scale ? 180 : 0))
-                    .animation(.linear(duration: 1.2).repeatForever(), value: scale)
-                
-                ZStack{
-                    Rectangle()
-                        .fill(Color.red)
-                        .frame(width: 50, height: 50)
-                    Rectangle()
-                        .fill(Color.white)
-                        .frame(width: 20, height: 20)
-                } .animation(.linear(duration: 1.2).repeatForever(), value: scale)
-                    .offset(x:-3)
-                
-                Image(systemName: "circle.fill")
-                    .resizable()
-                    .frame(width: 50, height: 50)
-                    .foregroundColor(.red)
-                    .offset(x:10,y: 100)
-                    .animation(.linear(duration: 1.2).repeatForever(), value: scale)
-            }.offset(x:-500)
-            
-            Group{
-                Image(systemName: "plus")
-                    .resizable()
-                    .frame(width: 50, height: 50)
-                    .foregroundColor(.blue)
-                    .offset(y:-200)
-                
-                Image(systemName: "circle.fill")
-                    .resizable()
-                    .frame(width: 50, height: 50)
-                    .foregroundColor(.red)
-                    .offset(y: 100)
-                
-                ZStack{
-                    Rectangle()
-                        .fill(Color.red)
-                        .frame(width: 50, height: 50)
-                    Rectangle()
-                        .fill(Color.white)
-                        .frame(width: 20, height: 20)
-                }.offset(x:20,y:250)
-            }.offset(x:165)
-            
-            Group{
-                Image(systemName: "plus")
-                    .resizable()
-                    .frame(width: 20, height: 20)
-                    .foregroundColor(.blue)
-                    .offset()
-                
-                Image(systemName: "circle.fill")
-                    .resizable()
-                    .frame(width: 20, height: 20)
-                    .foregroundColor(.red)
-                    .offset(y: 100)
-                
-                ZStack{
-                    Rectangle()
-                        .fill(Color.red)
-                        .frame(width: 10, height: 10)
-                    Rectangle()
-                        .fill(Color.white)
-                        .frame(width: 5, height: 5)
-                }.offset(y: 50)
-            }.offset(x:530)
+            .offset(y:-55)
+//
+//            Group{
+//                Image(systemName: "plus")
+//                    .resizable()
+//                    .frame(width: 50, height: 50)
+//                    .foregroundColor(.blue)
+//                    //.offset(y:-100)
+//                    .rotationEffect(Angle(degrees: scale ? 180 : 0))
+//                    .animation(.linear(duration: 1.2).repeatForever(), value: scale)
+//
+//                ZStack{
+//                    Rectangle()
+//                        .fill(Color.red)
+//                        .frame(width: 50, height: 50)
+//                    Rectangle()
+//                        .fill(Color.white)
+//                        .frame(width: 20, height: 20)
+//                } .animation(.linear(duration: 1.2).repeatForever(), value: scale)
+//                    .offset(x:-3)
+//
+//                Image(systemName: "circle.fill")
+//                    .resizable()
+//                    .frame(width: 50, height: 50)
+//                    .foregroundColor(.red)
+//                    .offset(x:10,y: 100)
+//                    .animation(.linear(duration: 1.2).repeatForever(), value: scale)
+//            }.offset(x:-500)
+//
+//            Group{
+//                Image(systemName: "plus")
+//                    .resizable()
+//                    .frame(width: 50, height: 50)
+//                    .foregroundColor(.blue)
+//                    .offset(y:-200)
+//
+//                Image(systemName: "circle.fill")
+//                    .resizable()
+//                    .frame(width: 50, height: 50)
+//                    .foregroundColor(.red)
+//                    .offset(y: 100)
+//
+//                ZStack{
+//                    Rectangle()
+//                        .fill(Color.red)
+//                        .frame(width: 50, height: 50)
+//                    Rectangle()
+//                        .fill(Color.white)
+//                        .frame(width: 20, height: 20)
+//                }.offset(x:20,y:250)
+//            }.offset(x:165)
+//
+//            Group{
+//                Image(systemName: "plus")
+//                    .resizable()
+//                    .frame(width: 20, height: 20)
+//                    .foregroundColor(.blue)
+//                    .offset()
+//
+//                Image(systemName: "circle.fill")
+//                    .resizable()
+//                    .frame(width: 20, height: 20)
+//                    .foregroundColor(.red)
+//                    .offset(y: 100)
+//
+//                ZStack{
+//                    Rectangle()
+//                        .fill(Color.red)
+//                        .frame(width: 10, height: 10)
+//                    Rectangle()
+//                        .fill(Color.white)
+//                        .frame(width: 5, height: 5)
+//                }.offset(y: 50)
+//            }.offset(x:530)
             
             HStack{
                 VStack{
@@ -380,7 +380,7 @@ struct MovieView: View {
                         }
                         else if selectmoview3 == true{
                             ZStack{
-                                Image("SDGs数字")
+                                Image("SDGs")
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: 680, height: 340)
@@ -392,7 +392,7 @@ struct MovieView: View {
                         }
                         else if selectmoview4 == true{
                             ZStack{
-                                Image("SDGs")
+                                Image("SDGs数字")
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: 680, height: 340)
@@ -1294,7 +1294,232 @@ struct MyButtonStyle2: ButtonStyle {
 struct moviestart1: View{
 
     var playerViewController = { () -> AVPlayerViewController in
-          let address = "http://ilab.watson.jp/Test/TatsukiTest/movie1.mp4"
+          let address = "http://ilab.watson.jp/Test/MatsushitaTest/tikasuinohimitsu.mp4"
+          let url = URL(string: address)!
+          let pvc = AVPlayerViewController()
+          pvc.player = AVPlayer(url: url)
+          pvc.showsPlaybackControls = false
+          return pvc
+      }()
+      
+      var player: AVPlayer { playerViewController.player! }
+      
+
+     var body: some View{
+         //UIViewControllerRepresenter(playerViewController)
+        VideoPlayer(player: player)
+            .onAppear(){
+                player.play()
+            }
+            .onDisappear(){
+                player.pause()
+            }
+        }
+    }
+struct moviestart2: View{
+
+    var playerViewController = { () -> AVPlayerViewController in
+          let address = "http://ilab.watson.jp/Test/MatsushitaTest/kumamotonomizunituite.mp4"
+          let url = URL(string: address)!
+          let pvc = AVPlayerViewController()
+          pvc.player = AVPlayer(url: url)
+          pvc.showsPlaybackControls = false
+          return pvc
+      }()
+      
+      var player: AVPlayer { playerViewController.player! }
+      
+
+     var body: some View{
+         //UIViewControllerRepresenter(playerViewController)
+        VideoPlayer(player: player)
+            .onAppear(){
+                player.play()
+            }
+            .onDisappear(){
+                player.pause()
+            }
+        }
+    }
+struct moviestart3: View{
+
+    var playerViewController = { () -> AVPlayerViewController in
+          let address = "http://ilab.watson.jp/Test/MatsushitaTest/SDGsttesitteru.mp4"
+          let url = URL(string: address)!
+          let pvc = AVPlayerViewController()
+          pvc.player = AVPlayer(url: url)
+          pvc.showsPlaybackControls = false
+          return pvc
+      }()
+      
+      var player: AVPlayer { playerViewController.player! }
+      
+
+     var body: some View{
+         //UIViewControllerRepresenter(playerViewController)
+        VideoPlayer(player: player)
+            .onAppear(){
+                player.play()
+            }
+            .onDisappear(){
+                player.pause()
+            }
+        }
+    }
+struct moviestart4: View{
+
+    var playerViewController = { () -> AVPlayerViewController in
+          let address = "http://ilab.watson.jp/Test/MatsushitaTest/SDGssuujikei.mp4"
+          let url = URL(string: address)!
+          let pvc = AVPlayerViewController()
+          pvc.player = AVPlayer(url: url)
+          pvc.showsPlaybackControls = false
+          return pvc
+      }()
+      
+      var player: AVPlayer { playerViewController.player! }
+      
+
+     var body: some View{
+         //UIViewControllerRepresenter(playerViewController)
+        VideoPlayer(player: player)
+            .onAppear(){
+                player.play()
+            }
+            .onDisappear(){
+                player.pause()
+            }
+        }
+    }
+struct moviestart5: View{
+
+    var playerViewController = { () -> AVPlayerViewController in
+          let address = "http://ilab.watson.jp/Test/MatsushitaTest/tikasuinohimitumitemiru.mp4"
+          let url = URL(string: address)!
+          let pvc = AVPlayerViewController()
+          pvc.player = AVPlayer(url: url)
+          pvc.showsPlaybackControls = false
+          return pvc
+      }()
+      
+      var player: AVPlayer { playerViewController.player! }
+      
+
+     var body: some View{
+         //UIViewControllerRepresenter(playerViewController)
+        VideoPlayer(player: player)
+            .onAppear(){
+                player.play()
+            }
+            .onDisappear(){
+                player.pause()
+            }
+        }
+    }
+struct moviestart6: View{
+
+    var playerViewController = { () -> AVPlayerViewController in
+          let address = "http://ilab.watson.jp/Test/MatsushitaTest/tikasuitteyogosareteru.mp4"
+          let url = URL(string: address)!
+          let pvc = AVPlayerViewController()
+          pvc.player = AVPlayer(url: url)
+          pvc.showsPlaybackControls = false
+          return pvc
+      }()
+      
+      var player: AVPlayer { playerViewController.player! }
+      
+
+     var body: some View{
+         //UIViewControllerRepresenter(playerViewController)
+        VideoPlayer(player: player)
+            .onAppear(){
+                player.play()
+            }
+            .onDisappear(){
+                player.pause()
+            }
+        }
+    }
+struct moviestart7: View{
+
+    var playerViewController = { () -> AVPlayerViewController in
+          let address = "    http://ilab.watson.jp/Test/MatsushitaTest/katoukiyomasattesitteru.mp4"
+          let url = URL(string: address)!
+          let pvc = AVPlayerViewController()
+          pvc.player = AVPlayer(url: url)
+          pvc.showsPlaybackControls = false
+          return pvc
+      }()
+      
+      var player: AVPlayer { playerViewController.player! }
+      
+
+     var body: some View{
+         //UIViewControllerRepresenter(playerViewController)
+        VideoPlayer(player: player)
+            .onAppear(){
+                player.play()
+            }
+            .onDisappear(){
+                player.pause()
+            }
+        }
+    }
+struct moviestart8: View{
+
+    var playerViewController = { () -> AVPlayerViewController in
+          let address = "http://ilab.watson.jp/Test/MatsushitaTest/suidousuittedokokarakiteru.mp4"
+          let url = URL(string: address)!
+          let pvc = AVPlayerViewController()
+          pvc.player = AVPlayer(url: url)
+          pvc.showsPlaybackControls = false
+          return pvc
+      }()
+      
+      var player: AVPlayer { playerViewController.player! }
+      
+
+     var body: some View{
+         //UIViewControllerRepresenter(playerViewController)
+        VideoPlayer(player: player)
+            .onAppear(){
+                player.play()
+            }
+            .onDisappear(){
+                player.pause()
+            }
+        }
+    }
+struct moviestart9: View{
+
+    var playerViewController = { () -> AVPlayerViewController in
+          let address = "http://ilab.watson.jp/Test/MatsushitaTest/sessuinomokuhyouttesitteru.mp4"
+          let url = URL(string: address)!
+          let pvc = AVPlayerViewController()
+          pvc.player = AVPlayer(url: url)
+          pvc.showsPlaybackControls = false
+          return pvc
+      }()
+      
+      var player: AVPlayer { playerViewController.player! }
+      
+
+     var body: some View{
+         //UIViewControllerRepresenter(playerViewController)
+        VideoPlayer(player: player)
+            .onAppear(){
+                player.play()
+            }
+            .onDisappear(){
+                player.pause()
+            }
+        }
+    }
+struct moviestart10: View{
+
+    var playerViewController = { () -> AVPlayerViewController in
+          let address = "http://ilab.watson.jp/Test/MatsushitaTest/sessuitteyatteru.mp4"
           let url = URL(string: address)!
           let pvc = AVPlayerViewController()
           pvc.player = AVPlayer(url: url)
@@ -1331,135 +1556,135 @@ struct moviestart1: View{
 //            }
 //        }
 //    }
-struct moviestart2: View{
-    
-     private let player2 = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
-    
-     var body: some View{
-        VideoPlayer(player: player2)
-            .onAppear(){
-                player2.play()
-            }
-            .onDisappear(){
-                player2.pause()
-            }
-        }
-    }
-struct moviestart3: View{
-    
-     private let player3 = AVPlayer(url: Bundle.main.url(forResource:"SDGs数字系_5",withExtension: "mp4")!)
-
-     var body: some View{
-        VideoPlayer(player: player3)
-            .onAppear(){
-                player3.play()
-            }
-            .onDisappear(){
-                player3.pause()
-            }
-        }
-    }
-struct moviestart4: View{
-
-     private let player4 = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
-
-     var body: some View{
-        VideoPlayer(player: player4)
-            .onAppear(){
-                player4.play()
-            }
-            .onDisappear(){
-                player4.pause()
-            }
-        }
-    }
-struct moviestart5: View{
-
-     private let player5 = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
-
-     var body: some View{
-        VideoPlayer(player: player5)
-            .onAppear(){
-                player5.play()
-            }
-            .onDisappear(){
-                player5.pause()
-            }
-        }
-    }
-struct moviestart6: View{
-
-     private let player6 = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
-
-     var body: some View{
-        VideoPlayer(player: player6)
-            .onAppear(){
-                player6.play()
-
-            }
-            .onDisappear(){
-                player6.pause()
-            }
-        }
-    }
-struct moviestart7: View{
-
-     private let player7 = AVPlayer(url: Bundle.main.url(forResource:"加藤清正って知ってる？",withExtension: "mp4")!)
-
-     var body: some View{
-        VideoPlayer(player: player7)
-            .onAppear(){
-                player7.play()
-            }
-            .onDisappear(){
-                player7.pause()
-            }
-        }
-    }
-struct moviestart8: View{
-
-     private let player8 = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
-
-     var body: some View{
-        VideoPlayer(player: player8)
-            .onAppear(){
-                player8.play()
-
-            }
-            .onDisappear(){
-                player8.pause()
-            }
-        }
-    }
-struct moviestart9: View{
-
-     private let player9 = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
-
-     var body: some View{
-        VideoPlayer(player: player9)
-            .onAppear(){
-                player9.play()
-
-            }
-            .onDisappear(){
-                player9.pause()
-            }
-        }
-    }
-struct moviestart10: View{
-
-     private let player10 = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
-
-     var body: some View{
-        VideoPlayer(player: player10)
-            .onAppear(){
-                player10.play()
-            }
-            .onDisappear(){
-                player10.pause()
-            }
-        }
-    }
+//struct moviestart2: View{
+//
+//     private let player2 = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
+//
+//     var body: some View{
+//        VideoPlayer(player: player2)
+//            .onAppear(){
+//                player2.play()
+//            }
+//            .onDisappear(){
+//                player2.pause()
+//            }
+//        }
+//    }
+//struct moviestart3: View{
+//
+//     private let player3 = AVPlayer(url: Bundle.main.url(forResource:"SDGs数字系_5",withExtension: "mp4")!)
+//
+//     var body: some View{
+//        VideoPlayer(player: player3)
+//            .onAppear(){
+//                player3.play()
+//            }
+//            .onDisappear(){
+//                player3.pause()
+//            }
+//        }
+//    }
+//struct moviestart4: View{
+//
+//     private let player4 = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
+//
+//     var body: some View{
+//        VideoPlayer(player: player4)
+//            .onAppear(){
+//                player4.play()
+//            }
+//            .onDisappear(){
+//                player4.pause()
+//            }
+//        }
+//    }
+//struct moviestart5: View{
+//
+//     private let player5 = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
+//
+//     var body: some View{
+//        VideoPlayer(player: player5)
+//            .onAppear(){
+//                player5.play()
+//            }
+//            .onDisappear(){
+//                player5.pause()
+//            }
+//        }
+//    }
+//struct moviestart6: View{
+//
+//     private let player6 = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
+//
+//     var body: some View{
+//        VideoPlayer(player: player6)
+//            .onAppear(){
+//                player6.play()
+//
+//            }
+//            .onDisappear(){
+//                player6.pause()
+//            }
+//        }
+//    }
+//struct moviestart7: View{
+//
+//     private let player7 = AVPlayer(url: Bundle.main.url(forResource:"加藤清正って知ってる？",withExtension: "mp4")!)
+//
+//     var body: some View{
+//        VideoPlayer(player: player7)
+//            .onAppear(){
+//                player7.play()
+//            }
+//            .onDisappear(){
+//                player7.pause()
+//            }
+//        }
+//    }
+//struct moviestart8: View{
+//
+//     private let player8 = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
+//
+//     var body: some View{
+//        VideoPlayer(player: player8)
+//            .onAppear(){
+//                player8.play()
+//
+//            }
+//            .onDisappear(){
+//                player8.pause()
+//            }
+//        }
+//    }
+//struct moviestart9: View{
+//
+//     private let player9 = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
+//
+//     var body: some View{
+//        VideoPlayer(player: player9)
+//            .onAppear(){
+//                player9.play()
+//
+//            }
+//            .onDisappear(){
+//                player9.pause()
+//            }
+//        }
+//    }
+//struct moviestart10: View{
+//
+//     private let player10 = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
+//
+//     var body: some View{
+//        VideoPlayer(player: player10)
+//            .onAppear(){
+//                player10.play()
+//            }
+//            .onDisappear(){
+//                player10.pause()
+//            }
+//        }
+//    }
 
 //動画再生
 //func playMovieFromUrl(movieUrl: URL?) {

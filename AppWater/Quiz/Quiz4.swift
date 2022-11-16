@@ -2,7 +2,7 @@
 import SwiftUI
 
 //最初の画面に戻ってっくる
-class EnvironmentData1: ObservableObject {
+class QuizEnvironmentData: ObservableObject {
     @Published var isNavigationActive: Binding<Bool> = Binding<Bool>.constant(false)
 }
 
@@ -10,7 +10,7 @@ class EnvironmentData1: ObservableObject {
 struct ModalView4: View {
     
     @State var shouldShowSecondView: Bool = false
-       @EnvironmentObject var envData: EnvironmentData
+       @EnvironmentObject var envData: QuizEnvironmentData
     
     var body: some View {
         NavigationView {
@@ -36,17 +36,20 @@ struct ModalView4: View {
 }
 
 struct Quiz4: View {
-    
+    //クイズが全問終わるとtrueなり画面遷移をする
     @State private var ShowQuizResultView: Bool = false
-    @State private var CommentaryView: Bool = false
     
+    //クイズの問題をここに書く
     var quiz = [
          "熊本の地下水を汚染している代表的な物質はどれ？",
          "地下水は日本の水使用量全体の約何％を占めている？",
-         "地下水が減少している理由は2つあり、\n一つは、水田が畑になっていることである。もう一つは？"
+         "地下水が減少している理由は2つあり、\n一つは、水田が畑になっていることである。もう一つは？",
+         "あああ",
+         "いいい"
      ]
+    //クイズの答えをここに書く
     var answer = ["普通のニート", "砂", "優しい","正解4","正解5"]
-     
+     //クイズの解答欄をここに書く
     var AnswerColumn = [
          ["普通のニート", "キムタク", "自分"],
          ["砂", "ピーマン", "じゃがいも"],
@@ -54,21 +57,29 @@ struct Quiz4: View {
          ["正解4","不正解","不正解"],
          ["不正解","不正解","正解5"]
     ]
-    
+    //解説ビューへ
+    @State private var CommentaryView: Bool = false
+    //解説をここに書く
     var Commentary = [
        "解説1","解説2","解説3","解説4","解説5"
     ]
-    
+    //問題に正解したとき正解の画像を表示するフラグ
        @State var correctFlg = false
+    //問題に不正解だったとき不正解の画像を表示するフラグ
        @State var incorrectFlg = false
+    //ボタンを無効にするときのフラグ
        @State var invalidBtn = false
-       
+       //リストから問題を取り出すときや今が何問目表示するときに使う
        @State var quizNum = 0
+    
+
        @State var CommentaryNum = 0
+    // 正解した問題の数
        @State var quizScore = 0
+    //?
        @State var quizjudge = 0
-       
-       var randomNum = [0,1,2]
+       // 問題をランダムに表示させるときに使う
+       var randomNum = [0,1,2,3,4]
     
     init() {
          randomNum.shuffle()
@@ -76,13 +87,14 @@ struct Quiz4: View {
              AnswerColumn[i].shuffle()
          }
      }
-    
+    //押されたボタンが正しかったらtrue、間違ってたらfalseを返す関数です
     func CorrectAnswer(btnNum: Int) -> Bool {
         if AnswerColumn[randomNum[quizNum]][btnNum] == answer[randomNum[quizNum]] {
             return true
         }
         return false
     }
+    //ボタンが押されたときの処理をしています
     func btnAction(count: Int) {
         //押されたボタンが正解かどうか
         if CorrectAnswer(btnNum: count) {
@@ -101,7 +113,7 @@ struct Quiz4: View {
             self.incorrectFlg = false
             self.invalidBtn = false
             
-            if quizNum == 2 {
+            if quizNum == 4 {
                 self.ShowQuizResultView = true
             } else {
                 quizNum += 1
@@ -115,7 +127,7 @@ struct Quiz4: View {
                 Text("地下水\(quizNum + 1)")
                     .font(.title)
                     .padding(.bottom, 30.0)
-                
+                //問題文
                 Text(quiz[randomNum[quizNum]])
                     .font(.largeTitle)
                     .multilineTextAlignment(.leading)
@@ -130,13 +142,14 @@ struct Quiz4: View {
                     Button(action: {
                         btnAction(count: count)
                     }) {
-                        Text(AnswerColumn[randomNum[quizNum]][count])
-                            .font(.largeTitle)
-                            .foregroundColor(Color.white)
+                        ZStack{
+                            Color.blue.frame(width: 300, height: 80)
+                            Text(AnswerColumn[randomNum[quizNum]][count])
+                                .font(.largeTitle)
+                                .foregroundColor(Color.white)
+                        }
                     }
                     .padding(.all)
-                    .frame(width: 300, height: 80)
-                    .background(Color.blue)
                     .disabled(invalidBtn)
                 }
                 }
@@ -165,7 +178,7 @@ struct CommentaryView: View{
     
     @Environment(\.dismiss) var dismiss
     
-    @EnvironmentObject var envData: EnvironmentData
+    @EnvironmentObject var envData: QuizEnvironmentData
     
     let score: Int
     let quizCount: Int
@@ -188,7 +201,7 @@ struct QuizResultView: View {
     
     @Environment(\.dismiss) var dismiss
     
-    @EnvironmentObject var envData: EnvironmentData
+    @EnvironmentObject var envData: QuizEnvironmentData
     
     let score: Int
     let quizCount: Int
@@ -218,6 +231,7 @@ struct QuizResultView: View {
     }
 }
 
+//ビューを表示・非表示に切り替える
 struct VisibleModifier : ViewModifier {
     let visible:Bool
     @ViewBuilder
@@ -229,13 +243,12 @@ struct VisibleModifier : ViewModifier {
         }
     }
 }
-
-
 extension View {
     func visible(_ visible:Bool) -> some View {
         modifier(VisibleModifier(visible: visible))
     }
 }
+
 
 struct Quiz4_Previews: PreviewProvider {
     static var previews: some View {

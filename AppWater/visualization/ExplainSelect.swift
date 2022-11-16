@@ -9,9 +9,14 @@ import SwiftUI
 
 struct ExplainSelect: View {
     var body: some View {
-        VStack{
-            Image("8つの行動項目")
-        }.customBackButton()
+    
+            VStack{
+                ScrollView{
+                    Image("ボタン説明")
+                        .ignoresSafeArea()
+                }
+            }.customBackButton()
+        
     }
 }
 
