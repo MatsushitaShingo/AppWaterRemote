@@ -59,12 +59,12 @@ class WaterData: ObservableObject {
         }
 }
 
-//class WaterMove: ObservableObject {
-//    @Published var display:Bool
-//    init(){
-//        self.display = true
-//    }
-//}
+class WaterMove: ObservableObject {
+    @Published var display:Bool
+    init(){
+        self.display = true
+    }
+}
 
 //にくまるフォントに変更
 extension Font {
@@ -87,39 +87,39 @@ struct ContentView: View {
                     Color(red:0.754,green:0.887, blue:0.914)
                         .ignoresSafeArea()
                     Image("画面背景ウォタべる")
-                        .offset(y:-80)
+                        .offset(y:-40)
                         .scaleEffect(scale ? 1.1 : 0.94)
                         .opacity(scale ? 1:0.7)
                         .animation(.linear(duration: 3).repeatForever(), value: scale)
                     
-                    NavigationLink(destination: CharaEcp()){
-                        Image("キャラたかし")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 200, height: 200)
-                            
-                    }.offset(x:-300,y: 270)
+//                    NavigationLink(destination: CharaEcp()){
+//                        Image("キャラたかし")
+//                            .resizable()
+//                            .scaledToFit()
+//                            .frame(width: 200, height: 200)
+//
+//                    }.offset(x:-300,y: 270)
                     NavigationLink(destination: CharaEcp()){
                         Image("キャラナンちゃん")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 300, height: 300)
                             
-                    }.offset(x:-100,y:300)
+                    }.offset(x:-200,y:330)
                     NavigationLink(destination: CharaEcp()){
                         Image("キャラコウくん")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 300, height: 300)
                             
-                    }.offset(x:100,y:320)
+                    }.offset(x:40,y:350)
                     NavigationLink(destination: CharaEcp()){
                         Image("カエル先生")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 100, height: 100)
                             
-                    }.offset(x:300,y: 270)
+                    }.offset(x:250,y: 300)
                    
                         
 //                    Image("キャラコウくん")
@@ -172,7 +172,7 @@ struct ContentView: View {
                             .animation(.linear(duration: 1.6).repeatForever(), value: scale)
                             
                     }
-                    .offset(y:-55)
+                    //.offset(y:-45)
                    
 //                    Image("タイトル画面Ver1")
 //                        .resizable()
@@ -201,9 +201,9 @@ struct ContentView: View {
                                             .cornerRadius(100)
                                             .shadow(color:Color(red:0.741,green:0.776, blue:0.776), radius: 3, x: 5, y: 5)
                                         HStack{
-                                            Image(systemName: "play.rectangle")
-                                                .resizable()
-                                                .frame(width: 50, height: 50)
+//                                            Image(systemName: "play.rectangle")
+//                                                .resizable()
+//                                                .frame(width: 50, height: 50)
                                             Text("学ぼう")
                                                 .font(Font.mainFont(size: 40))
                                                 .bold()
@@ -227,9 +227,9 @@ struct ContentView: View {
                                             .cornerRadius(100)
                                             .shadow(color:Color(red:0.741,green:0.776, blue:0.776), radius: 3, x: 5, y: 5)
                                         HStack{
-                                            Image(systemName: "questionmark.circle")
-                                                .resizable()
-                                                .frame(width: 40, height: 40)
+//                                            Image(systemName: "questionmark.circle")
+//                                                .resizable()
+//                                                .frame(width: 40, height: 40)
                                             Text("クイズ")
                                                 .font(Font.mainFont(size: 40))
                                                 .bold()
@@ -251,9 +251,9 @@ struct ContentView: View {
                                     .cornerRadius(100)
                                     .shadow(color:Color(red:0.741,green:0.776, blue:0.776), radius: 3, x: 5, y: 5)
                                 HStack{
-                                    Image(systemName: "eyes")
-                                        .resizable()
-                                        .frame(width: 30, height: 30)
+//                                    Image(systemName: "eyes")
+//                                        .resizable()
+//                                        .frame(width: 30, height: 30)
                                     Text("きろく")
                                         .font(Font.mainFont(size: 40))
                                         .bold()
@@ -262,7 +262,7 @@ struct ContentView: View {
                             }
                         }.offset(y: flag ? -3: 5)
                             .animation(.linear(duration: 1.0).repeatForever(), value: flag)
-                    }.offset(y:130)
+                    }.offset(y:160)
                 }
                 .onAppear{
                     self.scale.toggle()

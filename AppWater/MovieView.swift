@@ -1444,7 +1444,7 @@ struct moviestart6: View{
 struct moviestart7: View{
 
     var playerViewController = { () -> AVPlayerViewController in
-          let address = "    http://ilab.watson.jp/Test/MatsushitaTest/katoukiyomasattesitteru.mp4"
+          let address = "http://ilab.watson.jp/Test/MatsushitaTest/katoukiyomasattesitteru.mp4"
           let url = URL(string: address)!
           let pvc = AVPlayerViewController()
           pvc.player = AVPlayer(url: url)

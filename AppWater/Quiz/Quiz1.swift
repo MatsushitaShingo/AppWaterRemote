@@ -1059,8 +1059,8 @@ struct Quiz1answer1: View {
         ZStack{
             Color(red: 0.671, green: 0.863, blue: 0.678)
                 .ignoresSafeArea()
-            Waterwave(progress: progress, waveHeght: 0.015, offset: startAnimation)
-                .fill(Color.white)
+//            Waterwave(progress: progress, waveHeght: 0.015, offset: startAnimation)
+//                .fill(Color.white)
             VStack (spacing: 10){
                 Button(action: {self.isShowing1View1.toggle()}){
                     ZStack{
@@ -1264,8 +1264,8 @@ struct Quiz1answer2: View {
         ZStack{
             Color(red: 0.671, green: 0.863, blue: 0.678)
                 .ignoresSafeArea()
-            Waterwave(progress: progress, waveHeght: 0.03, offset: startAnimation)
-                .fill(Color.white)
+//            Waterwave(progress: progress, waveHeght: 0.03, offset: startAnimation)
+//                .fill(Color.white)
         VStack (spacing: 10){
             Button(action: {self.isShowing1View2.toggle()}){
                 ZStack{
@@ -1509,8 +1509,8 @@ struct Quiz1answer3: View {
         ZStack{
             Color(red: 0.671, green: 0.863, blue: 0.678)
                 .ignoresSafeArea()
-            Waterwave(progress: progress, waveHeght: 0.03, offset: startAnimation)
-                            .fill(Color.white)
+//            Waterwave(progress: progress, waveHeght: 0.03, offset: startAnimation)
+//                            .fill(Color.white)
         VStack (spacing: 10){
             Button(action: {self.isShowing1View3.toggle()}){
                 ZStack{
@@ -1746,8 +1746,8 @@ struct Quiz1answer4: View {
         ZStack{
             Color(red: 0.671, green: 0.863, blue: 0.678)
                 .ignoresSafeArea()
-            Waterwave(progress: progress, waveHeght: 0.03, offset: startAnimation)
-                            .fill(Color.white)
+//            Waterwave(progress: progress, waveHeght: 0.03, offset: startAnimation)
+//                            .fill(Color.white)
         VStack (spacing: 10){
             Button(action: {self.isShowing1View4.toggle()}){
                 ZStack{
@@ -1997,8 +1997,8 @@ struct Quiz1answer5: View {
         ZStack{
             Color(red: 0.671, green: 0.863, blue: 0.678)
                 .ignoresSafeArea()
-            Waterwave(progress: progress, waveHeght: 0.03, offset: startAnimation)
-                            .fill(Color.white)
+//            Waterwave(progress: progress, waveHeght: 0.03, offset: startAnimation)
+//                            .fill(Color.white)
         VStack (spacing: 10){
             Button(action: {self.isShowing1View5.toggle()}){
                 ZStack{

@@ -8,6 +8,7 @@
 import SwiftUI
 import CoreData
 import AVKit
+import Charts
 
 struct VisualizationView: View {
     
@@ -83,13 +84,13 @@ struct VisualizationView: View {
                 Image("カエル先生")
                     .resizable()
                     .frame(width: 100, height: 100)
-            }.offset(x:-270,y:-250)
-            NavigationLink(destination: TakashiEx()){
-                Image("キャラたかし")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 300, height:300)
-            }.offset(x:430,y:-300)
+            }.offset(x:-270,y:-240)
+//            NavigationLink(destination: TakashiEx()){
+//                Image("キャラたかし")
+//                    .resizable()
+//                    .scaledToFit()
+//                    .frame(width: 160, height:160)
+//            }.offset(x:280,y:-240)
            
                 
                 //.scaleEffect(scale ? 1.1 : 0.5)
@@ -134,7 +135,7 @@ struct VisualizationView: View {
 //                                }) {
 //                                    Text("リセット")
 //                                        .font(Font.mainFont(size: 20))
-//                                }.offset(y:-85)
+//                                }.offset(y:-295)
                                 Text("節水量")
                                     .foregroundColor(.white)
                                     .font(Font.mainFont(size: 30))
@@ -426,38 +427,38 @@ struct VisulalizationViewTest_Previews: PreviewProvider {
             .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
-struct Waterwave: Shape{
-    var progress: CGFloat
-    //Wave Height
-    var waveHeght: CGFloat
-    //Intiol Animation Start
-    var offset: CGFloat
-    //Enabling Animation
-    var animatableData: CGFloat{
-        get{offset}
-        set{offset = newValue}
-    }
-    
-    func path(in rect: CGRect) -> Path{
-        return Path{path in path.move(to: .zero)
-        //Drawing waves using Sine
-            let progressHeight: CGFloat = (1 - progress) * rect.height
-            let height = waveHeght * rect.height
-            
-            for value in stride(from: 0, to: rect.width, by: 2){
-                let x: CGFloat = value
-                let sine: CGFloat = sin(Angle(degrees: value + offset).radians)
-                let y: CGFloat = progressHeight + (height * sine)
-                
-                path.addLine(to:CGPoint(x: x,y: y))
-            }
-            
-            //Bottom Portion
-            path.addLine(to: CGPoint(x:rect.width, y: rect.height))
-            path.addLine(to: CGPoint(x: 0, y: rect.height))
-        }
-    }
-}
+//struct Waterwave: Shape{
+//    var progress: CGFloat
+//    //Wave Height
+//    var waveHeght: CGFloat
+//    //Intiol Animation Start
+//    var offset: CGFloat
+//    //Enabling Animation
+//    var animatableData: CGFloat{
+//        get{offset}
+//        set{offset = newValue}
+//    }
+//
+//    func path(in rect: CGRect) -> Path{
+//        return Path{path in path.move(to: .zero)
+//        //Drawing waves using Sine
+//            let progressHeight: CGFloat = (1 - progress) * rect.height
+//            let height = waveHeght * rect.height
+//
+//            for value in stride(from: 0, to: rect.width, by: 2){
+//                let x: CGFloat = value
+//                let sine: CGFloat = sin(Angle(degrees: value + offset).radians)
+//                let y: CGFloat = progressHeight + (height * sine)
+//
+//                path.addLine(to:CGPoint(x: x,y: y))
+//            }
+//
+//            //Bottom Portion
+//            path.addLine(to: CGPoint(x:rect.width, y: rect.height))
+//            path.addLine(to: CGPoint(x: 0, y: rect.height))
+//        }
+//    }
+//}
 
 struct WaterEx:View{
     var body: some View{

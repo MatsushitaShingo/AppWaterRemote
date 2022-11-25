@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E04E6292925400E000EE2CE /* ChartsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E04E6282925400E000EE2CE /* ChartsTest.swift */; };
+		1E04E62B292E90C7000EE2CE /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E04E62A292E90C7000EE2CE /* OnBoardingView.swift */; };
 		1E0DEB7328F3F63800E242F0 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0DEB7228F3F63800E242F0 /* Content.swift */; };
 		1E0DEB7728F6C5A000E242F0 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0DEB7628F6C5A000E242F0 /* LaunchScreen.swift */; };
 		1E0DEB7928F7E27300E242F0 /* testaa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0DEB7828F7E27300E242F0 /* testaa.swift */; };
@@ -79,6 +81,8 @@
 
 /* Begin PBXFileReference section */
 		02B8E8510460F2D97E002554 /* Pods_AppWater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppWater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E04E6282925400E000EE2CE /* ChartsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsTest.swift; sourceTree = "<group>"; };
+		1E04E62A292E90C7000EE2CE /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		1E0DEB7228F3F63800E242F0 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		1E0DEB7628F6C5A000E242F0 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		1E0DEB7828F7E27300E242F0 /* testaa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testaa.swift; sourceTree = "<group>"; };
@@ -191,6 +195,7 @@
 				1E6538CD283A80470089F3BB /* CalendarTestView.swift */,
 				1E717D3028964F0B009ACFB7 /* DataList.swift */,
 				1E0DEB7228F3F63800E242F0 /* Content.swift */,
+				1E04E6282925400E000EE2CE /* ChartsTest.swift */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 				1EA42FB128579F1D00B6647B /* Persistence.swift */,
 				1E0DEB812907A26E00E242F0 /* art.swift */,
 				1E0DEB7628F6C5A000E242F0 /* LaunchScreen.swift */,
+				1E04E62A292E90C7000EE2CE /* OnBoardingView.swift */,
 				1E9D2D5C27E05C870035C405 /* ContentView.swift */,
 				1E0DEBCA29200F0F00E242F0 /* CharaExp.swift */,
 				1E0DEBC8291D668100E242F0 /* TransitionTest.swift */,
@@ -584,6 +590,7 @@
 				1E3BD5C22807059100E6A405 /* Quiz3.swift in Sources */,
 				1E3BD5C02807058600E6A405 /* Quiz4.swift in Sources */,
 				1E0DEBC9291D668100E242F0 /* TransitionTest.swift in Sources */,
+				1E04E62B292E90C7000EE2CE /* OnBoardingView.swift in Sources */,
 				1EA42FB228579F1D00B6647B /* Persistence.swift in Sources */,
 				1E9D2D5D27E05C870035C405 /* ContentView.swift in Sources */,
 				1E3BD5C42807059F00E6A405 /* Quiz5.swift in Sources */,
@@ -601,6 +608,7 @@
 				1E0DEB822907A26E00E242F0 /* art.swift in Sources */,
 				1E0DEB7328F3F63800E242F0 /* Content.swift in Sources */,
 				1E0DEB89290F80D800E242F0 /* buttontest.swift in Sources */,
+				1E04E6292925400E000EE2CE /* ChartsTest.swift in Sources */,
 				1E3BD5BC280704F700E6A405 /* Quiz1.swift in Sources */,
 				1E9D2D5B27E05C870035C405 /* AppWaterApp.swift in Sources */,
 				1E63823B2828394300316318 /* LineChart.swift in Sources */,
@@ -775,7 +783,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppWater/Preview Content\"";
-				DEVELOPMENT_TEAM = XVAXRG42G2;
+				DEVELOPMENT_TEAM = N8CX38UQC4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppWater/Info.plist;
@@ -784,15 +792,16 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "----.AppWater";
+				PRODUCT_BUNDLE_IDENTIFIER = Whotaberu.AppWater;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -809,7 +818,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppWater/Preview Content\"";
-				DEVELOPMENT_TEAM = XVAXRG42G2;
+				DEVELOPMENT_TEAM = N8CX38UQC4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppWater/Info.plist;
@@ -818,15 +827,16 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "----.AppWater";
+				PRODUCT_BUNDLE_IDENTIFIER = Whotaberu.AppWater;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
