@@ -19,7 +19,7 @@ struct AppWaterApp: App {
             LaunchScreen()
                 .environmentObject(WaterData())
                 .environmentObject(EnvironmentData())
-                .environmentObject(QuizEnvironmentData())
+                //.environmentObject(QuizEnvironmentData())
             // ManagedObjectContextを環境変数に追加=containerのcontextを使えるようにする
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }

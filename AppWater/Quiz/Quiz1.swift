@@ -1011,7 +1011,7 @@
 import SwiftUI
 import AVKit
 
-struct ModalView1: View {
+struct Quiz1ModalView1: View {
     
     @Environment(\.presentationMode)var PresentationMode
     
@@ -1048,6 +1048,8 @@ struct ModalView1: View {
 }
 
 struct Quiz1answer1: View {
+    @EnvironmentObject var envData: EnvironmentData
+    @State private var toNextView = false
     
     @State private var isShowing1View1: Bool = false
     
@@ -1062,20 +1064,20 @@ struct Quiz1answer1: View {
 //            Waterwave(progress: progress, waveHeght: 0.015, offset: startAnimation)
 //                .fill(Color.white)
             VStack (spacing: 10){
-                Button(action: {self.isShowing1View1.toggle()}){
-                    ZStack{
-                        Image(systemName: "drop.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 50, height: 50)
-                            .foregroundColor(.blue)
-                        Text("戻る")
-                            .padding(.vertical)
-                            .foregroundColor(.white)
-                    }
-                }.fullScreenCover(isPresented:$isShowing1View1){
-                    finishView()
-                }.offset(x:500,y: -100)
+//                Button(action: {self.isShowing1View1.toggle()}){
+//                    ZStack{
+//                        Image(systemName: "drop.fill")
+//                            .resizable()
+//                            .scaledToFit()
+//                            .frame(width: 50, height: 50)
+//                            .foregroundColor(.blue)
+//                        Text("戻る")
+//                            .padding(.vertical)
+//                            .foregroundColor(.white)
+//                    }
+//                }.fullScreenCover(isPresented:$isShowing1View1){
+//                    finishView()
+//                }.offset(x:500,y: -100)
                     Text("第１問")
                         .font(Font.mainFont(size: 60))
                         .fontWeight(.heavy)
@@ -1162,7 +1164,7 @@ struct Quiz1answer1true: View {
                 ZStack{
                     Color.white
                         .frame(width:1000,height: 250)
-                    Text("硝酸性窒素などによごされていないか\nチェックするために\n熊本市の地下水観そく局や井戸など、\n約250カ所で地下水しつの調査をしているよ。")
+                    Text("熊本市の地下水観そく局は井戸など、約250カ所で\n硝酸性窒素などで地下水がよごされていないか調べているよ。")
                         .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
                         .font(Font.mainFont(size: 40))
                         .bold()
@@ -1183,7 +1185,7 @@ struct Quiz1answer1true: View {
                             .frame(width: 200, height: 100)
                             .border(Color.gray, width: 5)
                     }.sheet(isPresented: $showingmovie1){
-                        moviestart1()}
+                        moviestart6()}
                             
                     NavigationLink(destination: Quiz1answer2()) {
                         Text("次の問題へ")
@@ -1220,7 +1222,7 @@ struct Quiz1answer1false: View {
                 ZStack{
                 Color.white
                     .frame(width:1000,height: 250)
-                Text("硝酸性窒素などによごされていないかチェックするために\n熊本市の地下水観そく局や井戸など、\n約250カ所で地下水しつの調査をしているよ。")
+                Text("熊本市の地下水観そく局は井戸など、約250カ所で\n硝酸性窒素などで地下水がよごされていないか調べているよ。")
                     .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
                     .font(Font.mainFont(size: 40))
                     .bold()
@@ -1239,7 +1241,7 @@ struct Quiz1answer1false: View {
                         .frame(width: 200, height: 100)
                         .border(Color.gray, width: 5)
                 }.sheet(isPresented: $showingmovie1){
-                    moviestart1()}
+                    moviestart6()}
                 
                 NavigationLink(destination: Quiz1answer2()) {
                     Text("次の問題へ")
@@ -1267,20 +1269,20 @@ struct Quiz1answer2: View {
 //            Waterwave(progress: progress, waveHeght: 0.03, offset: startAnimation)
 //                .fill(Color.white)
         VStack (spacing: 10){
-            Button(action: {self.isShowing1View2.toggle()}){
-                ZStack{
-                    Image(systemName: "drop.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 50, height: 50)
-                        .foregroundColor(.blue)
-                    Text("戻る")
-                        .padding(.vertical)
-                        .foregroundColor(.white)
-                }
-            }.fullScreenCover(isPresented:$isShowing1View2){
-                finishView()
-            }.offset(x:500,y: -100)
+//            Button(action: {self.isShowing1View2.toggle()}){
+//                ZStack{
+//                    Image(systemName: "drop.fill")
+//                        .resizable()
+//                        .scaledToFit()
+//                        .frame(width: 50, height: 50)
+//                        .foregroundColor(.blue)
+//                    Text("戻る")
+//                        .padding(.vertical)
+//                        .foregroundColor(.white)
+//                }
+//            }.fullScreenCover(isPresented:$isShowing1View2){
+//                finishView()
+//            }.offset(x:500,y: -100)
             Text("第２問")
                 .font(Font.mainFont(size: 60))
                 .fontWeight(.heavy)
@@ -1400,7 +1402,7 @@ struct Quiz1answer2true: View {
             ZStack{
                 Color.white
                     .frame(width:1000,height: 250)
-                Text("白川流いきや熊本地いきを中心に約880haにわたって\n水げんかん養林を整びしているよ。\nまた、ショッピングセンターなどのちゅう車場などは\n雨が地下にしみこみやすいものになっているところもあるよ。")
+                Text("白川や熊本地いきで約880haにわたって水げんかん養林を整びしているよ。\nまた、ちゅう車場では雨が地下にしみこみやすいものになっているところもあるよ。")
                                                         .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
                                                         .font(Font.mainFont(size: 35))
                                                         .bold()
@@ -1422,7 +1424,7 @@ struct Quiz1answer2true: View {
                                         .frame(width: 200, height: 100)
                                         .border(Color.gray, width: 5)
                                 }.sheet(isPresented: $showingmovie1){
-                                    moviestart1()}
+                                    moviestart6()}
                         
                 NavigationLink(destination: Quiz1answer3()) {
 
@@ -1459,7 +1461,7 @@ struct Quiz1answer2false: View {
             ZStack{
                 Color.white
                     .frame(width:1000,height: 250)
-                Text("白川流いきや熊本地いきを中心に約880haにわたって\n水げんかん養林を整びしているよ。\nまた、ショッピングセンターなどのちゅう車場などは\n雨が地下にしみこみやすいものになっているところもあるよ。")
+                Text("白川や熊本地いきで約880haにわたって水げんかん養林を整びしているよ。\nまた、ちゅう車場では雨が地下にしみこみやすいものになっているところもあるよ。")
                                     .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
                                     .font(Font.mainFont(size: 35))
                                     .bold()
@@ -1481,7 +1483,7 @@ struct Quiz1answer2false: View {
                                         .frame(width: 200, height: 100)
                                         .border(Color.gray, width: 5)
                                 }.sheet(isPresented: $showingmovie1){
-                                    moviestart1()}
+                                    moviestart6()}
                         
                 NavigationLink(destination: Quiz1answer3()) {
 
@@ -1512,20 +1514,20 @@ struct Quiz1answer3: View {
 //            Waterwave(progress: progress, waveHeght: 0.03, offset: startAnimation)
 //                            .fill(Color.white)
         VStack (spacing: 10){
-            Button(action: {self.isShowing1View3.toggle()}){
-                ZStack{
-                    Image(systemName: "drop.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 50, height: 50)
-                        .foregroundColor(.blue)
-                    Text("戻る")
-                        .padding(.vertical)
-                        .foregroundColor(.white)
-                }
-            }.fullScreenCover(isPresented:$isShowing1View3){
-                finishView()
-            }.offset(x:500,y: -100)
+//            Button(action: {self.isShowing1View3.toggle()}){
+//                ZStack{
+//                    Image(systemName: "drop.fill")
+//                        .resizable()
+//                        .scaledToFit()
+//                        .frame(width: 50, height: 50)
+//                        .foregroundColor(.blue)
+//                    Text("戻る")
+//                        .padding(.vertical)
+//                        .foregroundColor(.white)
+//                }
+//            }.fullScreenCover(isPresented:$isShowing1View3){
+//                finishView()
+//            }.offset(x:500,y: -100)
             Text("第３問")
                 .font(Font.mainFont(size: 60))
                 .fontWeight(.heavy)
@@ -1638,7 +1640,7 @@ struct Quiz1answer3true: View {
             ZStack{
                 Color.white
                     .frame(width:1000,height: 250)
-                Text("地下水をはぐくむ田畑で作られたお米を1ぱい分食べると、\nお風呂6ぱい分の地下水がはぐくまれるよ。動画で登場した牛肉は\n『えこめ牛』と呼ばれていて、かんきょうにやさしいという意味の\nエコと、米をかけあわせて名づけられた牛のことだよ。")
+                Text("動画で登場した牛肉は、かんきょうにやさしい\nという意味のエコと、\n米をかけあわせて『えこめ牛』とよばれているよ。")
                                                         .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
                                                         .font(Font.mainFont(size: 35))
                                                         .bold()
@@ -1660,7 +1662,7 @@ struct Quiz1answer3true: View {
                                         .frame(width: 200, height: 100)
                                         .border(Color.gray, width: 5)
                                 }.sheet(isPresented: $showingmovie1){
-                                    moviestart1()}
+                                    moviestart5()}
                         
                 NavigationLink(destination: Quiz1answer4()) {
 
@@ -1697,7 +1699,7 @@ struct Quiz1answer3false: View {
             ZStack{
                 Color.white
                     .frame(width:1000,height: 250)
-                Text("地下水をはぐくむ田畑で作られたお米を1ぱい分食べると、\nお風呂6ぱい分の地下水がはぐくまれるよ。動画で登場した牛肉は\n『えこめ牛』と呼ばれていて、かんきょうにやさしいという意味の\nエコと、米をかけあわせて名づけられた牛のことだよ。")
+                Text("動画で登場した牛肉は、かんきょうにやさしい\nという意味のエコと、\n米をかけあわせて『えこめ牛』とよばれているよ。")
                                     .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
                                     .font(Font.mainFont(size: 35))
                                     .bold()
@@ -1719,7 +1721,7 @@ struct Quiz1answer3false: View {
                                         .frame(width: 200, height: 100)
                                         .border(Color.gray, width: 5)
                                 }.sheet(isPresented: $showingmovie1){
-                                    moviestart1()}
+                                    moviestart5()}
                         
                 NavigationLink(destination: Quiz1answer4()) {
 
@@ -1749,20 +1751,20 @@ struct Quiz1answer4: View {
 //            Waterwave(progress: progress, waveHeght: 0.03, offset: startAnimation)
 //                            .fill(Color.white)
         VStack (spacing: 10){
-            Button(action: {self.isShowing1View4.toggle()}){
-                ZStack{
-                    Image(systemName: "drop.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 50, height: 50)
-                        .foregroundColor(.blue)
-                    Text("戻る")
-                        .padding(.vertical)
-                        .foregroundColor(.white)
-                }
-            }.fullScreenCover(isPresented:$isShowing1View4){
-                finishView()
-            }.offset(x:500,y: -100)
+//            Button(action: {self.isShowing1View4.toggle()}){
+//                ZStack{
+//                    Image(systemName: "drop.fill")
+//                        .resizable()
+//                        .scaledToFit()
+//                        .frame(width: 50, height: 50)
+//                        .foregroundColor(.blue)
+//                    Text("戻る")
+//                        .padding(.vertical)
+//                        .foregroundColor(.white)
+//                }
+//            }.fullScreenCover(isPresented:$isShowing1View4){
+//                finishView()
+//            }.offset(x:500,y: -100)
             Text("第４問")
                 .font(Font.mainFont(size: 60))
                 .fontWeight(.heavy)
@@ -1888,7 +1890,7 @@ struct Quiz1answer4true: View {
             ZStack{
                 Color.white
                     .frame(width:1000,height: 250)
-                Text("水のじゅんかんには私たちの生活も深く関わっているよ。\nお家の台所も水じゅんかんに関わっているから\n水をよごさない工夫や正しい使い方をすれば、\nずっときれいな水を使うことができるんだ")
+                Text("台所も水じゅんかんに関わっているから、\n水をよごさない工夫や正しい使い方をすれば、\nずっときれいな水を使うことができるよ。")
                                     .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
                                     .font(Font.mainFont(size: 40))
                                     .bold()
@@ -1909,7 +1911,7 @@ struct Quiz1answer4true: View {
                         .frame(width: 200, height: 100)
                         .border(Color.gray, width: 5)
                 }.sheet(isPresented: $showingmovie1){
-                    moviestart1()}
+                    moviestart5()}
                         
                 NavigationLink(destination: Quiz1answer5()) {
 
@@ -1946,7 +1948,7 @@ struct Quiz1answer4false: View {
             ZStack{
                 Color.white
                     .frame(width:1000,height: 250)
-                Text("水のじゅんかんには私たちの生活も深く関わっているよ。\nお家の台所も水じゅんかんに関わっているから\n水をよごさない工夫や正しい使い方をすれば、\nずっときれいな水を使うことができるんだ")
+                Text("台所も水じゅんかんに関わっているから、水をよごさない工夫や\n正しい使い方をすれば、ずっときれいな水を使うことができるよ。")
                                     .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
                                     .font(Font.mainFont(size: 40))
                                     .bold()
@@ -1968,7 +1970,7 @@ struct Quiz1answer4false: View {
                                         .frame(width: 200, height: 100)
                                         .border(Color.gray, width: 5)
                                 }.sheet(isPresented: $showingmovie1){
-                                    moviestart1()}
+                                    moviestart5()}
                         
                 NavigationLink(destination: Quiz1answer5()) {
 
@@ -2000,20 +2002,20 @@ struct Quiz1answer5: View {
 //            Waterwave(progress: progress, waveHeght: 0.03, offset: startAnimation)
 //                            .fill(Color.white)
         VStack (spacing: 10){
-            Button(action: {self.isShowing1View5.toggle()}){
-                ZStack{
-                    Image(systemName: "drop.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 50, height: 50)
-                        .foregroundColor(.blue)
-                    Text("戻る")
-                        .padding(.vertical)
-                        .foregroundColor(.white)
-                }
-            }.fullScreenCover(isPresented:$isShowing1View5){
-                finishView()
-            }.offset(x:500,y: -100)
+//            Button(action: {self.isShowing1View5.toggle()}){
+//                ZStack{
+//                    Image(systemName: "drop.fill")
+//                        .resizable()
+//                        .scaledToFit()
+//                        .frame(width: 50, height: 50)
+//                        .foregroundColor(.blue)
+//                    Text("戻る")
+//                        .padding(.vertical)
+//                        .foregroundColor(.white)
+//                }
+//            }.fullScreenCover(isPresented:$isShowing1View5){
+//                finishView()
+//            }.offset(x:500,y: -100)
             Text("第５問")
                 .font(Font.mainFont(size: 60))
                 .fontWeight(.heavy)
@@ -2122,7 +2124,7 @@ struct Quiz1answer5true: View {
             ZStack{
                 Color.white
                     .frame(width:1000,height: 250)
-                Text("水田や畑など地下水がしみ込みやすい土地を、涵養域(かんよういき)、\nアスファルトやコンクリートでおおわれた土地を\n非涵養域(ひかんよういき)というよ。森林がへって、\n山の保水力(ほすいりょく：水をためこむ力)が\n少なくなっていることも\n地下水がへってきている理由のひとつだよ。")
+                Text("森林がへって、山の保水力(ほすいりょく：水をためこむ力)が\n少なくなっていることも地下水がへってきている理由のひとつだよ。")
                                     .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
                                     .font(Font.mainFont(size: 30))
                                     .bold()
@@ -2144,7 +2146,7 @@ struct Quiz1answer5true: View {
                                         .frame(width: 200, height: 100)
                                         .border(Color.gray, width: 5)
                                 }.sheet(isPresented: $showingmovie1){
-                                    moviestart1()}
+                                    moviestart5()}
                         
                 NavigationLink(destination: Quiz1End()) {
 
@@ -2181,7 +2183,7 @@ struct Quiz1answer5false: View {
             ZStack{
                 Color.white
                     .frame(width:1000,height: 250)
-                Text("水田や畑など地下水がしみ込みやすい土地を、涵養域(かんよういき)、\nアスファルトやコンクリートでおおわれた土地を\n非涵養域(ひかんよういき)というよ。森林がへって、\n山の保水力(ほすいりょく：水をためこむ力)が\n少なくなっていることも\n地下水がへってきている理由のひとつだよ。")
+                Text("森林がへって、山の保水力(ほすいりょく：水をためこむ力)が\n少なくなっていることも地下水がへってきている理由のひとつだよ。")
                                     .foregroundColor(Color(red: 0.259,green: 0.259,blue:0.259))
                                     .font(Font.mainFont(size: 30))
                                     .bold()
@@ -2203,7 +2205,7 @@ struct Quiz1answer5false: View {
                                         .frame(width: 200, height: 100)
                                         .border(Color.gray, width: 5)
                                 }.sheet(isPresented: $showingmovie1){
-                                    moviestart1()}
+                                    moviestart5()}
                         
                 NavigationLink(destination: Quiz1End()) {
 
@@ -2220,7 +2222,7 @@ struct Quiz1answer5false: View {
 }
 }
 
-struct finishView: View{
+struct Quiz1finishView: View{
     
      var body: some View{
          NavigationView{
@@ -2270,7 +2272,7 @@ struct Quiz1End: View{
              Color(red: 0.671, green: 0.863, blue: 0.678)
                  .ignoresSafeArea()
          VStack{
-             Text("５問中3問正解しました！")
+             Text("５問中○問正解しました！")
                  .font(.system(size: 70, weight: .black, design: .default))
                  .bold()
                  .padding()
@@ -2281,8 +2283,8 @@ struct Quiz1End: View{
              Button(action: {
                  envData.isNavigationActive.wrappedValue = false
                  if quizscore == 5 {
-                     envData.bbb = true
-                     UserDefaults.standard.bool(forKey: "bbb")
+                     envData.aaa = true
+                     UserDefaults.standard.bool(forKey: "aaa")
                      //envData.ccc = true
                  }
              }){

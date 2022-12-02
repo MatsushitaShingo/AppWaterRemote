@@ -212,9 +212,8 @@ struct ContentView: View {
                                     }
                                 }
                         }
-                        
-//                        .offset(y: flag ? 0 : 10)
-//                            .animation(.linear(duration: 1.7).repeatForever(), value: flag)
+                        .offset(y: flag ? 0 : 10)
+                            .animation(.linear(duration: 1.7).repeatForever(), value: flag)
                         NavigationLink(destination: StudyView()){
                                 ZStack{
                                     ZStack{
@@ -273,22 +272,15 @@ struct ContentView: View {
                     self.scale.toggle()
                     self.flag.toggle()
                     //waterData.display = true
-                    self.envData.bbb=false
+                    //音を出す
+                    //playSound()
+                    //self.envData.bbb=false
                 }
             }
-        //遷移後のボタンのtextを”戻る”にする
-//                .navigationTitle("3つの機能")
+        //ナビゲーションバーのボタンを無くす
             .navigationBarHidden(true)
             //iPadのナビゲーション遷移でiPhoneと同じようにする
             .navigationViewStyle(.stack)
-        //音を出す
-//        .onAppear(){
-//            playSound()
-//        }
-    }
-    
-    func savedata(){
-        
     }
 }
 struct CustomBackButton: ViewModifier {

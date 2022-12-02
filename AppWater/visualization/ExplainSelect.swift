@@ -13,6 +13,7 @@ struct ExplainSelect: View {
             VStack{
                 ScrollView{
                     Image("ボタン説明")
+                        .resizable()
                         .ignoresSafeArea()
                 }
             }.customBackButton()

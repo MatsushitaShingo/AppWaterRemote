@@ -83,25 +83,6 @@ struct MovieView: View {
     
     @State var scale : Bool = false
     
-//    let remoteFileUrl: String = ""
-//
-//    func playMovieFromRemoteFile() {
-//        playMovieFromUrl(movieUrl: URL(string: remoteFileUrl))
-//    }
-//    func playMovieFromUrl(movieUrl: URL?) {
-//        if let movieUrl = movieUrl {
-//            let videoPlayer = AVPlayer(url: movieUrl)
-//            let playerController = AVPlayerViewController()
-//            playerController.player = videoPlayer
-//            self.present(playerController, animated: true, completion: {
-//                videoPlayer.play()
-//            })
-//        } else {
-//            print("cannot play")
-//        }
-//    }
-    
-    
     var body: some View {
         ZStack{
 //            SwiftUIGIFPlayerView(gifName: "動画背景")
@@ -510,63 +491,127 @@ struct MovieView: View {
                                     Text("\(watchcount1)回視聴")
                                     Text("地下水の秘密知ってる？")
                                         .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
-                                        .font(Font.mainFont(size: 24))
+                                        .font(Font.mainFont(size: 20))
                                         .bold()
                                 } .offset(y:10)
                             }
                         }else if selectmoview2 == true{
-                            Text("この動画では水の硬度や、熊本水遺産について説明するよ！")
-                                .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
-                                .font(Font.mainFont(size: 24))
-                                .bold()
+                            
+                            ZStack{
+                                Image("吹き出し1")
+                                    .frame(height:40)
+                                HStack{
+                                    Text("\(watchcount2)回視聴")
+                                    Text("この動画では水の硬度や、\n熊本水遺産について説明するよ！")
+                                        .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
+                                        .font(Font.mainFont(size: 20))
+                                        .bold()
+                                } .offset(y:10)
+                            }
                         }
                         else if selectmoview3 == true{
-                            Text("世界の水について説明するよ！")
-                                .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
-                                .font(Font.mainFont(size: 24))
-                                .bold()
+                            ZStack{
+                                Image("吹き出し1")
+                                    .frame(height:40)
+                                HStack{
+                                    Text("\(watchcount3)回視聴")
+                                    Text("世界の水について説明するよ！")
+                                        .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
+                                        .font(Font.mainFont(size: 20))
+                                        .bold()
+                                } .offset(y:10)
+                            }
                         }
                         else if selectmoview4 == true{
-                            Text("SDGsと水について説明するよ！")
-                                .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
-                                .font(Font.mainFont(size: 24))
-                                .bold()
+                            ZStack{
+                                Image("吹き出し1")
+                                    .frame(height:40)
+                                HStack{
+                                    Text("\(watchcount4)回視聴")
+                                    Text("SDGsと水について説明するよ！")
+                                        .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
+                                        .font(Font.mainFont(size: 20))
+                                        .bold()
+                                } .offset(y:10)
+                            }
                         }
                         else if selectmoview5 == true{
-                            Text("雨の行方や地下水の減少について説明するよ！")
-                                .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
-                                .font(Font.mainFont(size: 24))
-                                .bold()
+                            ZStack{
+                                Image("吹き出し1")
+                                    .frame(height:40)
+                                HStack{
+                                    Text("\(watchcount5)回視聴")
+                                    Text("雨の行方や地下水の減少について説明するよ！")
+                                        .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
+                                        .font(Font.mainFont(size: 20))
+                                        .bold()
+                                } .offset(y:10)
+                            }
                         }
                         else if selectmoview6 == true{
-                            Text("地下水が汚れている理由や守る活動について説明するよ！")
-                                .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
-                                .font(Font.mainFont(size: 24))
-                                .bold()
+                            ZStack{
+                                Image("吹き出し1")
+                                    .frame(height:40)
+                                HStack{
+                                    Text("\(watchcount6)回視聴")
+                                    Text("地下水が汚れている理由や守る活動について\n説明するよ！")
+                                        .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
+                                        .font(Font.mainFont(size: 20))
+                                        .bold()
+                                } .offset(y:10)
+                            }
                         }
                         else if selectmoview7 == true{
-                            Text("加藤清正と水について説明するよ！")
-                                .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
-                                .font(Font.mainFont(size: 24))
-                                .bold()
+                            ZStack{
+                                Image("吹き出し1")
+                                    .frame(height:40)
+                                HStack{
+                                    Text("\(watchcount7)回視聴")
+                                    Text("加藤清正と水について説明するよ！")
+                                        .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
+                                        .font(Font.mainFont(size: 20))
+                                        .bold()
+                                } .offset(y:10)
+                            }
                         }
                         else if selectmoview8 == true{
-                            Text("水道水がどこからきているのか説明するよ！")
-                                .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
-                                .font(Font.mainFont(size: 24))
-                                .bold()
+                            ZStack{
+                                Image("吹き出し1")
+                                    .frame(height:40)
+                                HStack{
+                                    Text("\(watchcount8)回視聴")
+                                    Text("水道水がどこからきているのか説明するよ！")
+                                        .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
+                                        .font(Font.mainFont(size: 20))
+                                        .bold()
+                                } .offset(y:10)
+                            }
                         }
                         else if selectmoview9 == true{
-                            Text("節水について熊本市の取り組みや目標についてみていくよ！")
-                                .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
-                                .font(Font.mainFont(size: 24))
-                                .bold()
+                            ZStack{
+                                Image("吹き出し1")
+                                    .frame(height:40)
+                                HStack{
+                                    Text("\(watchcount9)回視聴")
+                                    Text("節水について熊本市の取り組みや\n目標についてみていくよ！")
+                                        .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
+                                        .font(Font.mainFont(size: 20))
+                                        .bold()
+                                } .offset(y:10)
+                            }
                         }
                         else if selectmoview10 == true{
-                            Text("節水につながる行動についてみていくよ！")
-                                .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
-                                .font(Font.mainFont(size: 24))
-                                .bold()
+                            ZStack{
+                                Image("吹き出し1")
+                                    .frame(height:40)
+                                HStack{
+                                    Text("\(watchcount10)回視聴")
+                                    Text("節水につながる行動についてみていくよ！")
+                                        .foregroundColor(Color(red:0.3,green:0.3, blue:0.3))
+                                        .font(Font.mainFont(size: 20))
+                                        .bold()
+                                } .offset(y:10)
+                            }
                         }
                     
 //                    HStack{
@@ -1229,17 +1274,6 @@ struct MovieView: View {
     }
 }
 
-//struct playOnlineFile: View {
-//        let url = URL(string: "http://ilab.watson.jp/Test/TatsukiTest/movie1.mp4")!
-//        let playerItem = AVPlayerItem(url: url)
-//    //動画再生
-//    @State var avPlayer: AVPlayer?
-//    var body: some View{
-//        avPlayer = AVPlayer(playerItem: playerItem)
-//        avPlayer?.play()
-//    }
-//}
-
 struct MyButtonStyle2: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         MyButton2(configuration:configuration)
@@ -1258,38 +1292,6 @@ struct MyButtonStyle2: ButtonStyle {
         }
     }
 }
-
-//動画再生
-//struct moviestart1: View{
-////https://lolipopftp.lolipop.jp/file/edit/root/Test/MatsushitaTest/kumamotonomizu1ver2.mp4
-//
-//    @State var player = AVPlayer()
-//    var videoUrl: String = "http://ilab.watson.jp/Test/TatsukiTest/movie1.mp4"
-//
-//     var body: some View{
-//        VideoPlayer(player: player)
-//            .onAppear(){
-//                player = AVPlayer(url: URL(string: videoUrl)!)
-//                player.play()
-//            }
-//            .onDisappear(){
-//                player.pause()
-//            }
-//     }
-//}
-
-//struct UIViewControllerRepresenter: UIViewControllerRepresentable {
-//   var uiViewController: UIViewController
-//   init(_ uiViewController: UIViewController) {
-//       self.uiViewController = uiViewController
-//   }
-//   func makeUIViewController(context: Self.Context) -> UIViewController {
-//       uiViewController
-//   }
-//   func updateUIViewController(_ uiViewController: UIViewController, context: Self.Context) {
-//       //
-//   }
-//}
 
 struct moviestart1: View{
 
@@ -1541,187 +1543,6 @@ struct moviestart10: View{
             }
         }
     }
-
-//struct moviestart1: View{
-//
-//     private let player1 = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
-//
-//     var body: some View{
-//        VideoPlayer(player: player1)
-//            .onAppear(){
-//                player1.play()
-//            }
-//            .onDisappear(){
-//                player1.pause()
-//            }
-//        }
-//    }
-//struct moviestart2: View{
-//
-//     private let player2 = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
-//
-//     var body: some View{
-//        VideoPlayer(player: player2)
-//            .onAppear(){
-//                player2.play()
-//            }
-//            .onDisappear(){
-//                player2.pause()
-//            }
-//        }
-//    }
-//struct moviestart3: View{
-//
-//     private let player3 = AVPlayer(url: Bundle.main.url(forResource:"SDGs数字系_5",withExtension: "mp4")!)
-//
-//     var body: some View{
-//        VideoPlayer(player: player3)
-//            .onAppear(){
-//                player3.play()
-//            }
-//            .onDisappear(){
-//                player3.pause()
-//            }
-//        }
-//    }
-//struct moviestart4: View{
-//
-//     private let player4 = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
-//
-//     var body: some View{
-//        VideoPlayer(player: player4)
-//            .onAppear(){
-//                player4.play()
-//            }
-//            .onDisappear(){
-//                player4.pause()
-//            }
-//        }
-//    }
-//struct moviestart5: View{
-//
-//     private let player5 = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
-//
-//     var body: some View{
-//        VideoPlayer(player: player5)
-//            .onAppear(){
-//                player5.play()
-//            }
-//            .onDisappear(){
-//                player5.pause()
-//            }
-//        }
-//    }
-//struct moviestart6: View{
-//
-//     private let player6 = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
-//
-//     var body: some View{
-//        VideoPlayer(player: player6)
-//            .onAppear(){
-//                player6.play()
-//
-//            }
-//            .onDisappear(){
-//                player6.pause()
-//            }
-//        }
-//    }
-//struct moviestart7: View{
-//
-//     private let player7 = AVPlayer(url: Bundle.main.url(forResource:"加藤清正って知ってる？",withExtension: "mp4")!)
-//
-//     var body: some View{
-//        VideoPlayer(player: player7)
-//            .onAppear(){
-//                player7.play()
-//            }
-//            .onDisappear(){
-//                player7.pause()
-//            }
-//        }
-//    }
-//struct moviestart8: View{
-//
-//     private let player8 = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
-//
-//     var body: some View{
-//        VideoPlayer(player: player8)
-//            .onAppear(){
-//                player8.play()
-//
-//            }
-//            .onDisappear(){
-//                player8.pause()
-//            }
-//        }
-//    }
-//struct moviestart9: View{
-//
-//     private let player9 = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
-//
-//     var body: some View{
-//        VideoPlayer(player: player9)
-//            .onAppear(){
-//                player9.play()
-//
-//            }
-//            .onDisappear(){
-//                player9.pause()
-//            }
-//        }
-//    }
-//struct moviestart10: View{
-//
-//     private let player10 = AVPlayer(url: Bundle.main.url(forResource:"熊本の水２音声あり",withExtension: "mp4")!)
-//
-//     var body: some View{
-//        VideoPlayer(player: player10)
-//            .onAppear(){
-//                player10.play()
-//            }
-//            .onDisappear(){
-//                player10.pause()
-//            }
-//        }
-//    }
-
-//動画再生
-//func playMovieFromUrl(movieUrl: URL?) {
-//    if let movieUrl = movieUrl {
-//        let videoPlayer = AVPlayer(url: movieUrl)
-//        let playerController = AVPlayerViewController()
-//        playerController.player = videoPlayer
-//        self.present(playerController, animated: true, completion: {
-//            videoPlayer.play()
-//        })
-//    } else {
-//        print("cannot play")
-//    }
-//}
-
-//func playMovieFromPath(moviePath: String?) {
-//    if let moviePath = moviePath {
-//        self.playMovieFromUrl(movieUrl: URL(fileURLWithPath: moviePath))
-//    } else {
-//        print("no such file")
-//    }
-//}
-//let remoteFileUrl1: String = "https://lolipopftp.lolipop.jp/file/edit/root/Test/MatsushitaTest/kumamotonomizu1ver2.mp4"
-//
-//@IBAction func playMovieFromRemoteFile() {
-//    playMovieFromUrl(movieUrl: URL(string: remoteFileUrl1))
-//}
-//let remoteFileUrl1: String = "https://lolipopftp.lolipop.jp/file/edit/root/Test/MatsushitaTest/SDGs%E6%95%B0%E5%AD%97%E7%B3%BB_5%20ver2.mp4"
-//
-//@IBAction func playMovieFromRemoteFile() {
-//    playMovieFromUrl(movieUrl: URL(string: remoteFileUrl1))
-//}
-//let remoteFileUrl1: String = "https://lolipopftp.lolipop.jp/file/edit/root/Test/MatsushitaTest/%E7%86%8A%E6%9C%AC%E3%81%AE%E6%B0%B4%EF%BC%92%E3%80%80%E9%9F%B3%E5%A3%B0%EF%BC%88%E6%9C%89%EF%BC%89%20ver2.mp4"
-//
-//@IBAction func playMovieFromRemoteFile() {
-//    playMovieFromUrl(movieUrl: URL(string: remoteFileUrl1))
-//}
 
 struct GifImage: UIViewRepresentable {
     func updateUIView(_ uiView: WKWebView, context: Context) {

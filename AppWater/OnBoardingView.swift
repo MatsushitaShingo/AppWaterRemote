@@ -13,12 +13,19 @@ struct OnBoardingView: View {
         
         TabView(selection: $currentTab,
                        content:  {
-            Image("キャラたかし")
+            Image("onboardingはじめ")
+                .ignoresSafeArea()
                 .tag(0)
-            Image("キャラナンちゃん")
+            Image("onboarding動画")
+                .ignoresSafeArea()
                 .tag(1)
-            Image("キャラコウくん")
+            Image("onboardingクイズ")
+                .ignoresSafeArea()
                 .tag(2)
+//            Image("onboarding可視化")
+//                .tag(3)
+//            Image("onboarding使ってみよう")
+//                .tag(4)
         })
         .tabViewStyle(PageTabViewStyle())
         .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))

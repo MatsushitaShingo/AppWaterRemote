@@ -532,6 +532,7 @@ struct KaeruEx : View{
     var body: some View{
         VStack{
             Image("説明カエル先生")
+                .resizable()
                 .ignoresSafeArea()
         }.customBackButton()
     }
@@ -540,6 +541,7 @@ struct KoukunEx : View{
     var body: some View{
         VStack{
             Image("説明コウくん")
+                .resizable()
                 .ignoresSafeArea()
         }.customBackButton()
     }
@@ -548,6 +550,7 @@ struct NantyanEx : View{
     var body: some View{
         VStack{
             Image("説明ナンちゃん")
+                .resizable()
                 .ignoresSafeArea()
         }.customBackButton()
     }
@@ -556,6 +559,7 @@ struct TakashiEx : View{
     var body: some View{
         VStack{
             Image("説明たかしくん")
+                .resizable()
                 .ignoresSafeArea()
         }.customBackButton()
     }
